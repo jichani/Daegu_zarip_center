@@ -1,0 +1,89 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+* {
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+body {
+  padding-top: 100px;
+}
+
+section.first_carousel {
+  font-family: Pretendard, sans-serif;
+  height: 45.327vw;
+}
+section.first_carousel .wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+section.first_carousel .main_text {
+  padding-top: 0;
+  font-size: 2.5008vw;
+}
+section.first_carousel.first_carousel {
+  position: relative;
+}
+section.first_carousel.first_carousel > div.gray_section {
+  position: absolute;
+  top: 22%;
+  width: 100%;
+  height: 31.26vw;
+  background: #ebefef;
+  z-index: 0;
+}
+section.first_carousel.first_carousel .swiper {
+  width: 100%;
+  height: 100%;
+}
+section.first_carousel.first_carousel .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.first_carousel.first_carousel .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.first_carousel.first_carousel .first_swiper .text_box {
+  width: 24.2786vw;
+  height: 18.756vw;
+  position: relative;
+  left: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  padding: 40px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(1) {
+  font-size: 1.6672vw;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(2) {
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.5;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description button {
+  width: 7.294vw;
+  height: 2.084vw;
+  align-self: flex-end;
+  font-size: 1.042vw;
+  font-weight: 400;
+}
+section.first_carousel.first_carousel .first_swiper img {
+  width: 49.7555vw;
+  height: 32.302vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+}

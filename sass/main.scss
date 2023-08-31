@@ -1,0 +1,111 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+$my-font: Pretendard, sans-serif;
+
+$size-1920-1px: 0.0521vw;
+$size-768-1px: 0.1302vw;
+$size-430-1px: 0.2326vw;
+
+body {
+  // 지울 코드
+  padding-top: 100px;
+}
+
+section.first_carousel {
+  font-family: $my-font;
+  height: 870 * $size-1920-1px;
+
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .main_text {
+    padding-top: 0;
+    font-size: 48 * $size-1920-1px;
+  }
+
+  &.first_carousel {
+    position: relative;
+
+    > div.gray_section {
+      position: absolute;
+      top: 22%;
+      width: 100%;
+      height: 600 * $size-1920-1px;
+      background: #ebefef;
+      z-index: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      // background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .first_swiper .text_box {
+      width: 466 * $size-1920-1px;
+      height: 360 * $size-1920-1px;
+      position: relative;
+      left: 200px;
+      background-color: #fff;
+
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 40px;
+
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+      .text_box_description {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        p:nth-child(1) {
+          font-size: 32 * $size-1920-1px;
+        }
+
+        p:nth-child(2) {
+          font-size: 20 * $size-1920-1px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+        button {
+          width: 140 * $size-1920-1px;
+          height: 40 * $size-1920-1px;
+          align-self: flex-end;
+
+          font-size: 20 * $size-1920-1px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .first_swiper img {
+      width: 955 * $size-1920-1px;
+      height: 620 * $size-1920-1px;
+      object-fit: cover;
+      border-radius: 40px;
+    }
+  }
+}

@@ -1,13 +1,21 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 * {
-  font-family: Pretendard, "Noto Sans KR", sans-serif;
-  margin: 0;
+  font-family: Pretendard;
 }
 
 body {
+  margin: 0;
   padding-top: 100px;
 }
 
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}
 section.first_carousel {
   font-family: Pretendard, sans-serif;
   height: 45.327vw;
@@ -65,7 +73,7 @@ section.first_carousel.first_carousel .first_swiper .text_box .text_box_descript
   height: 100%;
   justify-content: space-between;
 }
-section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(1) {
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
   font-size: 1.6672vw;
 }
 section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(2) {
@@ -73,12 +81,193 @@ section.first_carousel.first_carousel .first_swiper .text_box .text_box_descript
   font-weight: 400;
   line-height: 1.5;
 }
-section.first_carousel.first_carousel .first_swiper .text_box .text_box_description button {
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a {
   width: 7.294vw;
   height: 2.084vw;
   align-self: flex-end;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button {
+  width: 7.294vw;
+  height: 2.084vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ff9213;
+  border: 2px solid #ff9213;
+  font-size: 24px;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:hover {
+  background-color: #ff9213;
+  color: #fff;
+  border-bottom: 4px solid #df7800;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button {
+  width: 7.294vw;
+  height: 2.084vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #76c043;
+  border: 2px solid #76c043;
+  font-size: 24px;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:hover {
+  background-color: #76c043;
+  color: #fff;
+  border-bottom: 4px solid #5e9c34;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button {
+  width: 7.294vw;
+  height: 2.084vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #00a9de;
+  border: 2px solid #00a9de;
+  font-size: 24px;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:hover {
+  background-color: #00a9de;
+  color: #fff;
+  border-bottom: 4px solid #0082ab;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button {
+  width: 7.294vw;
+  height: 2.084vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #454ace;
+  border: 2px solid #454ace;
+  font-size: 24px;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:hover {
+  background-color: #454ace;
+  color: #fff;
+  border-bottom: 4px solid #2f33b1;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button {
+  width: 7.294vw;
+  height: 2.084vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #8700da;
+  border: 2px solid #8700da;
+  font-size: 24px;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:hover {
+  background-color: #8700da;
+  color: #fff;
+  border-bottom: 4px solid #6700a7;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a p {
   font-size: 1.042vw;
-  font-weight: 400;
 }
 section.first_carousel.first_carousel .first_swiper img {
   width: 49.7555vw;

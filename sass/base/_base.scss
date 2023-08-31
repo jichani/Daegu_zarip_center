@@ -1,0 +1,10 @@
+// 사용할 스타일들의 기초를 모아둔 파일이 _base.scss
+* {
+  font-family: Pretendard;
+}
+
+body {
+  margin: 0;
+  // 지울 코드
+  padding-top: 100px;
+}

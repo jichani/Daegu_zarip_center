@@ -1,19 +1,21 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-* {
-  font-family: Pretendard, "Noto Sans KR", sans-serif;
-  margin: 0;
-}
+@import "base/base";
+@import "base/fonts";
 
-$my-font: Pretendard, sans-serif;
+$Main_1: #ff9213;
+$Main_2: #76c043;
+$Main_3: #00a9de;
+$Main_4: #454ace;
 
-$size-1920-1px: 0.0521vw;
-$size-768-1px: 0.1302vw;
-$size-430-1px: 0.2326vw;
-
-body {
-  // 지울 코드
-  padding-top: 100px;
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
 }
 
 section.first_carousel {
@@ -81,7 +83,7 @@ section.first_carousel {
         height: 100%;
         justify-content: space-between;
 
-        p:nth-child(1) {
+        > p:nth-child(1) {
           font-size: 32 * $size-1920-1px;
         }
 
@@ -90,13 +92,34 @@ section.first_carousel {
           font-weight: 400;
           line-height: 1.5;
         }
-        button {
+        a {
           width: 140 * $size-1920-1px;
           height: 40 * $size-1920-1px;
           align-self: flex-end;
 
-          font-size: 20 * $size-1920-1px;
-          font-weight: 400;
+          &.gold {
+            @include set-button-color($Main_1);
+          }
+
+          &.green {
+            @include set-button-color($Main_2);
+          }
+
+          &.skyblue {
+            @include set-button-color($Main_3);
+          }
+
+          &.navy {
+            @include set-button-color($Main_4);
+          }
+
+          &.purple {
+            @include set-button-color($Main_5);
+          }
+
+          p {
+            font-size: 20 * $size-1920-1px;
+          }
         }
       }
     }

@@ -4,11 +4,6 @@
 @import "base/base";
 @import "base/fonts";
 
-$Main_1: #ff9213;
-$Main_2: #76c043;
-$Main_3: #00a9de;
-$Main_4: #454ace;
-
 @keyframes sheen {
   0% {
     transform: skewY(-45deg) translateX(0);
@@ -83,6 +78,22 @@ section.first_carousel {
         height: 100%;
         justify-content: space-between;
 
+        > p.text_gold {
+          color: $Main_1;
+        }
+        > p.text_green {
+          color: $Main_2;
+        }
+        > p.text_skyblue {
+          color: $Main_3;
+        }
+        > p.text_navy {
+          color: $Main_4;
+        }
+        > p.text_purple {
+          color: $Main_5;
+        }
+
         > p:nth-child(1) {
           font-size: 32 * $size-1920-1px;
         }
@@ -129,6 +140,30 @@ section.first_carousel {
       height: 620 * $size-1920-1px;
       object-fit: cover;
       border-radius: 40px;
+    }
+  }
+
+  .carousel_button {
+    z-index: 10;
+    position: absolute;
+    bottom: 100 * $size-1920-1px;
+    left: 180 * $size-1920-1px;
+    display: inline-block;
+
+    .button {
+      color: #b0b0b0;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      > p {
+        margin-bottom: 30 * $size-1920-1px;
+      }
+    }
+
+    svg {
+      fill: #b0b0b0;
+      margin-bottom: 10 * $size-1920-1px;
     }
   }
 }

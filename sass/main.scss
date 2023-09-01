@@ -69,6 +69,8 @@ section.first_carousel {
     }
 
     .first_swiper .text_box {
+      box-sizing: content-box;
+
       width: 466 * $size-1920-1px;
       height: 360 * $size-1920-1px;
       position: relative;
@@ -94,10 +96,10 @@ section.first_carousel {
           color: $Main_2;
         }
         > p.text_skyblue {
-          color: $Main_3;
+          color: $Main_4;
         }
         > p.text_navy {
-          color: $Main_4;
+          color: $Main_3;
         }
         > p.text_purple {
           color: $Main_5;
@@ -110,7 +112,7 @@ section.first_carousel {
         p:nth-child(2) {
           font-size: 20 * $size-1920-1px;
           font-weight: 400;
-          line-height: 1.5;
+          line-height: 1.8;
         }
         a {
           width: 140 * $size-1920-1px;
@@ -126,11 +128,11 @@ section.first_carousel {
           }
 
           &.skyblue {
-            @include set-button-color($Main_3);
+            @include set-button-color($Main_4);
           }
 
           &.navy {
-            @include set-button-color($Main_4);
+            @include set-button-color($Main_3);
           }
 
           &.purple {
@@ -166,13 +168,18 @@ section.first_carousel {
       @include set-carousel-button-color($Main_2);
     }
     .button_skyblue.active {
-      @include set-carousel-button-color($Main_3);
+      @include set-carousel-button-color($Main_4);
     }
     .button_navy.active {
-      @include set-carousel-button-color($Main_4);
+      @include set-carousel-button-color($Main_3);
     }
     .button_purple.active {
       @include set-carousel-button-color($Main_5);
+    }
+    .button_purple {
+      svg {
+        height: 39 * $size-1920-1px;
+      }
     }
 
     .button {

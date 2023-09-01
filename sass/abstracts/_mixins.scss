@@ -39,6 +39,7 @@
 
 @mixin set-carousel-button-color($color: $Main_1) {
   color: $color;
+  font-weight: bold;
   svg {
     fill: $color;
   }

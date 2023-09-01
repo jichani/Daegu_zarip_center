@@ -37,7 +37,7 @@ section.first_carousel.first_carousel {
 }
 section.first_carousel.first_carousel > div.gray_section {
   position: absolute;
-  top: 22%;
+  top: 26%;
   width: 100%;
   height: 31.26vw;
   background: #ebefef;
@@ -302,16 +302,52 @@ section.first_carousel .carousel_button {
   left: 9.378vw;
   display: inline-block;
 }
+section.first_carousel .carousel_button .button_gold.active {
+  color: #ff9213;
+}
+section.first_carousel .carousel_button .button_gold.active svg {
+  fill: #ff9213;
+}
+section.first_carousel .carousel_button .button_green.active {
+  color: #76c043;
+}
+section.first_carousel .carousel_button .button_green.active svg {
+  fill: #76c043;
+}
+section.first_carousel .carousel_button .button_skyblue.active {
+  color: #00a9de;
+}
+section.first_carousel .carousel_button .button_skyblue.active svg {
+  fill: #00a9de;
+}
+section.first_carousel .carousel_button .button_navy.active {
+  color: #454ace;
+}
+section.first_carousel .carousel_button .button_navy.active svg {
+  fill: #454ace;
+}
+section.first_carousel .carousel_button .button_purple.active {
+  color: #8700da;
+}
+section.first_carousel .carousel_button .button_purple.active svg {
+  fill: #8700da;
+}
 section.first_carousel .carousel_button .button {
   color: #b0b0b0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   cursor: pointer;
 }
 section.first_carousel .carousel_button .button > p {
   margin-bottom: 1.563vw;
+  font-size: 0.8336vw;
 }
 section.first_carousel .carousel_button svg {
   fill: #b0b0b0;
   margin-bottom: 0.521vw;
+  height: 1.9277vw;
+}
+section.first_carousel .swiper-pagination {
+  display: none;
 }

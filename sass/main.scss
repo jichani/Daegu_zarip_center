@@ -32,7 +32,7 @@ section.first_carousel {
 
     > div.gray_section {
       position: absolute;
-      top: 22%;
+      top: 26%;
       width: 100%;
       height: 600 * $size-1920-1px;
       background: #ebefef;
@@ -150,20 +150,43 @@ section.first_carousel {
     left: 180 * $size-1920-1px;
     display: inline-block;
 
+    .button_gold.active {
+      @include set-carousel-button-color($Main_1);
+    }
+    .button_green.active {
+      @include set-carousel-button-color($Main_2);
+    }
+    .button_skyblue.active {
+      @include set-carousel-button-color($Main_3);
+    }
+    .button_navy.active {
+      @include set-carousel-button-color($Main_4);
+    }
+    .button_purple.active {
+      @include set-carousel-button-color($Main_5);
+    }
+
     .button {
       color: #b0b0b0;
       display: flex;
       flex-direction: column;
+      align-items: center;
+
       cursor: pointer;
 
       > p {
         margin-bottom: 30 * $size-1920-1px;
+        font-size: 16 * $size-1920-1px;
       }
     }
 
     svg {
       fill: #b0b0b0;
       margin-bottom: 10 * $size-1920-1px;
+      height: 37 * $size-1920-1px;
     }
+  }
+  .swiper-pagination {
+    display: none;
   }
 }

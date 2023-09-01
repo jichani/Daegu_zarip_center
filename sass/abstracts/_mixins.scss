@@ -36,3 +36,10 @@
     }
   }
 }
+
+@mixin set-carousel-button-color($color: $Main_1) {
+  color: $color;
+  svg {
+    fill: $color;
+  }
+}

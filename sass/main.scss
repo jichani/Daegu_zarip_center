@@ -13,6 +13,15 @@
   }
 }
 
+@keyframes contact-motion {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
 section.first_carousel {
   font-family: $my-font;
   height: 870 * $size-1920-1px;
@@ -188,5 +197,23 @@ section.first_carousel {
   }
   .swiper-pagination {
     display: none;
+  }
+}
+
+div.contact {
+  .wrap {
+    text-align: center;
+    margin-top: 5px;
+
+    position: fixed;
+    right: 28 * $size-1920-1px;
+    bottom: 80 * $size-1920-1px;
+  }
+  .chatbox {
+    animation: contact-motion 0.8s linear 0s infinite alternate;
+    margin-top: 0;
+
+    width: 170 * $size-1920-1px;
+    cursor: pointer;
   }
 }

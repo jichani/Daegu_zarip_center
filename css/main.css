@@ -20,6 +20,14 @@ p {
     transform: skewY(-45deg) translateX(12.5em);
   }
 }
+@keyframes contact-motion {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
 section.first_carousel {
   font-family: Pretendard, sans-serif;
   height: 45.327vw;
@@ -350,4 +358,18 @@ section.first_carousel .carousel_button svg {
 }
 section.first_carousel .swiper-pagination {
   display: none;
+}
+
+div.contact .wrap {
+  text-align: center;
+  margin-top: 5px;
+  position: fixed;
+  right: 1.4588vw;
+  bottom: 4.168vw;
+}
+div.contact .chatbox {
+  animation: contact-motion 0.8s linear 0s infinite alternate;
+  margin-top: 0;
+  width: 8.857vw;
+  cursor: pointer;
 }

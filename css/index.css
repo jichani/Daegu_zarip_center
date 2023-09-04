@@ -1,0 +1,596 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard-Regular";
+}
+
+/* 첫번째 컨텐츠 */
+.content_first {
+    background: linear-gradient(180deg,
+            #c7e2ff 0%,
+            rgba(228, 239, 251, 0) 100%);
+    height: 502px;
+}
+
+.content_first_wrapper {
+    max-width: 430px;
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.slogan {
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.slogan_second {
+    position: absolute;
+    left: 106px;
+    top: 170px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.slogan_second span {
+    font-size: 48px;
+    color: #4279bc;
+}
+
+.main_image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.main_image img {
+    width: 330px;
+    height: 220px;
+}
+
+/* 세번째 컨텐츠 */
+.content_third {
+    padding: 0 20px;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.finance_img,
+.home_img,
+.unv_img,
+.medi_img {
+    margin-bottom: 35px;
+}
+
+.finance_img img,
+.home_img img,
+.unv_img img,
+.medi_img img {
+    width: 390px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.finance_title,
+.home_title,
+.unv_title,
+.medi_title {
+    display: flex;
+}
+
+.finance_icon,
+.home_icon,
+.unv_icon,
+.medi_icon {
+    margin-left: 20px;
+}
+
+.finance_title_text,
+.home_title_text,
+.unv_title_text,
+.medi_title_text {
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.finance_info_detail_zip,
+.home_info_detail_zip,
+.unv_info_detail_zip,
+.medi_info_detail_zip {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 77px;
+}
+
+.finance_info_detail:not(:last-of-type),
+.home_info_detail:not(:last-of-type),
+.unv_info_detail:not(:last-of-type),
+.medi_info_detail:not(:last-of-type) {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.finance_info_detail,
+.home_info_detail,
+.unv_info_detail,
+.medi_info_detail {
+    display: flex;
+}
+
+.finance_info_detail:nth-last-of-type(1),
+.home_info_detail:nth-last-of-type(1),
+.unv_info_detail:nth-last-of-type(1),
+.medi_info_detail:nth-last-of-type(1) {
+    margin-bottom: 10px;
+}
+
+.finance_num,
+.home_num,
+.unv_num,
+.medi_num {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 24px;
+    margin-right: 28px;
+}
+
+.finance_num {
+    color: #ffb713;
+}
+
+.home_num {
+    color: #76c043;
+}
+
+.unv_num {
+    color: #454ace;
+}
+
+.medi_num {
+    color: #4279bc;
+}
+
+.finance_btn button,
+.home_btn button,
+.unv_btn button,
+.medi_btn button {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    width: 100px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.finance_btn button {
+    border: 1px solid #ffb713;
+}
+
+.home_btn button {
+    border: 1px solid #76c043;
+}
+
+.unv_btn button {
+    border: 1px solid #454ace;
+}
+
+.medi_btn button {
+    border: 1px solid #4279bc;
+}
+
+@media screen and (max-width: 429px) {
+    content {
+        min-width: 370px;
+    }
+
+    .finance_img img,
+    .home_img img,
+    .unv_img img,
+    .medi_img img {
+        width: 96%;
+        height: auto;
+    }
+
+    .finance_img,
+    .home_img,
+    .unv_img,
+    .medi_img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .content_first_wrapper {
+        max-width: 70%;
+    }
+
+    .content_third {
+        max-width: 70%;
+        /* border: 1px solid yellow; */
+    }
+
+    .finance_img,
+    .home_img,
+    .unv_img,
+    .medi_img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .finance_img img,
+    .home_img img,
+    .unv_img img,
+    .medi_img img {
+        width: 88%;
+        height: auto;
+    }
+
+    .finance_title,
+    .home_title,
+    .unv_title,
+    .medi_title {
+        max-width: 88%;
+        /* border: 1px solid yellow; */
+        margin: 0 auto;
+    }
+
+    .finance_info .finance_info_detail_zip,
+    .home_info .home_info_detail_zip,
+    .unv_info .unv_info_detail_zip,
+    .medi_info .medi_info_detail_zip {
+        max-width: 88%;
+        margin: 0 auto;
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* 첫번째 컨텐츠 */
+    .content_first {
+        height: 653px;
+    }
+
+    .content_first_wrapper {
+        max-width: 1024px;
+        position: relative;
+        padding: 0px;
+        height: 100%;
+    }
+
+    .slogan {
+        left: 80px;
+        top: 164px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .slogan_second {
+        left: 162px;
+        top: 241px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .slogan_second span {
+        font-size: 72px;
+    }
+
+    .main_image {
+        position: absolute;
+        right: 120px;
+        bottom: 0;
+    }
+
+    .main_image img {
+        width: 520px;
+        height: 346px;
+    }
+
+    /* 세번째 컨텐츠 */
+    .content_third {
+        padding: 0;
+        max-width: none;
+    }
+
+    .title {
+        padding-top: 56px;
+        padding-bottom: 40px;
+        font-size: 40px;
+        max-width: 864px;
+        margin: 0 auto;
+    }
+
+    .title span {
+        color: #5a7789;
+    }
+
+    .unv,
+    .medi {
+        background-color: #f2f2f2;
+    }
+
+    .finance_zip {
+        display: flex;
+        justify-content: space-between;
+        max-width: 864px;
+        margin: 0 auto;
+    }
+
+    .home_zip {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 864px;
+        margin: 0 auto;
+    }
+
+    .unv_zip {
+        display: flex;
+        flex-direction: reverse;
+        justify-content: space-between;
+        max-width: 864px;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    .medi_zip {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 864px;
+        margin: 0 auto;
+    }
+
+    .finance_img img,
+    .home_img img,
+    .unv_img img,
+    .medi_img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .finance_img,
+    .home_img,
+    .unv_img,
+    .medi_img {
+        margin-bottom: 0px;
+        width: 400px;
+        height: 218px;
+    }
+
+    .finance_icon,
+    .home_icon,
+    .unv_icon,
+    .medi_icon {
+        margin-left: 0px;
+        margin-top: 27px;
+    }
+
+    .finance_icon img,
+    .home_icon img,
+    .unv_icon img,
+    .medi_icon img {
+        width: 24px;
+        height: 28px;
+    }
+
+    .finance_title,
+    .home_title,
+    .unv_title,
+    .medi_title {
+        max-width: none;
+        margin: 0;
+    }
+
+    .finance_title_text,
+    .home_title_text,
+    .unv_title_text,
+    .medi_title_text {
+        margin-top: 27px;
+        margin-left: 50px;
+        color: #0d0d0d;
+    }
+
+    .finance_info .finance_info .finance_info_detail_zip,
+    .home_info .home_info .home_info_detail_zip,
+    .unv_info .unv_info .unv_info_detail_zip,
+    .medi_info .medi_info .medi_info_detail_zip {
+        margin-bottom: 64px;
+        max-width: none;
+        margin: 0;
+    }
+
+    .finance_info_detail:not(:last-of-type),
+    .home_info_detail:not(:last-of-type),
+    .unv_info_detail:not(:last-of-type),
+    .medi_info_detail:not(:last-of-type) {
+        margin-bottom: 12px;
+    }
+
+    .finance_num,
+    .home_num,
+    .unv_num,
+    .medi_num {
+        margin-left: 0px;
+        margin-right: 64px;
+    }
+
+    .finance_info_detail_zip,
+    .home_info_detail_zip,
+    .unv_info_detail_zip,
+    .medi_info_detail_zip {
+        width: 422px;
+    }
+
+    .finance_info_detail_zip_zip,
+    .home_info_detail_zip_zip,
+    .unv_info_detail_zip_zip,
+    .medi_info_detail_zip_zip {
+        margin-right: 0px;
+    }
+
+    .finance_btn button,
+    .home_btn button,
+    .unv_btn button,
+    .medi_btn button {
+        font-size: 12px;
+        width: 100px;
+        height: 28px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    /* 첫번째 컨텐츠 */
+    .content_first {
+        height: 964px;
+    }
+
+    .content_first_wrapper {
+        max-width: 1920px;
+    }
+
+    .slogan {
+        left: 246px;
+        top: 98px;
+        font-size: 76px;
+    }
+
+    .slogan_second {
+        left: 400px;
+        top: 214px;
+        font-size: 76px;
+    }
+
+    .slogan_second span {
+        font-size: 128px;
+    }
+
+    .main_image {
+        right: 236px;
+    }
+
+    .main_image img {
+        width: 960px;
+        height: 640px;
+    }
+
+    /* 세번째 컨텐츠 */
+    .title {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        font-size: 48px;
+        max-width: 1450px;
+    }
+
+    .finance_zip {
+        max-width: 1196px;
+    }
+
+    .home_zip {
+        max-width: 1196px;
+    }
+
+    .unv_zip {
+        max-width: 1196px;
+        padding-top: 80px;
+    }
+
+    .medi_zip {
+        max-width: 1196px;
+    }
+
+    .finance_img,
+    .home_img,
+    .unv_img,
+    .medi_img {
+        width: 588px;
+        height: 320px;
+    }
+
+    .finance_icon img,
+    .home_icon img,
+    .unv_icon img,
+    .medi_icon img {
+        width: 32px;
+        height: 37px;
+    }
+
+    .finance_title_text,
+    .home_title_text,
+    .unv_title_text,
+    .medi_title_text {
+        font-size: 32px;
+        margin-left: 55px;
+    }
+
+    .finance_info_detail_zip,
+    .home_info_detail_zip,
+    .unv_info_detail_zip,
+    .medi_info_detail_zip {
+        margin-bottom: 102px;
+    }
+
+    .finance_info_detail:not(:last-of-type),
+    .home_info_detail:not(:last-of-type),
+    .unv_info_detail:not(:last-of-type),
+    .medi_info_detail:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    .finance_info_detail_text,
+    .home_info_detail_text,
+    .unv_info_detail_text,
+    .medi_info_detail_text {
+        font-size: 24px;
+    }
+
+    .finance_num,
+    .home_num,
+    .unv_num,
+    .medi_num {
+        margin-right: 60px;
+        margin-left: 10px;
+    }
+
+    .finance_info_detail_zip,
+    .home_info_detail_zip,
+    .unv_info_detail_zip,
+    .medi_info_detail_zip {
+        width: 553px;
+    }
+
+    .finance_btn button,
+    .home_btn button,
+    .unv_btn button,
+    .medi_btn button {
+        font-size: 16px;
+        width: 140px;
+        height: 40px;
+    }
+}

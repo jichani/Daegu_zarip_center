@@ -117,26 +117,6 @@ section.first_carousel {
           height: 40 * $size-1920-1px;
           align-self: flex-end;
 
-          &.gold {
-            @include set-button-color($Main_1, 140 * $size-1920-1px, 40 * $size-1920-1px);
-          }
-
-          &.green {
-            @include set-button-color($Main_2, 140 * $size-1920-1px, 40 * $size-1920-1px);
-          }
-
-          &.skyblue {
-            @include set-button-color($Main_4, 140 * $size-1920-1px, 40 * $size-1920-1px);
-          }
-
-          &.navy {
-            @include set-button-color($Main_3, 140 * $size-1920-1px, 40 * $size-1920-1px);
-          }
-
-          &.purple {
-            @include set-button-color($Main_5, 140 * $size-1920-1px, 40 * $size-1920-1px);
-          }
-
           p {
             font-size: 20 * $size-1920-1px;
           }
@@ -202,6 +182,31 @@ section.first_carousel {
   }
   .swiper-pagination {
     display: none;
+  }
+}
+
+a {
+  &.gold {
+    @include set-button-color($Main_1, 140 * $size-1920-1px, 40 * $size-1920-1px);
+  }
+
+  &.green {
+    @include set-button-color($Main_2, 140 * $size-1920-1px, 40 * $size-1920-1px);
+  }
+
+  &.skyblue {
+    @include set-button-color($Main_3, 140 * $size-1920-1px, 40 * $size-1920-1px);
+  }
+
+  &.navy {
+    @include set-button-color($Main_4, 140 * $size-1920-1px, 40 * $size-1920-1px);
+  }
+
+  &.purple {
+    @include set-button-color($Main_5, 140 * $size-1920-1px, 40 * $size-1920-1px);
+  }
+  p {
+    font-size: 20 * $size-1920-1px;
   }
 }
 

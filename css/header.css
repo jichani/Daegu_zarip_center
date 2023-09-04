@@ -1,0 +1,337 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+        format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    font-family: "Pretendard-Regular";
+}
+
+/* header의 공간이 띄워져있어서 padding을 주기 위한 코드 */
+:root {
+    --header-height: 90px;
+}
+
+body {
+    padding-top: var(--header-height);
+}
+
+/*  */
+
+header {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    background-color: #fff;
+    color: #0d0d0d;
+}
+
+.header_inner {
+    /* width: 90%; */
+    height: var(--header-height);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1460px;
+    padding: 0 20px;
+}
+
+.header_inner img {
+    width: 385px;
+    height: 56px;
+}
+
+.header_inner nav {
+    justify-self: center;
+}
+
+.right_nav {
+    font-size: 16px;
+}
+
+header .header_inner .right_nav {
+    display: none;
+}
+
+.right_nav button {
+    background: none;
+    border: none;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.right_nav button.main_login_btn {
+    margin-right: 0.6vw;
+}
+
+.nav_toggle {
+    display: none;
+}
+
+.menu_wrapper {
+    /* font-size: 0.9375vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.menu_wrapper .main_menu_title span {
+    font-size: 1.18rem;
+    display: inline-block;
+    margin-left: 200px;
+}
+.menu_wrapper .main_menu_title span.main_title_first {
+    margin-left: 0px;
+}
+
+.menu_wrapper .main_menu_title {
+    display: inline-block;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    /* margin: 0 25px; */
+}
+
+header .header_inner .menu_wrapper .main_menu_title .main_title {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.main_title:hover {
+    color: #4279bc;
+}
+
+.menu_wrapper .main_menu_title:hover .sub_menu {
+    display: block;
+}
+
+.menu_wrapper .main_menu_title:hover i {
+    color: #f54747;
+}
+
+.sub_menu {
+    position: absolute;
+    display: none;
+    overflow: auto;
+    width: 100%;
+    text-align: start;
+    font-size: 1rem;
+    background-color: white;
+    padding: 12px 8px;
+    margin-top: 10px;
+    white-space: nowrap;
+    line-height: 30px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    top: 40px;
+}
+
+.sub_menu li {
+    padding: 5px 8px;
+    font-weight: 300;
+}
+
+.sub_menu li::before {
+    content: "•";
+    margin-right: 10px;
+}
+
+.sub_menu li:hover::before {
+    content: "✔";
+    color: red;
+}
+
+.right_nav {
+    /* font-size: 0.9375vw; */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    /* margin-right: 10px; */
+}
+
+.right_nav_icon {
+    margin-right: 20px;
+    display: flex;
+    /* font-size: 0.9375vw; */
+}
+
+.right_nav_icon button {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.right_nav_icon .user_icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* 헤더 태블릿 버전 */
+@media screen and (max-width: 1020px) {
+    .header_inner img {
+        width: 320px;
+        height: 46px;
+    }
+
+    header .header_inner .right_nav {
+        display: flex;
+    }
+
+    .menu_wrapper .main {
+        display: none;
+    }
+
+    .right_nav_icon {
+        display: flex;
+    }
+
+    .right_nav_icon button {
+        display: none;
+    }
+
+    .right_nav_icon .user_icon {
+        display: block;
+        margin: 0 10px 0 30px;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* 태블릿 토글 */
+    .nav_toggle {
+        align-items: center;
+        display: block;
+    }
+
+    .nav_toggle #menuicon {
+        display: none;
+    }
+
+    .nav_toggle #menuicon + label {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .nav_toggle #menuicon + label span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 30px;
+        background: #000;
+        transition: all 0.35s;
+    }
+
+    .nav_toggle #menuicon + label span:nth-child(1) {
+        top: 0;
+    }
+
+    .nav_toggle #menuicon + label span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 80%;
+    }
+
+    .nav_toggle #menuicon + label span:nth-child(3) {
+        bottom: 0;
+    }
+
+    .nav_toggle #menuicon:checked + label span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .nav_toggle #menuicon:checked + label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav_toggle #menuicon:checked + label span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* 사이드 바 */
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        right: -100%;
+        transition: all 0.6s;
+        border-left: 1px solid #eee;
+    }
+
+    .nav_toggle #menuicon:checked + label + div {
+        left: 30%;
+        top: 91px;
+    }
+
+    .sideAccordion_title {
+        border-bottom: 1px solid #b0b0b0;
+        margin: 0 20px;
+        /* display: flex;
+        justify-content: end; */
+    }
+
+    .sideAccordion_title:hover i {
+        color: #f54747;
+    }
+
+    .sideAccordion_title span {
+        font-size: 22px;
+        display: inline-block;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .sideAccordion_menu {
+        display: none;
+    }
+
+    .sideAccordion_menu.show {
+        display: block;
+    }
+
+    .sideAccordion_menu li {
+        padding: 8px 10px;
+        margin-left: 50px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .sideAccordion_menu li::before {
+        content: "•";
+        margin-right: 10px;
+    }
+
+    .sideAccordion_menu li:hover::before {
+        content: "✔";
+        color: red;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header_inner {
+        padding: 0 10px;
+    }
+
+    .header_inner img {
+        width: 240px;
+        height: 54px;
+    }
+
+    .nav_toggle #menuicon:checked + label + div {
+        left: 0;
+    }
+}

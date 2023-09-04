@@ -215,3 +215,8 @@ button.submit {
   color: #f2f2f2;
   cursor: pointer;
 }
+
+.inqurey_btn button.checked {
+  background-color: #4279bc;
+  color: #f2f2f2;
+}

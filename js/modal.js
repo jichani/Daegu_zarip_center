@@ -2,8 +2,11 @@ const button = document.querySelector(".contact");
 const dialog = document.querySelector("dialog");
 const close_button = document.querySelector(".close_btn");
 
+
+
 button.addEventListener("click", () => {
   dialog.showModal();
+  AOS.init();
 });
 
 close_button.addEventListener("click", () => {

@@ -256,15 +256,6 @@
         /* border: 1px solid yellow; */
         margin: 0 auto;
     }
-
-    .finance_info .finance_info_detail_zip,
-    .home_info .home_info_detail_zip,
-    .unv_info .unv_info_detail_zip,
-    .medi_info .medi_info_detail_zip {
-        max-width: 88%;
-        margin: 0 auto;
-        margin-bottom: 64px;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -377,7 +368,7 @@
     .home_img,
     .unv_img,
     .medi_img {
-        margin-bottom: 0px;
+        margin-bottom: 40px;
         width: 400px;
         height: 218px;
     }
@@ -396,6 +387,7 @@
     .medi_icon img {
         width: 24px;
         height: 28px;
+        object-fit: cover;
     }
 
     .finance_title,
@@ -415,11 +407,12 @@
         color: #0d0d0d;
     }
 
-    .finance_info .finance_info .finance_info_detail_zip,
-    .home_info .home_info .home_info_detail_zip,
-    .unv_info .unv_info .unv_info_detail_zip,
-    .medi_info .medi_info .medi_info_detail_zip {
+    .finance_info .finance_info_detail_zip,
+    .home_info .home_info_detail_zip,
+    .unv_info .unv_info_detail_zip,
+    .medi_info .medi_info_detail_zip {
         margin-bottom: 64px;
+        width: 432px;
         max-width: none;
         margin: 0;
     }
@@ -437,13 +430,6 @@
     .medi_num {
         margin-left: 0px;
         margin-right: 64px;
-    }
-
-    .finance_info_detail_zip,
-    .home_info_detail_zip,
-    .unv_info_detail_zip,
-    .medi_info_detail_zip {
-        width: 422px;
     }
 
     .finance_info_detail_zip_zip,
@@ -531,6 +517,7 @@
     .medi_img {
         width: 588px;
         height: 320px;
+        margin-bottom: 80px;
     }
 
     .finance_icon img,
@@ -549,11 +536,13 @@
         margin-left: 55px;
     }
 
-    .finance_info_detail_zip,
-    .home_info_detail_zip,
-    .unv_info_detail_zip,
-    .medi_info_detail_zip {
+    .finance_info .finance_info_detail_zip,
+    .home_info .home_info_detail_zip,
+    .unv_info .unv_info_detail_zip,
+    .medi_info .medi_info_detail_zip {
         margin-bottom: 102px;
+        width: 553px;
+        max-width: none;
     }
 
     .finance_info_detail:not(:last-of-type),
@@ -576,13 +565,6 @@
     .medi_num {
         margin-right: 60px;
         margin-left: 10px;
-    }
-
-    .finance_info_detail_zip,
-    .home_info_detail_zip,
-    .unv_info_detail_zip,
-    .medi_info_detail_zip {
-        width: 553px;
     }
 
     .finance_btn button,

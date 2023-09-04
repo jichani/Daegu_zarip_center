@@ -251,7 +251,8 @@
     <h2 class="title">대구시 <span>자립지원사업 정보</span></h2>
     <div class="info_zip">
       <!-- 금융지원사업 -->
-      <div class="finance">
+      <div class="finance" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out"
+        data-aos-once="false">
         <div class="finance_zip">
           <div class="finance_img">
             <img src="./img/finance.png" alt="금융지원사업 이미지" />
@@ -302,7 +303,8 @@
         </div>
       </div>
       <!-- 주거지원사업 -->
-      <div class="home">
+      <div class="home" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
+        data-aos-once="false">
         <div class="home_zip">
           <div class="home_img">
             <img src="./img/home.png" alt="주거지원사업 이미지" />
@@ -353,7 +355,8 @@
         </div>
       </div>
       <!-- 진로지원사업 -->
-      <div class="unv">
+      <div class="unv" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
+        data-aos-once="false">
         <div class="unv_zip">
           <div class="unv_img">
             <img src="./img/unv.png" alt="진로지원사업 이미지" />
@@ -404,7 +407,8 @@
         </div>
       </div>
       <!-- 의료지원사업 -->
-      <div class="medi">
+      <div class="medi" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out"
+        data-aos-once="false">
         <div class="medi_zip">
           <div class="medi_img">
             <img src="./img/medi.png" alt="의료지원사업 이미지" />
@@ -463,7 +467,7 @@
     </div>
   </div>
 
-  <dialog data-aos="zoom-out-down" data-aos-delay="100">
+  <dialog data-aos="zoom-in-up" data-aos-delay="100">
     <div class="modal">
       <button value="close" class="close_btn">
         <i class="fa-solid fa-x"></i>
@@ -515,6 +519,11 @@
   <script src="./js/first_carousel.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/form.js"></script>
+
+  <!-- AOS 스크립트 시작 -->
+  <script>
+    AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+  </script>
 
 
 </body>

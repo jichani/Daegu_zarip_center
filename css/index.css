@@ -102,6 +102,26 @@
     margin-left: 20px;
 }
 
+.finance_icon img {
+    width: 24px;
+    object-fit: cover;
+}
+
+.home_icon img {
+    width: 27px;
+    object-fit: cover;
+}
+
+.unv_icon img {
+    width: 24px;
+    object-fit: cover;
+}
+
+.medi_icon img {
+    width: 21px;
+    object-fit: cover;
+}
+
 .finance_title_text,
 .home_title_text,
 .unv_title_text,
@@ -381,12 +401,23 @@
         margin-top: 27px;
     }
 
-    .finance_icon img,
-    .home_icon img,
-    .unv_icon img,
-    .medi_icon img {
+    .finance_icon img {
+        object-fit: cover;
         width: 24px;
-        height: 28px;
+    }
+
+    .home_icon img {
+        object-fit: cover;
+        width: 27px;
+    }
+
+    .unv_icon img {
+        object-fit: cover;
+        width: 24px;
+    }
+
+    .medi_icon img {
+        width: 30px;
         object-fit: cover;
     }
 
@@ -520,12 +551,24 @@
         margin-bottom: 80px;
     }
 
-    .finance_icon img,
-    .home_icon img,
-    .unv_icon img,
-    .medi_icon img {
+    .finance_icon img {
+        object-fit: cover;
         width: 32px;
-        height: 37px;
+    }
+
+    .home_icon img {
+        object-fit: cover;
+        width: 36px;
+    }
+
+    .unv_icon img {
+        object-fit: cover;
+        width: 32px;
+    }
+
+    .medi_icon img {
+        object-fit: cover;
+        width: 32px;
     }
 
     .finance_title_text,

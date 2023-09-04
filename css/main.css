@@ -378,7 +378,7 @@ div.contact .wrap {
 div.contact .chatbox {
   animation: contact-motion 0.8s linear 0s infinite alternate;
   margin-top: 0;
-  width: 8.857vw;
+  width: 170px;
   cursor: pointer;
 }
 
@@ -397,9 +397,9 @@ div.contact .chatbox {
     height: 400px;
   }
   section.first_carousel.first_carousel .first_swiper .text_box {
-    min-width: 31.264vw;
+    max-width: 31.264vw;
     min-height: 240px;
-    left: 200px;
+    left: 120px;
     padding: 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
@@ -410,6 +410,8 @@ div.contact .chatbox {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.8;
+    max-height: 150px;
+    overflow: hidden;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a {
     width: 9.77vw;
@@ -600,7 +602,7 @@ div.contact .chatbox {
     font-size: 14px;
   }
   section.first_carousel.first_carousel .first_swiper img {
-    width: 58.62vw;
+    width: 41.034vw;
     height: 366px;
   }
   section.first_carousel .carousel_button {
@@ -616,5 +618,22 @@ div.contact .chatbox {
   section.first_carousel .carousel_button svg {
     margin-bottom: 0.977vw;
     height: 28px;
+  }
+}
+@media (max-width: 500px) {
+  section.first_carousel .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+  section.first_carousel .carousel_button {
+    display: flex;
+    gap: 4.1868vw;
+  }
+  div.contact .wrap {
+    right: 28px;
+    bottom: 50px;
+  }
+  div.contact .chatbox {
+    width: 120px;
   }
 }

@@ -1,7 +1,7 @@
-@mixin set-button-color($color: $Main_1) {
+@mixin set-button-color($color: $Main_1, $width-size, $height-size) {
   &.button {
-    width: 140 * $size-1920-1px;
-    height: 40 * $size-1920-1px;
+    width: $width-size;
+    height: $height-size;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,5 +42,17 @@
   font-weight: bold;
   svg {
     fill: $color;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
   }
 }

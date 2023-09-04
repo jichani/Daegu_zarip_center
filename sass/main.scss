@@ -213,6 +213,7 @@ div.contact {
     position: fixed;
     right: 28 * $size-1920-1px;
     bottom: 80 * $size-1920-1px;
+    z-index: 100;
   }
   .chatbox {
     animation: contact-motion 0.8s linear 0s infinite alternate;
@@ -244,6 +245,7 @@ div.contact {
         left: 120px;
         padding: 40px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
         .text_box_description {
           > p:nth-child(1) {
             font-size: 24px;
@@ -319,8 +321,19 @@ div.contact {
       margin: 0 auto;
     }
     .carousel_button {
+      margin-top: 20px;
       display: flex;
       gap: 18 * $size-430-1px;
+      position: relative;
+      bottom: auto;
+      left: auto;
+      justify-content: center;
+    }
+    &.first_carousel {
+      .first_swiper .text_box {
+        width: 40%;
+        left: 50px;
+      }
     }
   }
 
@@ -335,5 +348,54 @@ div.contact {
   }
 }
 
-@include tablet {
+@include mobile {
+  section.first_carousel {
+    &.first_carousel {
+      position: relative;
+      .swiper-slide {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+      .main_text {
+        font-size: 28 * $size-430-1px;
+        margin-bottom: 20 * $size-430-1px;
+      }
+      .first_swiper img {
+        width: 390 * $size-430-1px;
+        height: 520 * $size-430-1px;
+        object-fit: cover;
+        border-radius: 40px;
+      }
+      .first_swiper .text_box {
+        box-sizing: border-box;
+        width: 88%;
+        max-width: none;
+        height: 420px;
+        left: 20px;
+        bottom: 140px;
+        .text_box_description {
+          > p:nth-child(1) {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          p:nth-child(2) {
+            font-size: 16px;
+            line-height: 1.8;
+            max-height: none;
+          }
+        }
+      }
+    }
+    .carousel_button {
+      margin-top: 0;
+      display: flex;
+      gap: 18 * $size-430-1px;
+      position: relative;
+      bottom: 100px;
+      left: auto;
+      justify-content: center;
+    }
+  }
 }

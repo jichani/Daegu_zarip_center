@@ -55,7 +55,7 @@ dialog::-webkit-scrollbar {
   /* 크롬, 사파리, 오페라, 엣지 */
 }
 
-h2 {
+dialog h2 {
   margin-bottom: 28px;
   text-align: center;
   font-family: Pretendard;

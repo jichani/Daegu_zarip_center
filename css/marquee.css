@@ -1,0 +1,47 @@
+/* marguee */
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+  padding-top: 30px;
+}
+
+.marquee__inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  /* 여기서 속도 조절 가능 */
+}
+
+.marquee__inner span {
+  margin-right: 2em;
+  /* 이미지 사이의 간격 조절 가능 */
+}
+
+.marquee__inner img {
+  width: 210px;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .marquee__inner span {
+    margin-right: 1em;
+    /* 이미지 사이의 간격 조절 가능 */
+  }
+
+  .marquee__inner img {
+    width: 160px;
+    object-fit: contain;
+  }
+}

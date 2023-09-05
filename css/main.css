@@ -1,12 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-
 * {
   font-family: Pretendard;
 }
 
 body {
   margin: 0;
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 p {
@@ -17,42 +16,35 @@ p {
   0% {
     transform: skewY(-45deg) translateX(0);
   }
-
   100% {
     transform: skewY(-45deg) translateX(12.5em);
   }
 }
-
 @keyframes contact-motion {
   from {
     transform: translateY(0);
   }
-
   to {
     transform: translateY(-10px);
   }
 }
-
 section.first_carousel {
   font-family: Pretendard, sans-serif;
   height: 45.327vw;
 }
-
 section.first_carousel .wrapper {
   width: 80%;
   margin: 0 auto;
 }
-
 section.first_carousel .main_text {
   padding-top: 0;
-  font-size: 2.5008vw;
+  font-size: 40px;
+  margin-top: 100px;
 }
-
 section.first_carousel {
   position: relative;
 }
-
-section.first_carousel>div.gray_section {
+section.first_carousel > div.gray_section {
   position: absolute;
   top: 26%;
   width: 100%;
@@ -60,26 +52,22 @@ section.first_carousel>div.gray_section {
   background: #ebefef;
   z-index: 0;
 }
-
 section.first_carousel .swiper {
   width: 100%;
   height: 100%;
 }
-
 section.first_carousel .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 section.first_carousel .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-
 section.first_carousel .first_swiper .text_box {
   box-sizing: content-box;
   width: 24.2786vw;
@@ -92,62 +80,50 @@ section.first_carousel .first_swiper .text_box {
   padding: 40px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
-
 section.first_carousel .first_swiper .text_box .text_box_description {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p.text_gold {
+section.first_carousel .first_swiper .text_box .text_box_description > p.text_gold {
   color: #ff9213;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p.text_green {
+section.first_carousel .first_swiper .text_box .text_box_description > p.text_green {
   color: #76c043;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p.text_skyblue {
+section.first_carousel .first_swiper .text_box .text_box_description > p.text_skyblue {
   color: #454ace;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p.text_navy {
+section.first_carousel .first_swiper .text_box .text_box_description > p.text_navy {
   color: #00a9de;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p.text_purple {
+section.first_carousel .first_swiper .text_box .text_box_description > p.text_purple {
   color: #d651b9;
 }
-
-section.first_carousel .first_swiper .text_box .text_box_description>p:nth-child(1) {
+section.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
   font-size: 1.6672vw;
 }
-
 section.first_carousel .first_swiper .text_box .text_box_description p:nth-child(2) {
   font-size: 1.042vw;
   font-weight: 400;
   line-height: 1.8;
 }
-
 section.first_carousel .first_swiper .text_box .text_box_description a {
   width: 7.294vw;
   height: 2.084vw;
   align-self: flex-end;
 }
-
 section.first_carousel .first_swiper .text_box .text_box_description a p {
   font-size: 1.042vw;
 }
-
 section.first_carousel .first_swiper img {
   width: 49.7555vw;
   height: 32.302vw;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 40px;
 }
-
 section.first_carousel .carousel_button {
   z-index: 10;
   position: absolute;
@@ -155,56 +131,44 @@ section.first_carousel .carousel_button {
   left: 9.378vw;
   display: inline-block;
 }
-
 section.first_carousel .carousel_button .button_gold.active {
   color: #ff9213;
   font-weight: bold;
 }
-
 section.first_carousel .carousel_button .button_gold.active svg {
   fill: #ff9213;
 }
-
 section.first_carousel .carousel_button .button_green.active {
   color: #76c043;
   font-weight: bold;
 }
-
 section.first_carousel .carousel_button .button_green.active svg {
   fill: #76c043;
 }
-
 section.first_carousel .carousel_button .button_skyblue.active {
   color: #454ace;
   font-weight: bold;
 }
-
 section.first_carousel .carousel_button .button_skyblue.active svg {
   fill: #454ace;
 }
-
 section.first_carousel .carousel_button .button_navy.active {
   color: #00a9de;
   font-weight: bold;
 }
-
 section.first_carousel .carousel_button .button_navy.active svg {
   fill: #00a9de;
 }
-
 section.first_carousel .carousel_button .button_purple.active {
   color: #d651b9;
   font-weight: bold;
 }
-
 section.first_carousel .carousel_button .button_purple.active svg {
   fill: #d651b9;
 }
-
 section.first_carousel .carousel_button .button_purple svg {
   height: 2.0319vw;
 }
-
 section.first_carousel .carousel_button .button {
   color: #b0b0b0;
   display: flex;
@@ -212,25 +176,22 @@ section.first_carousel .carousel_button .button {
   align-items: center;
   cursor: pointer;
 }
-
-section.first_carousel .carousel_button .button>p {
+section.first_carousel .carousel_button .button > p {
   margin-bottom: 1.563vw;
   font-size: 0.8336vw;
 }
-
 section.first_carousel .carousel_button svg {
   fill: #b0b0b0;
   margin-bottom: 0.521vw;
   height: 1.9277vw;
 }
-
 section.first_carousel .swiper-pagination {
   display: none;
 }
 
 a.gold.button {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 100px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +204,6 @@ a.gold.button {
   position: relative;
   overflow: hidden;
 }
-
 a.gold.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -256,21 +216,18 @@ a.gold.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-
 a.gold.button:hover {
   background-color: #ff9213;
   color: #fff;
   border-bottom: 4px solid #df7800;
 }
-
 a.gold.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-
 a.green.button {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 100px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,7 +240,6 @@ a.green.button {
   position: relative;
   overflow: hidden;
 }
-
 a.green.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -296,21 +252,18 @@ a.green.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-
 a.green.button:hover {
   background-color: #76c043;
   color: #fff;
   border-bottom: 4px solid #5e9c34;
 }
-
 a.green.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-
 a.skyblue.button {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 100px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,7 +276,6 @@ a.skyblue.button {
   position: relative;
   overflow: hidden;
 }
-
 a.skyblue.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -336,21 +288,18 @@ a.skyblue.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-
 a.skyblue.button:hover {
   background-color: #00a9de;
   color: #fff;
   border-bottom: 4px solid #0082ab;
 }
-
 a.skyblue.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-
 a.navy.button {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 100px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +312,6 @@ a.navy.button {
   position: relative;
   overflow: hidden;
 }
-
 a.navy.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -376,21 +324,18 @@ a.navy.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-
 a.navy.button:hover {
   background-color: #454ace;
   color: #fff;
   border-bottom: 4px solid #2f33b1;
 }
-
 a.navy.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-
 a.purple.button {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 100px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,7 +348,6 @@ a.purple.button {
   position: relative;
   overflow: hidden;
 }
-
 a.purple.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -416,20 +360,17 @@ a.purple.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-
 a.purple.button:hover {
   background-color: #d651b9;
   color: #fff;
   border-bottom: 4px solid #c52fa5;
 }
-
 a.purple.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-
 a p {
-  font-size: 1.042vw;
+  font-size: 14px;
 }
 
 div.contact .wrap {
@@ -440,7 +381,6 @@ div.contact .wrap {
   bottom: 4.168vw;
   z-index: 100;
 }
-
 div.contact .chatbox {
   animation: contact-motion 0.8s linear 0s infinite alternate;
   margin-top: 0;
@@ -450,22 +390,18 @@ div.contact .chatbox {
 
 @media (max-width: 1024px) {
   section.first_carousel {
-    height: 500px;
+    height: 600px;
   }
-
   section.first_carousel .wrapper {
     width: 85%;
     margin: 0 auto;
   }
-
   section.first_carousel .main_text {
     font-size: 3.908vw;
   }
-
-  section.first_carousel.first_carousel>div.gray_section {
+  section.first_carousel.first_carousel > div.gray_section {
     height: 400px;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box {
     max-width: 31.264vw;
     min-height: 240px;
@@ -473,11 +409,9 @@ div.contact .chatbox {
     padding: 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
-
-  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description>p:nth-child(1) {
+  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
     font-size: 24px;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(2) {
     font-size: 12px;
     font-weight: 400;
@@ -485,13 +419,11 @@ div.contact .chatbox {
     max-height: 150px;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a {
     width: 9.77vw;
     height: 2.7356vw;
     align-self: flex-end;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button {
     width: 100px;
     height: 28px;
@@ -507,7 +439,6 @@ div.contact .chatbox {
     position: relative;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
@@ -520,18 +451,15 @@ div.contact .chatbox {
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:hover {
     background-color: #ff9213;
     color: #fff;
     border-bottom: 4px solid #df7800;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button {
     width: 100px;
     height: 28px;
@@ -547,7 +475,6 @@ div.contact .chatbox {
     position: relative;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
@@ -560,18 +487,15 @@ div.contact .chatbox {
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:hover {
     background-color: #76c043;
     color: #fff;
     border-bottom: 4px solid #5e9c34;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button {
     width: 100px;
     height: 28px;
@@ -587,7 +511,6 @@ div.contact .chatbox {
     position: relative;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
@@ -600,18 +523,15 @@ div.contact .chatbox {
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:hover {
     background-color: #454ace;
     color: #fff;
     border-bottom: 4px solid #2f33b1;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button {
     width: 100px;
     height: 28px;
@@ -627,7 +547,6 @@ div.contact .chatbox {
     position: relative;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
@@ -640,18 +559,15 @@ div.contact .chatbox {
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:hover {
     background-color: #00a9de;
     color: #fff;
     border-bottom: 4px solid #0082ab;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button {
     width: 100px;
     height: 28px;
@@ -667,7 +583,6 @@ div.contact .chatbox {
     position: relative;
     overflow: hidden;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
@@ -680,52 +595,42 @@ div.contact .chatbox {
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:hover {
     background-color: #d651b9;
     color: #fff;
     border-bottom: 4px solid #c52fa5;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a p {
     font-size: 14px;
   }
-
   section.first_carousel.first_carousel .first_swiper img {
     width: 41.034vw;
     height: 366px;
   }
-
   section.first_carousel .carousel_button {
-    bottom: 0;
+    bottom: 100px;
     left: 70px;
   }
-
   section.first_carousel .carousel_button .button_purple svg {
     height: 30px;
   }
-
-  section.first_carousel .carousel_button .button>p {
+  section.first_carousel .carousel_button .button > p {
     font-size: 14px;
   }
-
   section.first_carousel .carousel_button svg {
     margin-bottom: 0.977vw;
     height: 28px;
   }
 }
-
 @media (max-width: 500px) {
   section.first_carousel .wrapper {
     width: 95%;
     margin: 0 auto;
   }
-
   section.first_carousel .carousel_button {
     margin-top: 20px;
     display: flex;
@@ -735,47 +640,43 @@ div.contact .chatbox {
     left: auto;
     justify-content: center;
   }
-
+  section.first_carousel.first_carousel > div.gray_section {
+    display: none;
+  }
   section.first_carousel.first_carousel .first_swiper .text_box {
     width: 40%;
     left: 50px;
   }
-
   div.contact .wrap {
     right: 28px;
     bottom: 50px;
   }
-
   div.contact .chatbox {
     width: 120px;
   }
 }
-
 @media (max-width: 430px) {
   section.first_carousel.first_carousel {
+    height: 1000px;
     position: relative;
   }
-
   section.first_carousel.first_carousel .swiper-slide {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
-
   section.first_carousel.first_carousel .main_text {
     font-size: 6.5128vw;
     margin-bottom: 4.652vw;
   }
-
   section.first_carousel.first_carousel .first_swiper img {
     width: 90.714vw;
     height: 120.952vw;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     border-radius: 40px;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box {
     box-sizing: border-box;
     width: 88%;
@@ -784,18 +685,15 @@ div.contact .chatbox {
     left: 20px;
     bottom: 140px;
   }
-
-  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description>p:nth-child(1) {
+  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
     font-size: 24px;
     margin-bottom: 20px;
   }
-
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p:nth-child(2) {
     font-size: 16px;
     line-height: 1.8;
     max-height: none;
   }
-
   section.first_carousel .carousel_button {
     margin-top: 0;
     display: flex;

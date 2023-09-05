@@ -195,9 +195,9 @@ section.first_carousel .swiper-pagination {
 
 a {
   box-sizing: content-box;
-  font-size: 1.042vw;
-  width: 7.294vw;
-  height: 2.084vw;
+  font-size: 14px;
+  width: 100px;
+  height: 28px;
 }
 a.gold.button {
   display: flex;
@@ -370,7 +370,7 @@ a.purple.button:hover:before {
   transition: all 0.5s ease-in-out;
 }
 a p {
-  font-size: 1.042vw;
+  font-size: 14px;
 }
 
 div.contact .wrap {

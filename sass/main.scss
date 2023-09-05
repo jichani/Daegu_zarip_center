@@ -188,9 +188,9 @@ section.first_carousel {
 
 a {
   box-sizing: content-box;
-  font-size: 20 * $size-1920-1px;
-  width: 140 * $size-1920-1px;
-  height: 40 * $size-1920-1px;
+  font-size: 14px;
+  width: 100px;
+  height: 28px;
   &.gold {
     @include set-button-color($Main_1);
   }
@@ -211,7 +211,7 @@ a {
     @include set-button-color($Main_5);
   }
   p {
-    font-size: 20 * $size-1920-1px;
+    font-size: 14px;
   }
 }
 

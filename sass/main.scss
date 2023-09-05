@@ -114,8 +114,8 @@ section.first_carousel {
           line-height: 1.8;
         }
         a {
-          width: 140 * $size-1920-1px;
-          height: 40 * $size-1920-1px;
+          width: 140px;
+          height: 40px;
           align-self: flex-end;
 
           p {
@@ -189,8 +189,8 @@ section.first_carousel {
 section a {
   box-sizing: content-box;
   font-size: 14px;
-  width: 100px;
-  height: 28px;
+  width: 140px;
+  height: 40px;
   &.gold {
     @include set-button-color($Main_1);
   }
@@ -321,6 +321,12 @@ div.contact {
         height: 28px;
       }
     }
+  }
+  section a {
+    box-sizing: content-box;
+    font-size: 14px;
+    width: 100px;
+    height: 28px;
   }
 }
 

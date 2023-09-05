@@ -114,8 +114,8 @@ section.first_carousel .first_swiper .text_box .text_box_description p:nth-child
   line-height: 1.8;
 }
 section.first_carousel .first_swiper .text_box .text_box_description a {
-  width: 7.294vw;
-  height: 2.084vw;
+  width: 140px;
+  height: 40px;
   align-self: flex-end;
 }
 section.first_carousel .first_swiper .text_box .text_box_description a p {
@@ -196,8 +196,8 @@ section.first_carousel .swiper-pagination {
 section a {
   box-sizing: content-box;
   font-size: 14px;
-  width: 100px;
-  height: 28px;
+  width: 140px;
+  height: 40px;
 }
 section a.gold.button {
   display: flex;
@@ -613,6 +613,12 @@ div.contact .chatbox {
   }
   section.first_carousel .carousel_button svg {
     margin-bottom: 0.977vw;
+    height: 28px;
+  }
+  section a {
+    box-sizing: content-box;
+    font-size: 14px;
+    width: 100px;
     height: 28px;
   }
 }

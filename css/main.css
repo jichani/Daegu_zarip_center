@@ -196,10 +196,10 @@ section.first_carousel .swiper-pagination {
 a {
   box-sizing: content-box;
   font-size: 1.042vw;
+  width: 7.294vw;
+  height: 2.084vw;
 }
 a.gold.button {
-  width: 100px;
-  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,8 +234,6 @@ a.gold.button:hover:before {
   transition: all 0.5s ease-in-out;
 }
 a.green.button {
-  width: 100px;
-  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,8 +268,6 @@ a.green.button:hover:before {
   transition: all 0.5s ease-in-out;
 }
 a.skyblue.button {
-  width: 100px;
-  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,8 +302,6 @@ a.skyblue.button:hover:before {
   transition: all 0.5s ease-in-out;
 }
 a.navy.button {
-  width: 100px;
-  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,8 +336,6 @@ a.navy.button:hover:before {
   transition: all 0.5s ease-in-out;
 }
 a.purple.button {
-  width: 100px;
-  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -433,8 +425,6 @@ div.contact .chatbox {
     align-self: flex-end;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.gold.button {
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,8 +459,6 @@ div.contact .chatbox {
     transition: all 0.5s ease-in-out;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.green.button {
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -505,8 +493,6 @@ div.contact .chatbox {
     transition: all 0.5s ease-in-out;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.skyblue.button {
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,8 +527,6 @@ div.contact .chatbox {
     transition: all 0.5s ease-in-out;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.navy.button {
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -577,8 +561,6 @@ div.contact .chatbox {
     transition: all 0.5s ease-in-out;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a.purple.button {
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -632,192 +614,6 @@ div.contact .chatbox {
   section.first_carousel .carousel_button svg {
     margin-bottom: 0.977vw;
     height: 28px;
-  }
-  a {
-    font-size: 14px;
-  }
-  a.gold.button {
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #ff9213;
-    font-size: 24px;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  a.gold.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  a.gold.button:hover {
-    background-color: #ff9213;
-    color: #fff;
-    border-bottom: 4px solid #df7800;
-  }
-  a.gold.button:hover:before {
-    transform: skewX(-45deg) translateX(13.5em);
-    transition: all 0.5s ease-in-out;
-  }
-  a.green.button {
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #76c043;
-    font-size: 24px;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  a.green.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  a.green.button:hover {
-    background-color: #76c043;
-    color: #fff;
-    border-bottom: 4px solid #5e9c34;
-  }
-  a.green.button:hover:before {
-    transform: skewX(-45deg) translateX(13.5em);
-    transition: all 0.5s ease-in-out;
-  }
-  a.skyblue.button {
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #454ace;
-    font-size: 24px;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  a.skyblue.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  a.skyblue.button:hover {
-    background-color: #454ace;
-    color: #fff;
-    border-bottom: 4px solid #2f33b1;
-  }
-  a.skyblue.button:hover:before {
-    transform: skewX(-45deg) translateX(13.5em);
-    transition: all 0.5s ease-in-out;
-  }
-  a.navy.button {
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #00a9de;
-    font-size: 24px;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  a.navy.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  a.navy.button:hover {
-    background-color: #00a9de;
-    color: #fff;
-    border-bottom: 4px solid #0082ab;
-  }
-  a.navy.button:hover:before {
-    transform: skewX(-45deg) translateX(13.5em);
-    transition: all 0.5s ease-in-out;
-  }
-  a.purple.button {
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #d651b9;
-    font-size: 24px;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  a.purple.button:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  a.purple.button:hover {
-    background-color: #d651b9;
-    color: #fff;
-    border-bottom: 4px solid #c52fa5;
-  }
-  a.purple.button:hover:before {
-    transform: skewX(-45deg) translateX(13.5em);
-    transition: all 0.5s ease-in-out;
-  }
-  a p {
-    font-size: 14px;
   }
 }
 @media (max-width: 500px) {

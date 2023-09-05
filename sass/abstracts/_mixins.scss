@@ -1,7 +1,5 @@
-@mixin set-button-color($color: $Main_1, $width-size, $height-size) {
+@mixin set-button-color($color: $Main_1) {
   &.button {
-    width: $width-size;
-    height: $height-size;
     display: flex;
     justify-content: center;
     align-items: center;

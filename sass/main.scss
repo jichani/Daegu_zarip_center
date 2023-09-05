@@ -189,24 +189,26 @@ section.first_carousel {
 a {
   box-sizing: content-box;
   font-size: 20 * $size-1920-1px;
+  width: 140 * $size-1920-1px;
+  height: 40 * $size-1920-1px;
   &.gold {
-    @include set-button-color($Main_1, 100px, 28px);
+    @include set-button-color($Main_1);
   }
 
   &.green {
-    @include set-button-color($Main_2, 100px, 28px);
+    @include set-button-color($Main_2);
   }
 
   &.skyblue {
-    @include set-button-color($Main_3, 100px, 28px);
+    @include set-button-color($Main_3);
   }
 
   &.navy {
-    @include set-button-color($Main_4, 100px, 28px);
+    @include set-button-color($Main_4);
   }
 
   &.purple {
-    @include set-button-color($Main_5, 100px, 28px);
+    @include set-button-color($Main_5);
   }
   p {
     font-size: 20 * $size-1920-1px;
@@ -271,23 +273,23 @@ div.contact {
             height: 28px;
             align-self: flex-end;
             &.gold {
-              @include set-button-color($Main_1, 100px, 28px);
+              @include set-button-color($Main_1);
             }
 
             &.green {
-              @include set-button-color($Main_2, 100px, 28px);
+              @include set-button-color($Main_2);
             }
 
             &.skyblue {
-              @include set-button-color($Main_4, 100px, 28px);
+              @include set-button-color($Main_4);
             }
 
             &.navy {
-              @include set-button-color($Main_3, 100px, 28px);
+              @include set-button-color($Main_3);
             }
 
             &.purple {
-              @include set-button-color($Main_5, 100px, 28px);
+              @include set-button-color($Main_5);
             }
 
             p {
@@ -318,32 +320,6 @@ div.contact {
         margin-bottom: 10 * $size-1024-1px;
         height: 28px;
       }
-    }
-  }
-  a {
-    font-size: 14px;
-    &.gold {
-      @include set-button-color($Main_1, 100px, 28px);
-    }
-
-    &.green {
-      @include set-button-color($Main_2, 100px, 28px);
-    }
-
-    &.skyblue {
-      @include set-button-color($Main_4, 100px, 28px);
-    }
-
-    &.navy {
-      @include set-button-color($Main_3, 100px, 28px);
-    }
-
-    &.purple {
-      @include set-button-color($Main_5, 100px, 28px);
-    }
-
-    p {
-      font-size: 14px;
     }
   }
 }

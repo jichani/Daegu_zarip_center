@@ -329,9 +329,9 @@
 
     .title {
         padding-top: 56px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         font-size: 40px;
-        max-width: 940px;
+        max-width: 1400px;
         margin: 0 auto;
     }
 
@@ -481,7 +481,7 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1600px) {
 
     /* 첫번째 컨텐츠 */
     .content_first {
@@ -522,7 +522,7 @@
         padding-top: 80px;
         padding-bottom: 30px;
         font-size: 48px;
-        max-width: 1450px;
+        max-width: 1400px;
     }
 
     .finance_zip {

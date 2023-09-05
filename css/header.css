@@ -37,13 +37,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1460px;
-    margin-left: 60px;
+    margin-left: 10vw;
 }
 
 .header_inner img {
     width: 320px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .header_inner nav {
@@ -79,12 +78,16 @@ header .header_inner .right_nav {
     justify-content: center;
     align-items: center;
     height: 90px;
+    gap: 10.9792vw;
 }
 
 .menu_wrapper .main_menu_title span {
     font-size: 1.18rem;
     display: inline-block;
-    margin-left: 200px;
+}
+
+.menu_wrapper .main_menu_title span.last_nav {
+    margin-right: 10vw;
 }
 
 .menu_wrapper .main_menu_title span.main_title_first {
@@ -156,7 +159,7 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
     height: 90px;
     display: flex;
     align-items: center;
-    /* margin-right: 10px; */
+    margin-right: 40px;
 }
 
 .right_nav_icon {
@@ -176,10 +179,9 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
 }
 
 /* 헤더 태블릿 버전 */
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
     .header_inner img {
-        width: 320px;
-        height: 46px;
+        width: 260px;
     }
 
     header .header_inner .right_nav {
@@ -294,6 +296,10 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
         display: inline-block;
         margin: 20px;
         cursor: pointer;
+    }
+
+    .sideAccordion_title span:hover {
+        color: #4279bc;
     }
 
     .sideAccordion_menu {

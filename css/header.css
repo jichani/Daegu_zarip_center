@@ -331,6 +331,7 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
 @media screen and (max-width: 430px) {
     .header_inner {
         padding: 0 10px;
+        margin-left: 4vw;
     }
 
     .header_inner img {
@@ -340,5 +341,13 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
 
     .nav_toggle #menuicon:checked+label+div {
         left: 0;
+    }
+
+    .menu_wrapper {
+        gap: 6vw;
+    }
+
+    header .header_inner .right_nav {
+        margin-right: 10px;
     }
 }

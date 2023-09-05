@@ -193,13 +193,13 @@ section.first_carousel .swiper-pagination {
   display: none;
 }
 
-a {
+section a {
   box-sizing: content-box;
   font-size: 14px;
   width: 100px;
   height: 28px;
 }
-a.gold.button {
+section a.gold.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,7 +212,7 @@ a.gold.button {
   position: relative;
   overflow: hidden;
 }
-a.gold.button:before {
+section a.gold.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -224,16 +224,16 @@ a.gold.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-a.gold.button:hover {
+section a.gold.button:hover {
   background-color: #ff9213;
   color: #fff;
   border-bottom: 4px solid #df7800;
 }
-a.gold.button:hover:before {
+section a.gold.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-a.green.button {
+section a.green.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,7 +246,7 @@ a.green.button {
   position: relative;
   overflow: hidden;
 }
-a.green.button:before {
+section a.green.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -258,16 +258,16 @@ a.green.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-a.green.button:hover {
+section a.green.button:hover {
   background-color: #76c043;
   color: #fff;
   border-bottom: 4px solid #5e9c34;
 }
-a.green.button:hover:before {
+section a.green.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-a.skyblue.button {
+section a.skyblue.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +280,7 @@ a.skyblue.button {
   position: relative;
   overflow: hidden;
 }
-a.skyblue.button:before {
+section a.skyblue.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -292,16 +292,16 @@ a.skyblue.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-a.skyblue.button:hover {
+section a.skyblue.button:hover {
   background-color: #00a9de;
   color: #fff;
   border-bottom: 4px solid #0082ab;
 }
-a.skyblue.button:hover:before {
+section a.skyblue.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-a.navy.button {
+section a.navy.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,7 +314,7 @@ a.navy.button {
   position: relative;
   overflow: hidden;
 }
-a.navy.button:before {
+section a.navy.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -326,16 +326,16 @@ a.navy.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-a.navy.button:hover {
+section a.navy.button:hover {
   background-color: #454ace;
   color: #fff;
   border-bottom: 4px solid #2f33b1;
 }
-a.navy.button:hover:before {
+section a.navy.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-a.purple.button {
+section a.purple.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,7 +348,7 @@ a.purple.button {
   position: relative;
   overflow: hidden;
 }
-a.purple.button:before {
+section a.purple.button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -360,16 +360,16 @@ a.purple.button:before {
   transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-a.purple.button:hover {
+section a.purple.button:hover {
   background-color: #d651b9;
   color: #fff;
   border-bottom: 4px solid #c52fa5;
 }
-a.purple.button:hover:before {
+section a.purple.button:hover:before {
   transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
 }
-a p {
+section a p {
   font-size: 14px;
 }
 

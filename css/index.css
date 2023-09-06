@@ -1,58 +1,3 @@
-@font-face {
-    font-family: "Pretendard-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* 첫번째 컨텐츠 */
-.content_first {
-    background: linear-gradient(180deg,
-            #c7e2ff 0%,
-            rgba(228, 239, 251, 0) 100%);
-    height: 502px;
-}
-
-.content_first_wrapper {
-    max-width: 430px;
-    position: relative;
-    padding: 0 20px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.slogan {
-    position: absolute;
-    left: 30px;
-    top: 120px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.slogan_second {
-    position: absolute;
-    left: 106px;
-    top: 170px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.slogan_second span {
-    font-size: 48px;
-    color: #4279bc;
-}
-
-.main_image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.main_image img {
-    width: 330px;
-    height: 220px;
-}
-
 /* 세번째 컨텐츠 */
 .content_third {
     padding: 0 20px;
@@ -273,47 +218,6 @@
 
 @media screen and (min-width: 1024px) {
 
-    /* 첫번째 컨텐츠 */
-    .content_first {
-        height: 653px;
-    }
-
-    .content_first_wrapper {
-        max-width: 1024px;
-        position: relative;
-        padding: 0px;
-        height: 100%;
-    }
-
-    .slogan {
-        left: 80px;
-        top: 164px;
-        font-size: 48px;
-        font-weight: 700;
-    }
-
-    .slogan_second {
-        left: 162px;
-        top: 241px;
-        font-size: 48px;
-        font-weight: 700;
-    }
-
-    .slogan_second span {
-        font-size: 72px;
-    }
-
-    .main_image {
-        position: absolute;
-        right: 120px;
-        bottom: 0;
-    }
-
-    .main_image img {
-        width: 520px;
-        height: 346px;
-    }
-
     /* 세번째 컨텐츠 */
     .content_third {
         padding: 0;
@@ -476,39 +380,6 @@
 
 @media screen and (min-width: 1600px) {
 
-    /* 첫번째 컨텐츠 */
-    .content_first {
-        height: 964px;
-    }
-
-    .content_first_wrapper {
-        max-width: 1920px;
-    }
-
-    .slogan {
-        left: 246px;
-        top: 98px;
-        font-size: 76px;
-    }
-
-    .slogan_second {
-        left: 400px;
-        top: 214px;
-        font-size: 76px;
-    }
-
-    .slogan_second span {
-        font-size: 128px;
-    }
-
-    .main_image {
-        right: 236px;
-    }
-
-    .main_image img {
-        width: 960px;
-        height: 640px;
-    }
 
     /* 세번째 컨텐츠 */
     .title {

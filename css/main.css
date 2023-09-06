@@ -36,6 +36,9 @@ section.content_first {
   margin-top: -90px;
   padding-top: 90px;
 }
+section.content_first img {
+  width: 100%;
+}
 
 section.first_carousel {
   margin-top: -10px;
@@ -414,11 +417,13 @@ div.contact .chatbox {
 }
 
 section.contact_form {
+  box-sizing: border-box;
   width: 100%;
   height: 945px;
   position: relative;
 }
 section.contact_form .blue_area {
+  box-sizing: border-box;
   position: absolute;
   top: 196px;
   width: 100%;
@@ -537,6 +542,10 @@ section.contact_form .form_area form .submit:hover {
 }
 
 @media (max-width: 1024px) {
+  section.content_first img {
+    width: 100%;
+    content: url("../img/main_tablet.jpg");
+  }
   section.first_carousel {
     height: 600px;
   }
@@ -800,6 +809,10 @@ section.contact_form .form_area form .submit:hover {
   }
 }
 @media (max-width: 430px) {
+  section.content_first img {
+    width: 100%;
+    content: url("../img/main_mobile.jpg");
+  }
   section.first_carousel.first_carousel {
     height: 1000px;
     position: relative;

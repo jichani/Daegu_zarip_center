@@ -25,6 +25,9 @@
 section.content_first {
   margin-top: -90px;
   padding-top: 90px;
+  img {
+    width: 100%;
+  }
 }
 
 section.first_carousel {
@@ -260,10 +263,12 @@ div.contact {
 }
 
 section.contact_form {
+  box-sizing: border-box;
   width: 100%;
   height: 945px;
   position: relative;
   .blue_area {
+    box-sizing: border-box;
     position: absolute;
     top: 196px;
     width: 100%;
@@ -384,6 +389,13 @@ section.contact_form {
 }
 
 @include tablet {
+  section.content_first {
+    img {
+      width: 100%;
+      content: url("../img/main_tablet.jpg");
+    }
+  }
+
   section.first_carousel {
     height: 600px;
 
@@ -518,6 +530,12 @@ section.contact_form {
 }
 
 @include mobile {
+  section.content_first {
+    img {
+      width: 100%;
+      content: url("../img/main_mobile.jpg");
+    }
+  }
   section.first_carousel {
     &.first_carousel {
       height: 1000px;

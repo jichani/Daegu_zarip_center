@@ -134,12 +134,12 @@ input {
 }
 
 .inqurey_btn button {
-  width: 60px;
-  height: 40px;
+  width: 72px;
+  height: 38px;
   margin-bottom: 23px;
   font-family: Pretendard;
   border-radius: 5px;
-  border: 1px solid #d1d1d1;
+  border: none;
   background: #fff;
 }
 

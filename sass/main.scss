@@ -223,7 +223,7 @@ div.contact {
     margin-top: 5px;
 
     position: fixed;
-    right: 28 * $size-1920-1px;
+    right: 27 * $size-1920-1px;
     bottom: 80 * $size-1920-1px;
     z-index: 100;
   }
@@ -242,11 +242,12 @@ div.contact {
   height: 50px;
   position: fixed;
   background-color: $Main_2;
-  right: 10px;
-  bottom: 30px; /* 위치를 절대값으로 고정 */
+  right: 79 * $size-1920-1px;
+  bottom: 30 * $size-1920-1px; /* 위치를 절대값으로 고정 */
   text-align: center;
   line-height: 3.1;
   border-radius: 50%; /* 모서리가 둥근 사각형, 박스 테두리 지정 */
+  animation: contact-motion 0.8s linear 0s infinite alternate;
   a {
     text-decoration: none;
     color: #fff;
@@ -312,6 +313,65 @@ section.contact_form {
         p:nth-child(2) {
           font-size: 24px;
           font-weight: 400;
+        }
+      }
+    }
+  }
+  .form_area {
+    position: absolute;
+    right: 364px;
+    top: 116px;
+    width: 460px;
+    height: 767px;
+    border-radius: 5px;
+    background: var(--Main_Gray, #4d5359);
+    form {
+      padding: 48px 30px 48px 30px;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      p {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      .inqurey_btn button:hover,
+      .inqurey_btn button.checked {
+        background-color: $Main_2;
+        color: #fff;
+        font-weight: 700;
+      }
+      input.contact_info {
+        height: 160px;
+      }
+      input#agreeCheckbox {
+        width: auto;
+      }
+      a {
+        color: #fff;
+        align-self: flex-end;
+        width: auto;
+        margin-bottom: 30px;
+        height: auto;
+      }
+      .submit {
+        width: 100%;
+        background-color: #fff;
+        color: black;
+        border: none;
+        outline: none;
+        &:hover {
+          background-color: $Main_2;
+          color: #fff;
+          font-weight: 700;
         }
       }
     }

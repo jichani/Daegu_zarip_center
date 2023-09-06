@@ -481,7 +481,28 @@
         </div>
       </div>
     </div>
-    <div class="form_area"></div>
+    <div class="form_area">
+      <form>
+        <p>문의하기</p>
+        <input type="text" placeholder="이름" class="name" />
+        <input type="tel" placeholder="연락처" class="call" />
+        <input type="email" placeholder="이메일" class="email" />
+        <div>
+          <div class="inqurey_btn">
+            <button type="button" class="inqurey_option" data-value="재정">재정</button>
+            <button type="button" class="inqurey_option" data-value="주거">주거</button>
+            <button type="button" class="inqurey_option" data-value="진로">진로</button>
+            <button type="button" class="inqurey_option" data-value="건강">건강</button>
+            <button type="button" class="inqurey_option" data-value="기타">기타</button>
+          </div>
+        </div>
+        <input class="contact_info" type="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." />
+        <label><input id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보수집 이용에 관한 동의</label>
+        <a href="./agree.html" target="_blank">개인정보처리방침</a>
+
+        <button type="button" id="privateButton" class="submit">신청하기</button>
+      </form>
+    </div>
   </section>
 
   <section class="marquee">

@@ -1,586 +1,771 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>대구시자립지원센터</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대구시자립지원센터</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
+        <link rel="stylesheet" href="./css/marquee.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/modal.css" />
+        <link rel="stylesheet" href="./css/index.css" />
 
+        <!-- AOS 라이브러리 불러오기-->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/marquee.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/modal.css">
-  <link rel="stylesheet" href="./css/index.css" />
+        <!-- 폰트어썸 // -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;300&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-  <!-- AOS 라이브러리 불러오기-->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <body>
+        <header>
+            <div class="header_inner">
+                <a href="./index.html"
+                    ><img src="./img/logo.png" alt="대구자립지원전담기관 logo"
+                /></a>
 
-  <!-- 폰트어썸 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;300&display=swap" rel="stylesheet" />
-</head>
+                <nav class="menu_wrapper">
+                    <ui>
+                        <li>
+                            <div class="main_menu_title main">
+                                <a href="#information"
+                                    ><span class="main_title main_title_first"
+                                        >자립정보</span
+                                    ></a
+                                >
+                            </div>
+                        </li>
+                    </ui>
 
-<body>
-  <header>
-    <div class="header_inner">
-      <a href="./index.html"><img src="./img/logo.png" alt="대구자립지원전담기관 logo" /></a>
+                    <ui>
+                        <li>
+                            <div class="main_menu_title main">
+                                <a href="#business"
+                                    ><span class="main_title"
+                                        >지원사업 정보</span
+                                    ></a
+                                >
+                            </div>
+                        </li>
+                    </ui>
 
-      <nav class="menu_wrapper">
-        <ui>
-          <li>
-            <div class="main_menu_title main">
-              <a href="#information"><span class="main_title main_title_first">자립정보</span></a>
-            </div>
-          </li>
-        </ui>
+                    <ui>
+                        <li>
+                            <div class="main_menu_title main">
+                                <span class="main_title last_nav contact_button"
+                                    >신청상담</span
+                                >
+                            </div>
+                        </li>
+                    </ui>
+                </nav>
 
-        <ui>
-          <li>
-            <div class="main_menu_title main">
-              <a href="#business"><span class="main_title">지원사업 정보</span></a>
-            </div>
-          </li>
-        </ui>
+                <div class="right_nav">
+                    <!-- 토글 메뉴 -->
+                    <div class="nav_toggle">
+                        <input type="checkbox" name="" id="menuicon" />
+                        <label for="menuicon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
 
-        <ui>
-          <li>
-            <div class="main_menu_title main">
-              <span class="main_title last_nav contact_button">신청상담</span>
-            </div>
-          </li>
-        </ui>
-      </nav>
-
-      <div class="right_nav">
-        <!-- 토글 메뉴 -->
-        <div class="nav_toggle">
-          <input type="checkbox" name="" id="menuicon" />
-          <label for="menuicon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-
-          <!-- 사이드 바 메뉴 -->
-          <div class="sidebar">
-            <ui>
-              <li>
-                <div class="main sideAccordion_title">
-                  <a href="#information"><span>자립정보</span></a>
-                </div>
-              </li>
-            </ui>
-            <ui>
-              <li>
-                <div class="main sideAccordion_title">
-                  <a href="#business"><span>지원사업 정보</span></a>
-                </div>
-              </li>
-            </ui>
-            <ui>
-              <li>
-                <div class="main sideAccordion_title">
-                  <span class="contact_button">상담신청</span>
-                </div>
-              </li>
-            </ui>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="content_first">
-    <div class="content_first_wrapper">
-      <div class="slogan">자립준비청년들의</div>
-      <div class="slogan_second">
-        <span>꿈</span>을 응원합니다!
-      </div>
-      <div class="main_image">
-        <img src="./img/people.png" alt="자립준비청년_이미지" />
-      </div>
-    </div>
-  </section>
-
-  <section class="first_carousel" id="information">
-    <div class="gray_section"></div>
-    <div class="wrapper">
-      <h1 class="main_text">
-        자립정보
-      </h1>
-
-      <div class="swiper first_swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="text_box">
-              <div class="text_box_description">
-                <p class="text_gold">
-                  재정관리
-                </p>
-                <p>
-                  현명한 소비생활방법과 통장개설 및 인터넷뱅킹 활용 등의 지식을 다루고 있습니다.<br />현대사회의 심각한 문제 중 하나인 '신용카드' 부분은 자립을 앞둔 여러분들이 꼭 알아야 하는
-                  중요한 내용입니다.
-                </p>
-                <a href="http://www.ggjarip.or.kr/ebook/gg02/" target="_blank" class="button gold">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-            <img src="./img/first_carousel1.png" alt="first_carousel1" loading="lazy" />
-          </div>
-          <div class="swiper-slide">
-            <div class="text_box">
-              <div class="text_box_description">
-                <p class="text_green">
-                  주거관리
-                </p>
-                <p>
-                  자립 한다는 것은 살아야 할 새로운 장소를 찾아야 한다는 것을 뜻합니다.
-                  자립을 하려면 혼자 또는 누군가와 함께 살 장소를 찾을 계획을 세워야 합니다.<br /> 주택나 아파트 등의 방을 구할
-                  때 갖추어야 할 서류와 거쳐야 할 절차는 어떤 것이 있는지 알아보도록 합시다.
-                </p>
-                <a href="http://www.ggjarip.or.kr/ebook/gg01/" target="_blank" class="button green">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-            <img src="./img/first_carousel2.png" alt="first_carousel2" loading="lazy" />
-          </div>
-          <div class="swiper-slide">
-            <div class="text_box">
-              <div class="text_box_description">
-                <p class="text_skyblue">
-                  진로관리
-                </p>
-                <p>
-                  여러분이 하고 싶은 것, 잘 하는 것이 무엇인지 알아보는 활동을 통해 먼저 직업에 대해 알고, 여러분이 원하는 진로에 따라 학업계획 또는 취업 계획을 세워 각각 거쳐야 하는 과정들을
-                  연습하게 될 것입니다.
-                </p>
-                <a href="http://www.ggjarip.or.kr/ebook/gg08/" target="_blank" class="button navy">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-            <img src="./img/first_carousel3.png" alt="first_carousel3" loading="lazy" />
-          </div>
-          <div class="swiper-slide">
-            <div class="text_box">
-              <div class="text_box_description">
-                <p class="text_navy">
-                  건강관리
-                </p>
-                <p>
-                  자신과 공동체에 대한 건강한 인식을 가지고 생활하도록 다방면으로 지원하고 있습니다.<br />
-                  전문가를 통한 맞춤심리상담, 성격검사 등을 지원하기도 하고 졸업 및 명절선물 나눔을 통해 안정적이고 풍성한
-                  정서생활을 유지하도록 돕습니다.
-
-                </p>
-                <a href="http://www.ggjarip.or.kr/ebook/gg09/" target="_blank" class="button skyblue">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-            <img src="./img/first_carousel4.png" alt="first_carousel4" loading="lazy" />
-          </div>
-          <div class="swiper-slide">
-            <div class="text_box">
-              <div class="text_box_description">
-                <p class="text_purple">
-                  기타관리
-                </p>
-                <p>
-                  그 외 일상생활에 필요한 '의, 식, 주'에 대한 기술 및 기타 생활에 필요한 기술을 습득하게 됩니다.<br /> 영양가 있는 식단으로 건강을 유지하고, 깨끗한 옷과 청결한 환경에서
-                  생활하는
-                  등의 기본적인 일상생활을 위해 일상생활기술이 필요합니다.
-                </p>
-                <a href="http://www.ggjarip.or.kr/ebook/gg04/" target="_blank" class="button purple">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-            <img src="./img/first_carousel5.png" alt="first_carousel5" loading="lazy" />
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-    <div class="carousel_button">
-      <div class="button button_gold active" data-slide="0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z" />
-        </svg>
-        <p>재정관리</p>
-      </div>
-      <div class="button button_green" data-slide="1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-          <path
-            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-        </svg>
-        <p>주거관리</p>
-      </div>
-      <div class="button button_skyblue" data-slide="2">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <path
-            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
-        </svg>
-        <p>진로관리</p>
-      </div>
-      <div class="button button_navy" data-slide="3">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <path
-            d="M192 48c0-26.5 21.5-48 48-48H400c26.5 0 48 21.5 48 48V512H368V432c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H192V48zM48 96H160V512H48c-26.5 0-48-21.5-48-48V320H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V224H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V144c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v48H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80V464c0 26.5-21.5 48-48 48H480V96H592zM312 64c-8.8 0-16 7.2-16 16v24H272c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h24v24c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V152h24c8.8 0 16-7.2 16-16V120c0-8.8-7.2-16-16-16H344V80c0-8.8-7.2-16-16-16H312z" />
-        </svg>
-        <p>건강관리</p>
-      </div>
-      <div class="button button_purple" data-slide="4">
-        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
-          viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <path
-            d="M0 24C0 10.7 10.7 0 24 0H360c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V67c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8V445c0-40.3 16-79 44.5-107.5L158.1 256 76.5 174.5C48 146 32 107.3 32 67V48H24C10.7 48 0 37.3 0 24zM110.5 371.5c-3.9 3.9-7.5 8.1-10.7 12.5H284.2c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80V67c0 22.1 7 43.4 19.8 61H284.2z" />
-        </svg>
-        <p>기타관리</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="content_third" id="business">
-    <h2 class="title"><span>자립지원사업 정보</span></h2>
-    <div class="info_zip">
-      <!-- 금융지원사업 -->
-      <div>
-        <div class="finance">
-          <div class="finance_zip">
-            <div class="finance_img">
-              <img src="./img/finance.png" alt="금융지원사업 이미지" />
-            </div>
-            <div class="finance_info">
-              <div class="finance_title">
-                <div class="finance_icon">
-                  <img src="./img/finance_icon.png" alt="금융지원사업 제목 아이콘" />
-                </div>
-                <div class="finance_title_text">
-                  금융지원사업
-                </div>
-              </div>
-              <div class="finance_info_detail_zip">
-                <div class="finance_info_detail_zip_zip">
-                  <div class="finance_info_detail">
-                    <div class="finance_num">01</div>
-                    <div class="finance_info_detail_text">
-                      자립준비청년 지원사업
+                        <!-- 사이드 바 메뉴 -->
+                        <div class="sidebar">
+                            <ui>
+                                <li>
+                                    <div class="main sideAccordion_title">
+                                        <a href="#information"
+                                            ><span>자립정보</span></a
+                                        >
+                                    </div>
+                                </li>
+                            </ui>
+                            <ui>
+                                <li>
+                                    <div class="main sideAccordion_title">
+                                        <a href="#business"
+                                            ><span>지원사업 정보</span></a
+                                        >
+                                    </div>
+                                </li>
+                            </ui>
+                            <ui>
+                                <li>
+                                    <div class="main sideAccordion_title">
+                                        <span class="contact_button"
+                                            >상담신청</span
+                                        >
+                                    </div>
+                                </li>
+                            </ui>
+                        </div>
                     </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">02</div>
-                    <div class="finance_info_detail_text">
-                      장학금 지원사업
-                    </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">03</div>
-                    <div class="finance_info_detail_text">
-                      맞춤형 경제 컨설팅
-                    </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">04</div>
-                    <div class="finance_info_detail_text">
-                      대출 지원사업
-                    </div>
-                  </div>
                 </div>
-                <div class="finance_btn">
-                  <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=20&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                    target="_blank" class="button gold">
-                    <p>자세히보기</p>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
+        </header>
+
+        <section class="content_first">
+            <div class="content_first_wrapper">
+                <div class="slogan">자립준비청년들의</div>
+                <div class="slogan_second"><span>꿈</span>을 응원합니다!</div>
+                <div class="main_image">
+                    <img src="./img/people.png" alt="자립준비청년_이미지" />
+                </div>
+            </div>
+        </section>
+
+        <section class="first_carousel" id="information">
+            <div class="gray_section"></div>
+            <div class="wrapper">
+                <h1 class="main_text">자립정보</h1>
+
+                <div class="swiper first_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="text_box">
+                                <div class="text_box_description">
+                                    <p class="text_gold">재정관리</p>
+                                    <p>
+                                        현명한 소비생활방법과 통장개설 및
+                                        인터넷뱅킹 활용 등의 지식을 다루고
+                                        있습니다.<br />현대사회의 심각한 문제 중
+                                        하나인 '신용카드' 부분은 자립을 앞둔
+                                        여러분들이 꼭 알아야 하는 중요한
+                                        내용입니다.
+                                    </p>
+                                    <a
+                                        href="http://www.ggjarip.or.kr/ebook/gg02/"
+                                        target="_blank"
+                                        class="button gold"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/first_carousel1.png"
+                                alt="first_carousel1"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_box">
+                                <div class="text_box_description">
+                                    <p class="text_green">주거관리</p>
+                                    <p>
+                                        자립 한다는 것은 살아야 할 새로운 장소를
+                                        찾아야 한다는 것을 뜻합니다. 자립을
+                                        하려면 혼자 또는 누군가와 함께 살 장소를
+                                        찾을 계획을 세워야 합니다.<br />
+                                        주택나 아파트 등의 방을 구할 때 갖추어야
+                                        할 서류와 거쳐야 할 절차는 어떤 것이
+                                        있는지 알아보도록 합시다.
+                                    </p>
+                                    <a
+                                        href="http://www.ggjarip.or.kr/ebook/gg01/"
+                                        target="_blank"
+                                        class="button green"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/first_carousel2.png"
+                                alt="first_carousel2"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_box">
+                                <div class="text_box_description">
+                                    <p class="text_skyblue">진로관리</p>
+                                    <p>
+                                        여러분이 하고 싶은 것, 잘 하는 것이
+                                        무엇인지 알아보는 활동을 통해 먼저
+                                        직업에 대해 알고, 여러분이 원하는 진로에
+                                        따라 학업계획 또는 취업 계획을 세워 각각
+                                        거쳐야 하는 과정들을 연습하게 될
+                                        것입니다.
+                                    </p>
+                                    <a
+                                        href="http://www.ggjarip.or.kr/ebook/gg08/"
+                                        target="_blank"
+                                        class="button navy"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/first_carousel3.png"
+                                alt="first_carousel3"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_box">
+                                <div class="text_box_description">
+                                    <p class="text_navy">건강관리</p>
+                                    <p>
+                                        자신과 공동체에 대한 건강한 인식을
+                                        가지고 생활하도록 다방면으로 지원하고
+                                        있습니다.<br />
+                                        전문가를 통한 맞춤심리상담, 성격검사
+                                        등을 지원하기도 하고 졸업 및 명절선물
+                                        나눔을 통해 안정적이고 풍성한 정서생활을
+                                        유지하도록 돕습니다.
+                                    </p>
+                                    <a
+                                        href="http://www.ggjarip.or.kr/ebook/gg09/"
+                                        target="_blank"
+                                        class="button skyblue"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/first_carousel4.png"
+                                alt="first_carousel4"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text_box">
+                                <div class="text_box_description">
+                                    <p class="text_purple">기타관리</p>
+                                    <p>
+                                        그 외 일상생활에 필요한 '의, 식, 주'에
+                                        대한 기술 및 기타 생활에 필요한 기술을
+                                        습득하게 됩니다.<br />
+                                        영양가 있는 식단으로 건강을 유지하고,
+                                        깨끗한 옷과 청결한 환경에서 생활하는
+                                        등의 기본적인 일상생활을 위해
+                                        일상생활기술이 필요합니다.
+                                    </p>
+                                    <a
+                                        href="http://www.ggjarip.or.kr/ebook/gg04/"
+                                        target="_blank"
+                                        class="button purple"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/first_carousel5.png"
+                                alt="first_carousel5"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="carousel_button">
+                <div class="button button_gold active" data-slide="0">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"
+                        />
+                    </svg>
+                    <p>재정관리</p>
+                </div>
+                <div class="button button_green" data-slide="1">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"
+                    >
+                        <path
+                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z"
+                        />
+                    </svg>
+                    <p>주거관리</p>
+                </div>
+                <div class="button button_skyblue" data-slide="2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
+                        />
+                    </svg>
+                    <p>진로관리</p>
+                </div>
+                <div class="button button_navy" data-slide="3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512"
+                    >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M192 48c0-26.5 21.5-48 48-48H400c26.5 0 48 21.5 48 48V512H368V432c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H192V48zM48 96H160V512H48c-26.5 0-48-21.5-48-48V320H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V224H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V144c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v48H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80V464c0 26.5-21.5 48-48 48H480V96H592zM312 64c-8.8 0-16 7.2-16 16v24H272c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h24v24c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V152h24c8.8 0 16-7.2 16-16V120c0-8.8-7.2-16-16-16H344V80c0-8.8-7.2-16-16-16H312z"
+                        />
+                    </svg>
+                    <p>건강관리</p>
+                </div>
+                <div class="button button_purple" data-slide="4">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        viewBox="0 0 384 512"
+                    >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M0 24C0 10.7 10.7 0 24 0H360c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V67c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8V445c0-40.3 16-79 44.5-107.5L158.1 256 76.5 174.5C48 146 32 107.3 32 67V48H24C10.7 48 0 37.3 0 24zM110.5 371.5c-3.9 3.9-7.5 8.1-10.7 12.5H284.2c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80V67c0 22.1 7 43.4 19.8 61H284.2z"
+                        />
+                    </svg>
+                    <p>기타관리</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content_third" id="business">
+            <h2 class="title"><span>자립지원사업 정보</span></h2>
+            <div class="info_zip">
+                <!-- 금융지원사업 -->
+                <div>
+                    <div class="finance">
+                        <div class="finance_zip">
+                            <div class="finance_img">
+                                <img
+                                    src="./img/finance.png"
+                                    alt="금융지원사업 이미지"
+                                />
+                            </div>
+                            <div class="finance_info">
+                                <div class="finance_title">
+                                    <div class="finance_icon">
+                                        <img
+                                            src="./img/finance_icon.png"
+                                            alt="금융지원사업 제목 아이콘"
+                                        />
+                                    </div>
+                                    <div class="finance_title_text">
+                                        금융지원사업
+                                    </div>
+                                </div>
+                                <div class="finance_info_detail_zip">
+                                    <div class="finance_info_detail_zip_zip">
+                                        <div class="finance_info_detail">
+                                            <div class="finance_num">01</div>
+                                            <div
+                                                class="finance_info_detail_text"
+                                            >
+                                                자립준비청년 지원사업
+                                            </div>
+                                        </div>
+                                        <div class="finance_info_detail">
+                                            <div class="finance_num">02</div>
+                                            <div
+                                                class="finance_info_detail_text"
+                                            >
+                                                장학금 지원사업
+                                            </div>
+                                        </div>
+                                        <div class="finance_info_detail">
+                                            <div class="finance_num">03</div>
+                                            <div
+                                                class="finance_info_detail_text"
+                                            >
+                                                맞춤형 경제 컨설팅
+                                            </div>
+                                        </div>
+                                        <div class="finance_info_detail">
+                                            <div class="finance_num">04</div>
+                                            <div
+                                                class="finance_info_detail_text"
+                                            >
+                                                대출 지원사업
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="finance_btn">
+                                        <a
+                                            href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=20&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                                            target="_blank"
+                                            class="button gold"
+                                        >
+                                            <p>자세히보기</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 주거지원사업 -->
+                    <div class="home">
+                        <div class="home_zip">
+                            <div class="home_img">
+                                <img
+                                    src="./img/home.png"
+                                    alt="주거지원사업 이미지"
+                                />
+                            </div>
+                            <div class="home_info">
+                                <div class="home_title">
+                                    <div class="home_icon">
+                                        <img
+                                            src="./img/home_icon.png"
+                                            alt="주거지원사업 제목 아이콘"
+                                        />
+                                    </div>
+                                    <div class="home_title_text">
+                                        주거지원사업
+                                    </div>
+                                </div>
+                                <div class="home_info_detail_zip">
+                                    <div class="home_info_detail_zip_zip">
+                                        <div class="home_info_detail">
+                                            <div class="home_num">01</div>
+                                            <div class="home_info_detail_text">
+                                                주거교육
+                                            </div>
+                                        </div>
+                                        <div class="home_info_detail">
+                                            <div class="home_num">02</div>
+                                            <div class="home_info_detail_text">
+                                                자산형성 역량 강화 지원사업
+                                            </div>
+                                        </div>
+                                        <div class="home_info_detail">
+                                            <div class="home_num">03</div>
+                                            <div class="home_info_detail_text">
+                                                맞춤형 경제 컨설팅
+                                            </div>
+                                        </div>
+                                        <div class="home_info_detail">
+                                            <div class="home_num">04</div>
+                                            <div class="home_info_detail_text">
+                                                주거대출 지원사업
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="home_btn">
+                                        <a
+                                            href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=19&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                                            target="_blank"
+                                            class="button green"
+                                        >
+                                            <p>자세히보기</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 진로지원사업 -->
+                <div class="unv">
+                    <div class="unv_zip">
+                        <div class="unv_img">
+                            <img
+                                src="./img/unv.png"
+                                alt="진로지원사업 이미지"
+                            />
+                        </div>
+                        <div class="unv_info">
+                            <div class="unv_title">
+                                <div class="unv_icon">
+                                    <img
+                                        src="./img/unv_icon.png"
+                                        alt="진로지원사업 제목 아이콘"
+                                    />
+                                </div>
+                                <div class="unv_title_text">진로지원사업</div>
+                            </div>
+                            <div class="unv_info_detail_zip">
+                                <div class="unv_info_detail_zip_zip">
+                                    <div class="unv_info_detail">
+                                        <div class="unv_num">01</div>
+                                        <div class="unv_info_detail_text">
+                                            학자금 지원사업
+                                        </div>
+                                    </div>
+                                    <div class="unv_info_detail">
+                                        <div class="unv_num">02</div>
+                                        <div class="unv_info_detail_text">
+                                            학자금대출 지원사업
+                                        </div>
+                                    </div>
+                                    <div class="unv_info_detail">
+                                        <div class="unv_num">03</div>
+                                        <div class="unv_info_detail_text">
+                                            취업 연계 지원사업
+                                        </div>
+                                    </div>
+                                    <div class="unv_info_detail">
+                                        <div class="unv_num">04</div>
+                                        <div class="unv_info_detail_text">
+                                            취업역량 강화 지원사업
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="unv_btn">
+                                    <a
+                                        href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=21&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                                        target="_blank"
+                                        class="button navy"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 의료지원사업 -->
+                <div class="medi">
+                    <div class="medi_zip">
+                        <div class="medi_img">
+                            <img
+                                src="./img/medi.png"
+                                alt="의료지원사업 이미지"
+                            />
+                        </div>
+                        <div class="medi_info">
+                            <div class="medi_title">
+                                <div class="medi_icon">
+                                    <img
+                                        src="./img/medi_icon.png"
+                                        alt="의료지원사업 제목 아이콘"
+                                    />
+                                </div>
+                                <div class="medi_title_text">의료지원사업</div>
+                            </div>
+                            <div class="medi_info_detail_zip">
+                                <div class="medi_info_detail_zip_zip">
+                                    <div class="medi_info_detail">
+                                        <div class="medi_num">01</div>
+                                        <div class="medi_info_detail_text">
+                                            상담소 지원사업
+                                        </div>
+                                    </div>
+                                    <div class="medi_info_detail">
+                                        <div class="medi_num">02</div>
+                                        <div class="medi_info_detail_text">
+                                            건강검진 지원사업
+                                        </div>
+                                    </div>
+                                    <div class="medi_info_detail">
+                                        <div class="medi_num">03</div>
+                                        <div class="medi_info_detail_text">
+                                            맞춤형 경제 컨설팅
+                                        </div>
+                                    </div>
+                                    <div class="medi_info_detail">
+                                        <div class="medi_num">04</div>
+                                        <div class="medi_info_detail_text">
+                                            정신건강 프로그램
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medi_btn">
+                                    <a
+                                        href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=23&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                                        target="_blank"
+                                        class="button skyblue"
+                                    >
+                                        <p>자세히보기</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="marquee">
+            <div class="marquee__inner" aria-hidden="true">
+                <span><img src="./img/logo1.png" alt="logo" /></span>
+                <span><img src="./img/logo2.png" alt="logo" /></span>
+                <span><img src="./img/logo3.png" alt="logo" /></span>
+                <span><img src="./img/logo4.png" alt="logo" /></span>
+                <span><img src="./img/logo5.png" alt="logo" /></span>
+                <span><img src="./img/logo6.png" alt="logo" /></span>
+                <span><img src="./img/logo7.png" alt="logo" /></span>
+                <span><img src="./img/logo8.png" alt="logo" /></span>
+                <span><img src="./img/logo9.png" alt="logo" /></span>
+                <span><img src="./img/logo10.png" alt="logo" /></span>
+                <!-- 복사된 부분 -->
+                <span><img src="./img/logo1.png" alt="logo" /></span>
+                <span><img src="./img/logo2.png" alt="logo" /></span>
+                <span><img src="./img/logo3.png" alt="logo" /></span>
+                <span><img src="./img/logo4.png" alt="logo" /></span>
+                <span><img src="./img/logo5.png" alt="logo" /></span>
+                <span><img src="./img/logo6.png" alt="logo" /></span>
+                <span><img src="./img/logo7.png" alt="logo" /></span>
+                <span><img src="./img/logo8.png" alt="logo" /></span>
+                <span><img src="./img/logo9.png" alt="logo" /></span>
+                <span><img src="./img/logo10.png" alt="logo" /></span>
+            </div>
+        </section>
+
+        <div class="contact">
+            <div class="wrap">
+                <img src="./img/contact.png" alt="contact" class="chatbox" />
+            </div>
         </div>
-        <!-- 주거지원사업 -->
-        <div class="home">
-          <div class="home_zip">
-            <div class="home_img">
-              <img src="./img/home.png" alt="주거지원사업 이미지" />
-            </div>
-            <div class="home_info">
-              <div class="home_title">
-                <div class="home_icon">
-                  <img src="./img/home_icon.png" alt="주거지원사업 제목 아이콘" />
-                </div>
-                <div class="home_title_text">
-                  주거지원사업
-                </div>
-              </div>
-              <div class="home_info_detail_zip">
-                <div class="home_info_detail_zip_zip">
-                  <div class="home_info_detail">
-                    <div class="home_num">01</div>
-                    <div class="home_info_detail_text">
-                      주거교육
+
+        <dialog>
+            <div class="modal">
+                <button value="close" class="close_btn">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <form>
+                    <h2>무엇이든 물어보세요</h2>
+                    <div class="info">
+                        <h3>이름</h3>
+                        <input type="text" placeholder="이름" class="name" />
+                        <h3>연락처</h3>
+                        <input
+                            type="tel"
+                            placeholder="010-1234-5678"
+                            class="call"
+                        />
+                        <h3>이메일</h3>
+                        <input
+                            type="email"
+                            placeholder="abcd@gmail.com"
+                            class="email"
+                        />
                     </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">02</div>
-                    <div class="home_info_detail_text">
-                      자산형성 역량 강화 지원사업
+                    <div class="inqurey_type">
+                        <h3>문의유형</h3>
+                        <div class="inqurey_btn">
+                            <button
+                                type="button"
+                                class="inqurey_option"
+                                data-value="재정"
+                            >
+                                재정
+                            </button>
+                            <button
+                                type="button"
+                                class="inqurey_option"
+                                data-value="주거"
+                            >
+                                주거
+                            </button>
+                            <button
+                                type="button"
+                                class="inqurey_option"
+                                data-value="진로"
+                            >
+                                진로
+                            </button>
+                            <button
+                                type="button"
+                                class="inqurey_option"
+                                data-value="건강"
+                            >
+                                건강
+                            </button>
+                            <button
+                                type="button"
+                                class="inqurey_option"
+                                data-value="기타"
+                            >
+                                기타
+                            </button>
+                        </div>
+                        <div class="inqurey_text">
+                            <h3>문의사항</h3>
+                            <input
+                                type="text"
+                                placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다."
+                                style="width: 324px; height: 126px"
+                            />
+                        </div>
+                        <div class="private">
+                            <label
+                                ><input
+                                    id="agreeCheckbox"
+                                    type="checkbox"
+                                    class="checkbox"
+                                />
+                                개인정보취급방침을 읽었으며, 이에
+                                동의합니다.</label
+                            >
+                            <button type="button" class="private_btn">
+                                전문보기
+                            </button>
+                        </div>
+                        <button type="button" id="privateButton" class="submit">
+                            제출하기
+                        </button>
                     </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">03</div>
-                    <div class="home_info_detail_text">
-                      맞춤형 경제 컨설팅
-                    </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">04</div>
-                    <div class="home_info_detail_text">
-                      주거대출 지원사업
-                    </div>
-                  </div>
-                </div>
-                <div class="home_btn">
-                  <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=19&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                    target="_blank" class="button green">
-                    <p>자세히보기</p>
-                  </a>
-                </div>
-              </div>
+                </form>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- 진로지원사업 -->
-      <div class="unv">
-        <div class="unv_zip">
-          <div class="unv_img">
-            <img src="./img/unv.png" alt="진로지원사업 이미지" />
-          </div>
-          <div class="unv_info">
-            <div class="unv_title">
-              <div class="unv_icon">
-                <img src="./img/unv_icon.png" alt="진로지원사업 제목 아이콘" />
-              </div>
-              <div class="unv_title_text">
-                진로지원사업
-              </div>
+        </dialog>
+
+        <footer>
+            <div class="footer_wrapper">
+                <div class="footer_list">
+                    <ul>
+                        <li>자립정보</li>
+                        <li>자립지원사업정보</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>채용안내</li>
+                    </ul>
+                </div>
+                <div class="footer_list_s">
+                    <ul>
+                        <li>(주)아이리스</li>
+                        <li>대표자 : 이연경</li>
+                        <li>사업자등록번호 : 499-81-00612</li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    COPYRIGHT © Team Iris. ALL RIGHT RESERVED.
+                </div>
             </div>
-            <div class="unv_info_detail_zip">
-              <div class="unv_info_detail_zip_zip">
-                <div class="unv_info_detail">
-                  <div class="unv_num">01</div>
-                  <div class="unv_info_detail_text">
-                    학자금 지원사업
-                  </div>
-                </div>
-                <div class="unv_info_detail">
-                  <div class="unv_num">02</div>
-                  <div class="unv_info_detail_text">
-                    학자금대출 지원사업
-                  </div>
-                </div>
-                <div class="unv_info_detail">
-                  <div class="unv_num">03</div>
-                  <div class="unv_info_detail_text">
-                    취업 연계 지원사업
-                  </div>
-                </div>
-                <div class="unv_info_detail">
-                  <div class="unv_num">04</div>
-                  <div class="unv_info_detail_text">
-                    취업역량 강화 지원사업
-                  </div>
-                </div>
-              </div>
-              <div class="unv_btn">
-                <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=21&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                  target="_blank" class="button navy">
-                  <p>자세히보기</p>
-                </a>
-              </div>
+            <div class="footer_logo">
+                <img
+                    src="./img/logo_white.png"
+                    alt="대구자립전담지원기관 로고"
+                />
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- 의료지원사업 -->
-      <div class="medi">
-        <div class="medi_zip">
-          <div class="medi_img">
-            <img src="./img/medi.png" alt="의료지원사업 이미지" />
-          </div>
-          <div class="medi_info">
-            <div class="medi_title">
-              <div class="medi_icon">
-                <img src="./img/medi_icon.png" alt="의료지원사업 제목 아이콘" />
-              </div>
-              <div class="medi_title_text">
-                의료지원사업
-              </div>
-            </div>
-            <div class="medi_info_detail_zip">
-              <div class="medi_info_detail_zip_zip">
-                <div class="medi_info_detail">
-                  <div class="medi_num">01</div>
-                  <div class="medi_info_detail_text">
-                    상담소 지원사업
-                  </div>
-                </div>
-                <div class="medi_info_detail">
-                  <div class="medi_num">02</div>
-                  <div class="medi_info_detail_text">
-                    건강검진 지원사업
-                  </div>
-                </div>
-                <div class="medi_info_detail">
-                  <div class="medi_num">03</div>
-                  <div class="medi_info_detail_text">
-                    맞춤형 경제 컨설팅
-                  </div>
-                </div>
-                <div class="medi_info_detail">
-                  <div class="medi_num">04</div>
-                  <div class="medi_info_detail_text">
-                    정신건강 프로그램
-                  </div>
-                </div>
-              </div>
-              <div class="medi_btn">
-                <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=23&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                  target="_blank" class="button skyblue">
-                  <p>자세히보기</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </footer>
 
-  <section class="marquee">
-    <div class="marquee__inner" aria-hidden="true">
-      <span><img src="./img/logo1.png" alt="logo"></span>
-      <span><img src="./img/logo2.png" alt="logo"></span>
-      <span><img src="./img/logo3.png" alt="logo"></span>
-      <span><img src="./img/logo4.png" alt="logo"></span>
-      <span><img src="./img/logo5.png" alt="logo"></span>
-      <span><img src="./img/logo6.png" alt="logo"></span>
-      <span><img src="./img/logo7.png" alt="logo"></span>
-      <span><img src="./img/logo8.png" alt="logo"></span>
-      <span><img src="./img/logo9.png" alt="logo"></span>
-      <span><img src="./img/logo10.png" alt="logo"></span>
-      <!-- 복사된 부분 -->
-      <span><img src="./img/logo1.png" alt="logo"></span>
-      <span><img src="./img/logo2.png" alt="logo"></span>
-      <span><img src="./img/logo3.png" alt="logo"></span>
-      <span><img src="./img/logo4.png" alt="logo"></span>
-      <span><img src="./img/logo5.png" alt="logo"></span>
-      <span><img src="./img/logo6.png" alt="logo"></span>
-      <span><img src="./img/logo7.png" alt="logo"></span>
-      <span><img src="./img/logo8.png" alt="logo"></span>
-      <span><img src="./img/logo9.png" alt="logo"></span>
-      <span><img src="./img/logo10.png" alt="logo"></span>
-    </div>
-  </section>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script
+            src="https://kit.fontawesome.com/a5bbbba078.js"
+            crossorigin="anonymous"
+        ></script>
 
-  <div class="contact">
-    <div class="wrap">
-      <img src="./img/contact.png" alt="contact" class="chatbox">
-    </div>
-  </div>
+        <script src="./js/toggle.js"></script>
+        <script src="./js/first_carousel.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/form.js"></script>
 
-  <dialog>
-    <div class="modal">
-      <button value="close" class="close_btn">
-        <i class="fa-solid fa-x"></i>
-      </button>
-      <form>
-        <h2>무엇이든 물어보세요</h2>
-        <div class="info">
-          <h3>이름</h3>
-          <input type="text" placeholder="이름" class="name" />
-          <h3>연락처</h3>
-          <input type="tel" placeholder="010-1234-5678" class="call" />
-          <h3>이메일</h3>
-          <input type="email" placeholder="abcd@gmail.com" class="email" />
-        </div>
-        <div class="inqurey_type">
-          <h3>문의유형</h3>
-          <div class="inqurey_btn">
-            <button type="button" class="inqurey_option" data-value="재정">재정</button>
-            <button type="button" class="inqurey_option" data-value="주거">주거</button>
-            <button type="button" class="inqurey_option" data-value="진로">진로</button>
-            <button type="button" class="inqurey_option" data-value="건강">건강</button>
-            <button type="button" class="inqurey_option" data-value="기타">기타</button>
-          </div>
-          <div class="inqurey_text">
-            <h3>문의사항</h3>
-            <input type="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." style="width: 324px; height: 126px" />
-          </div>
-          <div class="private">
-            <label><input id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보취급방침을
-              읽었으며, 이에 동의합니다.</label>
-            <button type="button" class="private_btn">전문보기</button>
-          </div>
-          <button type="button" id="privateButton" class="submit">제출하기</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
-
-  <footer>
-    <div class="footer_wrapper">
-      <div class="footer_list">
-        <ul>
-          <li>자립정보</li>
-          <li>자립지원사업정보</li>
-          <li>이용약관</li>
-          <li>개인정보처리방침</li>
-          <li>채용안내</li>
-        </ul>
-      </div>
-      <div class="footer_list_s">
-        <ul>
-          <li>(주)아이리스</li>
-          <li>대표자 : 이연경</li>
-          <li>사업자등록번호 : 499-81-00612</li>
-        </ul>
-      </div>
-      <div class="copyright">
-        COPYRIGHT © Team Iris. ALL RIGHT RESERVED.
-      </div>
-    </div>
-    <div class="footer_logo">
-      <img src="./img/logo_white.png" alt="대구자립전담지원기관 로고" />
-    </div>
-  </footer>
-
-
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a5bbbba078.js" crossorigin="anonymous"></script>
-
-
-  <script src="./js/toggle.js"></script>
-  <script src="./js/first_carousel.js"></script>
-  <script src="./js/modal.js"></script>
-  <script src="./js/form.js"></script>
-
-  <!-- AOS 스크립트 시작 -->
-  <script>
-    AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
-  </script>
-
-</body>
-
+        <!-- AOS 스크립트 시작 -->
+        <script>
+            AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+        </script>
+    </body>
 </html>

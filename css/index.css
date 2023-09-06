@@ -544,34 +544,34 @@
     }
 }
 
-@media screen and (min-width: 1890px) {
+@media screen and (min-width: 1700px) {
     /* 세번째 컨텐츠 */
     .finance_title {
         /* border: 1px solid red; */
-        width: 43%;
+        width: 48%;
         height: 20%;
     }
     .home_title {
         /* border: 1px solid red; */
-        width: 51%;
+        width: 57%;
         height: 20%;
     }
 
     .unv_title {
         /* border: 1px solid red; */
-        width: 44%;
+        width: 49%;
         height: 20%;
     }
 
     .medi_title {
         /* border: 1px solid red; */
-        width: 38%;
+        width: 43%;
         height: 20%;
     }
 
     .finance_info_detail_zip {
         height: 80%;
-        width: 43%;
+        width: 48%;
         margin: 0 auto;
         /* border: 1px solid aqua; */
         display: flex;
@@ -581,7 +581,7 @@
 
     .home_info_detail_zip {
         height: 80%;
-        width: 51%;
+        width: 57%;
         margin: 0 auto;
         /* border: 1px solid aqua; */
         display: flex;
@@ -591,7 +591,7 @@
 
     .unv_info_detail_zip {
         height: 80%;
-        width: 44%;
+        width: 49%;
         margin: 0 auto;
         /* border: 1px solid aqua; */
         display: flex;
@@ -601,7 +601,7 @@
 
     .medi_info_detail_zip {
         height: 80%;
-        width: 38%;
+        width: 43%;
         margin: 0 auto;
         /* border: 1px solid aqua; */
         display: flex;

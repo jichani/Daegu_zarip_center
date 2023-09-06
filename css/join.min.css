@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    cursor: pointer
+}
+
+.privacy_content .inner {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px 20px 30px
+}
+
+.privacy_content .main_title {
+    flex: none;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -.2px;
+    color: #1e1e23;
+    text-align: center
+}
+
+
+.privacy_content .content_box {
+    flex: 0 1 auto;
+    overflow: auto;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #d6d6d6
+}
+
+.privacy_content .content_box pre {
+    margin: 0;
+    font-family: Pretendard-Regular;
+    font-size: 15px;
+    line-height: 20px;
+    /* letter-spacing: -.43px; */
+    color: #303038;
+    /* word-wrap: break-word; */
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+.privacy_content .content_box .b_title {
+    font-weight:bolder;
+    font-size: 18px;
+}
+
+.privacy_content .content_box .s_title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.privacy_content .content_box pre+pre {
+    /* border: 1px solid red; */
+    margin-top: 15px
+}
+
+.privacy_content .button_wrap {
+    flex: none;
+    margin-top: 20px;
+}
+
+.privacy_content .btn_confirm {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .05);
+    background: #4279BC;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
+
+.privacy_content .footer {
+    /* flex: none; */
+    width: 100%;
+    /* padding-top: 30px; */
+}
+
+.privacy_content .footer .logo {
+    width: 100%;
+    /* border: 1px solid red; */
+    padding-top: 5px;
+}
+
+.privacy_content .footer .logo  img{
+    margin: auto;
+    display: block;
+    padding: 2px;
+    /* vertical-align: top; */
+    display: block;
+    width: 250px;
+    /* height: 51px; */
+}

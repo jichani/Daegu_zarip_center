@@ -442,6 +442,35 @@ section.contact_form .blue_area > p:nth-child(3) {
   font-size: 20px;
   font-weight: 400;
 }
+section.contact_form .blue_area .contact_number {
+  display: flex;
+  margin-top: 154px;
+}
+section.contact_form .blue_area .contact_number div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+section.contact_form .blue_area .contact_number div:nth-child(1) img {
+  margin-right: 14px;
+}
+section.contact_form .blue_area .contact_number div:nth-child(1) p {
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+section.contact_form .blue_area .contact_number div:nth-child(2) {
+  border-left: 1px solid #fff;
+  padding-left: 20px;
+}
+section.contact_form .blue_area .contact_number div:nth-child(2) p:nth-child(1) {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+section.contact_form .blue_area .contact_number div:nth-child(2) p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+}
 
 @media (max-width: 1024px) {
   section.first_carousel {

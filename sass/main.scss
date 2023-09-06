@@ -286,6 +286,35 @@ section.contact_form {
       font-size: 20px;
       font-weight: 400;
     }
+    .contact_number {
+      display: flex;
+      margin-top: 154px;
+      div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 14px;
+        }
+        p {
+          font-size: 24px;
+          font-weight: 400;
+          margin-right: 20px;
+        }
+      }
+      div:nth-child(2) {
+        border-left: 1px solid #fff;
+        padding-left: 20px;
+        p:nth-child(1) {
+          font-size: 24px;
+          font-weight: 400;
+          margin-bottom: 12px;
+        }
+        p:nth-child(2) {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
   }
 }
 

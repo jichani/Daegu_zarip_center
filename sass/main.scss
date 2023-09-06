@@ -340,6 +340,10 @@ section.contact_form {
       display: flex;
       flex-direction: column;
       color: #fff;
+      button,
+      label {
+        cursor: pointer;
+      }
       p {
         font-size: 32px;
         font-weight: 700;
@@ -359,8 +363,13 @@ section.contact_form {
         color: #fff;
         font-weight: 700;
       }
-      input.contact_info {
+      textarea.contact_info {
         height: 160px;
+        margin-bottom: 20px;
+        padding: 20px;
+        &:focus-visible {
+          outline: none;
+        }
       }
       input#agreeCheckbox {
         width: auto;

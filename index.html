@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/marquee.css">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" href="./css/inform.css">
   <link rel="stylesheet" href="./css/index.css" />
 
   <!-- css animate 라이브러리 불러오기-->
@@ -475,12 +475,13 @@
         </div>
       </div>
     </div>
+
     <div class="form_area">
       <form>
         <p>문의하기</p>
-        <input type="text" placeholder="이름" class="name" />
-        <input type="tel" placeholder="연락처" class="call" />
-        <input type="email" placeholder="이메일" class="email" />
+        <input type="text" placeholder="이름" class="name" id="name" />
+        <input type="tel" placeholder="연락처" class="call" id="call" />
+        <input type="email" placeholder="이메일" class="email" id="email" />
         <div>
           <div class="inqurey_btn">
             <button type="button" class="inqurey_option" data-value="재정">재정</button>
@@ -490,11 +491,10 @@
             <button type="button" class="inqurey_option" data-value="기타">기타</button>
           </div>
         </div>
-        <input class="contact_info" type="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." />
+        <textarea id="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"></textarea>
         <label><input id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보수집 이용에 관한 동의</label>
         <a href="./agree.html" target="_blank">개인정보처리방침</a>
-
-        <button type="button" id="privateButton" class="submit">신청하기</button>
+        <button id="privateButton" class="submit">신청하기</button>
       </form>
     </div>
   </section>
@@ -579,6 +579,7 @@
   <script src="./js/first_carousel.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/form.js"></script>
+  <script src="js/inform.js"></script>
 </body>
 
 </html>

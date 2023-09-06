@@ -496,6 +496,10 @@ section.contact_form .form_area form {
   flex-direction: column;
   color: #fff;
 }
+section.contact_form .form_area form button,
+section.contact_form .form_area form label {
+  cursor: pointer;
+}
 section.contact_form .form_area form p {
   font-size: 32px;
   font-weight: 700;
@@ -515,8 +519,13 @@ section.contact_form .form_area form .inqurey_btn button.checked {
   color: #fff;
   font-weight: 700;
 }
-section.contact_form .form_area form input.contact_info {
+section.contact_form .form_area form textarea.contact_info {
   height: 160px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+section.contact_form .form_area form textarea.contact_info:focus-visible {
+  outline: none;
 }
 section.contact_form .form_area form input#agreeCheckbox {
   width: auto;

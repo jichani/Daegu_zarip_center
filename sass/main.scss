@@ -23,8 +23,8 @@
 }
 
 section.first_carousel {
-  margin-top: -90px;
-  padding-top: 90px;
+  margin-top: -10px;
+  padding-top: 10px;
   font-family: $my-font;
   height: 870 * $size-1920-1px;
 
@@ -238,15 +238,55 @@ div.contact {
 
 /* 페이지 top 부분 */
 #top_btn {
-  width: 80px;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  right: 0px;
-  bottom: 40px; /* 위치를 절대값으로 고정 */
+  background-color: $Main_2;
+  right: 10px;
+  bottom: 30px; /* 위치를 절대값으로 고정 */
   text-align: center;
-  transform: rotate(-90deg); /* 반시계 방향 90도 회전 */
-  -webkit-transform: rotate(-90deg); /* 공급업체 접두어로 벤더프리픽스 적용 */
-  -ms-transform: rotate(-90deg);
-  border-radius: 10px; /* 모서리가 둥근 사각형, 박스 테두리 지정 */
+  line-height: 3.1;
+  border-radius: 50%; /* 모서리가 둥근 사각형, 박스 테두리 지정 */
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+section.contact_form {
+  width: 100%;
+  height: 945px;
+  position: relative;
+  .blue_area {
+    position: absolute;
+    top: 196px;
+    width: 100%;
+    height: 560px;
+    background-color: $Main_blue;
+    padding-left: 237 * $size-1920-1px;
+    padding-top: 56 * $size-1920-1px;
+    color: #fff;
+
+    > p:nth-child(1) {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    > p:nth-child(2) {
+      margin-top: 37px;
+      font-size: 32px;
+      font-weight: 400;
+      span {
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    > p:nth-child(3) {
+      margin-top: 33px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
 }
 
 @include tablet {

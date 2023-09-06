@@ -48,7 +48,7 @@
         <ui>
           <li>
             <div class="main_menu_title main">
-              <span class="main_title last_nav contact_button">신청상담</span>
+              <a href="#contact_form"><span class="main_title last_nav contact_button">신청상담</span></a>
             </div>
           </li>
         </ui>
@@ -83,7 +83,7 @@
             <ui>
               <li>
                 <div class="main sideAccordion_title">
-                  <span class="contact_button">상담신청</span>
+                  <a href="#contact_form"><span class="contact_button">상담신청</span></a>
                 </div>
               </li>
             </ui>
@@ -533,48 +533,9 @@
 
   <div class="contact">
     <div class="wrap">
-      <img src="./img/contact.png" alt="contact" class="chatbox">
+      <a href="#contact_form"><img src="./img/contact.png" alt="contact" class="chatbox"></a>
     </div>
   </div>
-
-  <dialog>
-    <div class="modal">
-      <button value="close" class="close_btn">
-        <i class="fa-solid fa-x"></i>
-      </button>
-      <form>
-        <h2>무엇이든 물어보세요</h2>
-        <div class="info">
-          <h3>이름</h3>
-          <input type="text" placeholder="이름" class="name" />
-          <h3>연락처</h3>
-          <input type="tel" placeholder="010-1234-5678" class="call" />
-          <h3>이메일</h3>
-          <input type="email" placeholder="abcd@gmail.com" class="email" />
-        </div>
-        <div class="inqurey_type">
-          <h3>문의유형</h3>
-          <div class="inqurey_btn">
-            <button type="button" class="inqurey_option" data-value="재정">재정</button>
-            <button type="button" class="inqurey_option" data-value="주거">주거</button>
-            <button type="button" class="inqurey_option" data-value="진로">진로</button>
-            <button type="button" class="inqurey_option" data-value="건강">건강</button>
-            <button type="button" class="inqurey_option" data-value="기타">기타</button>
-          </div>
-          <div class="inqurey_text">
-            <h3>문의사항</h3>
-            <input type="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." style="width: 324px; height: 126px" />
-          </div>
-          <div class="private">
-            <label><input id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보취급방침을
-              읽었으며, 이에 동의합니다.</label>
-            <button type="button" class="private_btn">전문보기</button>
-          </div>
-          <button type="button" id="privateButton" class="submit">제출하기</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
 
   <footer>
     <div class="footer_wrapper">

@@ -6,7 +6,6 @@
 
 body {
   margin: 0;
-  padding-top: 90px;
 }
 
 p {
@@ -33,6 +32,11 @@ a {
     transform: translateY(-10px);
   }
 }
+section.content_first {
+  margin-top: -90px;
+  padding-top: 90px;
+}
+
 section.first_carousel {
   margin-top: -10px;
   padding-top: 10px;

@@ -16,9 +16,8 @@
   <link rel="stylesheet" href="./css/modal.css">
   <link rel="stylesheet" href="./css/index.css" />
 
-  <!-- AOS 라이브러리 불러오기-->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- css animate 라이브러리 불러오기-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <!-- 폰트어썸 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;300&display=swap" rel="stylesheet" />
@@ -94,7 +93,7 @@
     </div>
   </header>
 
-  <section class="content_first">
+  <section class="content_first" id="header_title">
     <div class="content_first_wrapper">
       <div class="slogan">자립준비청년들의</div>
       <div class="slogan_second">
@@ -564,7 +563,24 @@
     </div>
   </footer>
 
+  <!-- 페이지 Top 버튼 -->
+  <nav id="top_btn">
+    <a href="#header_title">Top</a>
+  </nav>
 
+  <!--스크롤 기능을 위한 자바스크립트 제이쿼리 삽입 -->
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+
+  <!-- 스크롤 기능을 위한 자바스크립트 제이쿼리 실행 -->
+  <script>
+    $(function () {
+      $("header nav a").click(function (e) {
+        $.scrollTo(this.hash || 0, 500); /* 속도 절, 숫자가 작을수록 빠름 */
+        e.preventDefault();
+      });
+    });
+  </script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -575,12 +591,6 @@
   <script src="./js/first_carousel.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/form.js"></script>
-
-  <!-- AOS 스크립트 시작 -->
-  <script>
-    AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
-  </script>
-
 </body>
 
 </html>

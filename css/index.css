@@ -5,13 +5,6 @@
     font-style: normal;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Pretendard-Regular";
-}
-
 /* 첫번째 컨텐츠 */
 .content_first {
     background: linear-gradient(180deg,

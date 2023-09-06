@@ -23,6 +23,8 @@
 }
 
 section.first_carousel {
+  margin-top: -90px;
+  padding-top: 90px;
   font-family: $my-font;
   height: 870 * $size-1920-1px;
 
@@ -232,6 +234,19 @@ div.contact {
     width: 170px;
     cursor: pointer;
   }
+}
+
+/* 페이지 top 부분 */
+#top_btn {
+  width: 80px;
+  position: fixed;
+  right: 0px;
+  bottom: 40px; /* 위치를 절대값으로 고정 */
+  text-align: center;
+  transform: rotate(-90deg); /* 반시계 방향 90도 회전 */
+  -webkit-transform: rotate(-90deg); /* 공급업체 접두어로 벤더프리픽스 적용 */
+  -ms-transform: rotate(-90deg);
+  border-radius: 10px; /* 모서리가 둥근 사각형, 박스 테두리 지정 */
 }
 
 @include tablet {

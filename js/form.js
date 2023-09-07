@@ -25,7 +25,12 @@ form_submit.addEventListener("click", (e) => {
   } else {
     e.preventDefault();
 
-    btn_sendMessage();
+    if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
+      btn_sendMessage();
+    } else {
+      alert("로컬에서만 작동합니다");
+    }
+
 
     // const name = document.getElementById("name").value;
     // const tel = document.getElementById("tel").value;

@@ -405,17 +405,16 @@ div.contact .chatbox {
   width: 50px;
   height: 50px;
   position: fixed;
-  background-color: #76c043;
-  right: 4.1159vw;
-  bottom: 1.563vw; /* 위치를 절대값으로 고정 */
+  transform: rotate(270deg);
+  right: 0vw;
+  bottom: 0.521vw; /* 위치를 절대값으로 고정 */
   text-align: center;
   line-height: 3.1;
+  font-size: 18px;
   border-radius: 50%; /* 모서리가 둥근 사각형, 박스 테두리 지정 */
-  animation: contact-motion 0.8s linear 0s infinite alternate;
 }
 #top_btn a {
-  text-decoration: none;
-  color: #fff;
+  color: #999;
 }
 
 section.contact_form {

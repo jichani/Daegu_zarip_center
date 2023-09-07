@@ -582,11 +582,12 @@ section.contact_form {
       color: #fff;
 
       > p:nth-child(1) {
-        font-size: 28px;
-        color: #000;
-        position: relative;
-        bottom: 170px;
-        font-weight: 700;
+        // font-size: 28px;
+        // color: #000;
+        // position: relative;
+        // bottom: 170px;
+        // font-weight: 700;
+        display: none;
       }
       > p:nth-child(2) {
         display: none;
@@ -711,9 +712,11 @@ section.contact_form {
       justify-content: center;
     }
   }
-  form {
-    .inqurey_btn button {
-      width: 60px;
+  section.contact_form {
+    form {
+      .inqurey_btn button {
+        width: 60px;
+      }
     }
   }
 }

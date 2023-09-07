@@ -867,11 +867,7 @@ section.contact_form .form_area form .submit:hover {
     color: #fff;
   }
   section.contact_form .blue_area > p:nth-child(1) {
-    font-size: 28px;
-    color: #000;
-    position: relative;
-    bottom: 170px;
-    font-weight: 700;
+    display: none;
   }
   section.contact_form .blue_area > p:nth-child(2) {
     display: none;
@@ -977,7 +973,7 @@ section.contact_form .form_area form .submit:hover {
     left: auto;
     justify-content: center;
   }
-  form .inqurey_btn button {
+  section.contact_form form .inqurey_btn button {
     width: 60px;
   }
 }

@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="./css/inform.css">
   <link rel="stylesheet" href="./css/index.css" />
 
-  <!-- css animate 라이브러리 불러오기-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- aos 라이브러리 불러오기-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- 폰트어썸 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;300&display=swap" rel="stylesheet" />
@@ -97,7 +97,8 @@
     <img src="./img/main_pc.jpg" alt="메인 이미지">
   </section>
 
-  <section class="first_carousel" id="information">
+  <section class="first_carousel" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="00"
+    data-aos-offset="200" id="information">
     <div class="gray_section"></div>
     <div class="wrapper">
       <h1 class="main_text">
@@ -243,117 +244,116 @@
     </div>
   </section>
 
-  <section class="content_third" id="business">
+  <section class="content_thirdd" id="business">
     <h2 class="title"><span>자립지원사업 정보</span></h2>
     <div class="info_zip">
       <!-- 금융지원사업 -->
-      <div>
-        <div class="finance">
-          <div class="finance_zip">
-            <div class="finance_img">
-              <img src="./img/finance.png" alt="금융지원사업 이미지" />
+      <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-offset="200"
+        class="finance">
+        <div class="finance_zip">
+          <div class="finance_img">
+            <img src="./img/finance.png" alt="금융지원사업 이미지" />
+          </div>
+          <div class="finance_info">
+            <div class="finance_title">
+              <div class="finance_icon">
+                <img src="./img/finance_icon.png" alt="금융지원사업 제목 아이콘" />
+              </div>
+              <div class="finance_title_text">
+                금융지원사업
+              </div>
             </div>
-            <div class="finance_info">
-              <div class="finance_title">
-                <div class="finance_icon">
-                  <img src="./img/finance_icon.png" alt="금융지원사업 제목 아이콘" />
+            <div class="finance_info_detail_zip">
+              <div class="finance_info_detail_zip_zip">
+                <div class="finance_info_detail">
+                  <div class="finance_num">01</div>
+                  <div class="finance_info_detail_text">
+                    자립준비청년 지원사업
+                  </div>
                 </div>
-                <div class="finance_title_text">
-                  금융지원사업
+                <div class="finance_info_detail">
+                  <div class="finance_num">02</div>
+                  <div class="finance_info_detail_text">
+                    장학금 지원사업
+                  </div>
+                </div>
+                <div class="finance_info_detail">
+                  <div class="finance_num">03</div>
+                  <div class="finance_info_detail_text">
+                    맞춤형 경제 컨설팅
+                  </div>
+                </div>
+                <div class="finance_info_detail">
+                  <div class="finance_num">04</div>
+                  <div class="finance_info_detail_text">
+                    대출 지원사업
+                  </div>
                 </div>
               </div>
-              <div class="finance_info_detail_zip">
-                <div class="finance_info_detail_zip_zip">
-                  <div class="finance_info_detail">
-                    <div class="finance_num">01</div>
-                    <div class="finance_info_detail_text">
-                      자립준비청년 지원사업
-                    </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">02</div>
-                    <div class="finance_info_detail_text">
-                      장학금 지원사업
-                    </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">03</div>
-                    <div class="finance_info_detail_text">
-                      맞춤형 경제 컨설팅
-                    </div>
-                  </div>
-                  <div class="finance_info_detail">
-                    <div class="finance_num">04</div>
-                    <div class="finance_info_detail_text">
-                      대출 지원사업
-                    </div>
-                  </div>
-                </div>
-                <div class="finance_btn">
-                  <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=20&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                    target="_blank" class="button gold">
-                    <p>자세히보기</p>
-                  </a>
-                </div>
+              <div class="finance_btn">
+                <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=20&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                  target="_blank" class="button gold">
+                  <p>자세히보기</p>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <!-- 주거지원사업 -->
-        <div class="home">
-          <div class="home_zip">
-            <div class="home_img">
-              <img src="./img/home.png" alt="주거지원사업 이미지" />
+      </div>
+      <!-- 주거지원사업 -->
+      <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-offset="200" class="home">
+        <div class="home_zip">
+          <div class="home_img">
+            <img src="./img/home.png" alt="주거지원사업 이미지" />
+          </div>
+          <div class="home_info">
+            <div class="home_title">
+              <div class="home_icon">
+                <img src="./img/home_icon.png" alt="주거지원사업 제목 아이콘" />
+              </div>
+              <div class="home_title_text">
+                주거지원사업
+              </div>
             </div>
-            <div class="home_info">
-              <div class="home_title">
-                <div class="home_icon">
-                  <img src="./img/home_icon.png" alt="주거지원사업 제목 아이콘" />
+            <div class="home_info_detail_zip">
+              <div class="home_info_detail_zip_zip">
+                <div class="home_info_detail">
+                  <div class="home_num">01</div>
+                  <div class="home_info_detail_text">
+                    주거교육
+                  </div>
                 </div>
-                <div class="home_title_text">
-                  주거지원사업
+                <div class="home_info_detail">
+                  <div class="home_num">02</div>
+                  <div class="home_info_detail_text">
+                    자산형성 역량 강화 지원사업
+                  </div>
+                </div>
+                <div class="home_info_detail">
+                  <div class="home_num">03</div>
+                  <div class="home_info_detail_text">
+                    맞춤형 경제 컨설팅
+                  </div>
+                </div>
+                <div class="home_info_detail">
+                  <div class="home_num">04</div>
+                  <div class="home_info_detail_text">
+                    주거대출 지원사업
+                  </div>
                 </div>
               </div>
-              <div class="home_info_detail_zip">
-                <div class="home_info_detail_zip_zip">
-                  <div class="home_info_detail">
-                    <div class="home_num">01</div>
-                    <div class="home_info_detail_text">
-                      주거교육
-                    </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">02</div>
-                    <div class="home_info_detail_text">
-                      자산형성 역량 강화 지원사업
-                    </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">03</div>
-                    <div class="home_info_detail_text">
-                      맞춤형 경제 컨설팅
-                    </div>
-                  </div>
-                  <div class="home_info_detail">
-                    <div class="home_num">04</div>
-                    <div class="home_info_detail_text">
-                      주거대출 지원사업
-                    </div>
-                  </div>
-                </div>
-                <div class="home_btn">
-                  <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=19&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
-                    target="_blank" class="button green">
-                    <p>자세히보기</p>
-                  </a>
-                </div>
+              <div class="home_btn">
+                <a href="https://jaripon.ncrc.or.kr/home/kor/support/projectMng/index.do?menuPos=1&idx=&act=&searchValueList1=19&searchValue5=2023&searchValue6=0&searchKeyword=&searchValue1=A&pageIndex=1"
+                  target="_blank" class="button green">
+                  <p>자세히보기</p>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- 진로지원사업 -->
-      <div class="unv">
+      <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-offset="200" class="unv">
         <div class="unv_zip">
           <div class="unv_img">
             <img src="./img/unv.png" alt="진로지원사업 이미지" />
@@ -405,7 +405,7 @@
         </div>
       </div>
       <!-- 의료지원사업 -->
-      <div class="medi">
+      <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-offset="200" class="medi">
         <div class="medi_zip">
           <div class="medi_img">
             <img src="./img/medi.png" alt="의료지원사업 이미지" />
@@ -476,7 +476,8 @@
       </div>
     </div>
 
-    <div class="form_area">
+    <div class="form_area" data-aos-offset="400" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
+      data-aos-duration="2200">
       <form>
         <p>문의하기</p>
         <input type="text" placeholder="이름" class="name" id="name" />
@@ -573,7 +574,11 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a5bbbba078.js" crossorigin="anonymous"></script>
-
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- solapi -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>

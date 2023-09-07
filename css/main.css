@@ -42,8 +42,8 @@ section.content_first img {
 }
 
 section.first_carousel {
-  margin-top: -10px;
-  padding-top: 10px;
+  margin-top: 0px;
+  padding-top: 100px;
   font-family: Pretendard, sans-serif;
   height: 45.327vw;
 }
@@ -54,7 +54,6 @@ section.first_carousel .wrapper {
 section.first_carousel .main_text {
   padding-top: 0;
   font-size: 48px;
-  margin-top: 100px;
 }
 section.first_carousel {
   position: relative;

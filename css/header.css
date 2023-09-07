@@ -339,10 +339,6 @@ header .header_inner .menu_wrapper .main_menu_title .main_title {
         height: 54px;
     }
 
-    .nav_toggle #menuicon:checked+label+div {
-        left: 0;
-    }
-
     .menu_wrapper {
         gap: 6vw;
     }

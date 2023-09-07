@@ -31,8 +31,8 @@ section.content_first {
 }
 
 section.first_carousel {
-  margin-top: -10px;
-  padding-top: 10px;
+  margin-top: 0px;
+  padding-top: 100px;
   font-family: $my-font;
   height: 870 * $size-1920-1px;
 
@@ -44,7 +44,6 @@ section.first_carousel {
   .main_text {
     padding-top: 0;
     font-size: 48px;
-    margin-top: 100px;
   }
 
   & {

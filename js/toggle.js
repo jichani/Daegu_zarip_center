@@ -1,16 +1,13 @@
-const mainMenuItems = document.querySelectorAll(".sideAccordion_title");
+const mainMenuTitle = document.querySelectorAll(".sideAccordion_title");
+const subMenues = document.querySelectorAll(".sideAccordion_menu");
 
-for (let i = 0; i < mainMenuItems.length; i++) {
-  mainMenuItems[i].addEventListener("click", () => {
-
-    // 모든 메뉴 항목의 'show' 클래스 제거
-    for (let j = 0; j < mainMenuItems.length; j++) {
+for (let i = 0; i < mainMenuTitle.length; i++) {
+  mainMenuTitle[i].addEventListener("click", () => {
+    subMenues[i].classList.toggle("show");
+    for (let j = 0; j < mainMenuTitle.length; j++) {
       if (i !== j) {
-        mainMenuItems[j].classList.remove("show");
+        subMenues[j].classList.remove("show");
       }
     }
-
-    // 현재 클릭한 메뉴 항목에 'show' 클래스 추가
-    mainMenuItems[i].classList.add("show");
   });
 }

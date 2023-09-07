@@ -430,7 +430,7 @@ section.contact_form .blue_area {
   width: 100%;
   height: 560px;
   background-color: #4279bc;
-  padding-left: 12.3477vw;
+  padding-left: 9.378vw;
   padding-top: 2.9176vw;
   color: #fff;
 }
@@ -441,11 +441,11 @@ section.contact_form .blue_area > p:nth-child(1) {
 }
 section.contact_form .blue_area > p:nth-child(2) {
   margin-top: 37px;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 400;
 }
 section.contact_form .blue_area > p:nth-child(2) span {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
 }
 section.contact_form .blue_area > p:nth-child(3) {
@@ -465,7 +465,7 @@ section.contact_form .blue_area .contact_number div:nth-child(1) img {
   margin-right: 14px;
 }
 section.contact_form .blue_area .contact_number div:nth-child(1) p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   margin-right: 20px;
 }
@@ -474,12 +474,12 @@ section.contact_form .blue_area .contact_number div:nth-child(2) {
   padding-left: 20px;
 }
 section.contact_form .blue_area .contact_number div:nth-child(2) p:nth-child(1) {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 12px;
 }
 section.contact_form .blue_area .contact_number div:nth-child(2) p:nth-child(2) {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 section.contact_form .form_area {
@@ -815,7 +815,7 @@ section.contact_form .form_area form .submit:hover {
   }
   section.contact_form .blue_area > p:nth-child(3) {
     margin-top: 33px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
   }
   section.contact_form .blue_area .contact_number {
@@ -838,7 +838,7 @@ section.contact_form .form_area form .submit:hover {
   }
   section.contact_form .blue_area .contact_number div:nth-child(2) {
     border-left: 1px solid #fff;
-    padding-left: 20px;
+    padding-left: 16px;
   }
   section.contact_form .blue_area .contact_number div:nth-child(2) p:nth-child(1) {
     font-size: 14px;
@@ -851,6 +851,43 @@ section.contact_form .form_area form .submit:hover {
   }
   section.contact_form .form_area {
     right: 7.816vw;
+  }
+}
+@media (max-width: 866px) {
+  section.contact_form {
+    display: flex;
+    justify-content: center;
+  }
+  section.contact_form .blue_area {
+    width: 95%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #4279bc;
+    padding-left: 0;
+    color: #fff;
+  }
+  section.contact_form .blue_area > p:nth-child(1) {
+    font-size: 28px;
+    color: #000;
+    position: relative;
+    bottom: 170px;
+    font-weight: 700;
+  }
+  section.contact_form .blue_area > p:nth-child(2) {
+    display: none;
+  }
+  section.contact_form .blue_area > p:nth-child(2) span {
+    display: none;
+  }
+  section.contact_form .blue_area > p:nth-child(3) {
+    display: none;
+  }
+  section.contact_form .blue_area .contact_number {
+    display: none;
+  }
+  section.contact_form .form_area {
+    position: relative;
+    right: 0;
   }
 }
 @media (max-width: 500px) {
@@ -889,6 +926,9 @@ section.contact_form .form_area form .submit:hover {
   section.content_first img {
     width: 100%;
     content: url("../img/main_mobile.jpg");
+  }
+  section.content_third {
+    padding-top: 160px;
   }
   section.first_carousel.first_carousel {
     height: 1000px;
@@ -936,5 +976,8 @@ section.contact_form .form_area form .submit:hover {
     bottom: 100px;
     left: auto;
     justify-content: center;
+  }
+  form .inqurey_btn button {
+    width: 60px;
   }
 }

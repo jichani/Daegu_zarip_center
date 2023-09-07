@@ -24,15 +24,18 @@ form_submit.addEventListener("click", (e) => {
     e.preventDefault();
   } else {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    const call = document.getElementById("call").value;
-    const email = document.getElementById("email").value;
-    const text = document.getElementById("text").value;
 
-    console.log(`이름: ${name}`);
-    console.log(`번호: ${call}`);
-    console.log(`Email: ${email}`);
-    console.log(`버튼: ${selectedValue}`)
-    console.log(`텍스트: ${text}`);
+    btn_sendMessage();
+
+    // const name = document.getElementById("name").value;
+    // const tel = document.getElementById("tel").value;
+    // const email = document.getElementById("email").value;
+    // const text = document.getElementById("text").value;
+
+    // console.log(`이름: ${name}`);
+    // console.log(`번호: ${tel}`);
+    // console.log(`Email: ${email}`);
+    // console.log(`버튼: ${selectedValue}`)
+    // console.log(`텍스트: ${text}`);
   }
 });

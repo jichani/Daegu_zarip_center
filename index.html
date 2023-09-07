@@ -480,15 +480,15 @@
       <form>
         <p>문의하기</p>
         <input type="text" placeholder="이름" class="name" id="name" />
-        <input type="tel" placeholder="연락처" class="call" id="call" />
+        <input type="tel" placeholder="연락처" class="call" id="tel" />
         <input type="email" placeholder="이메일" class="email" id="email" />
         <div>
           <div class="inqurey_btn">
-            <button type="button" class="inqurey_option" data-value="재정">재정</button>
-            <button type="button" class="inqurey_option" data-value="주거">주거</button>
-            <button type="button" class="inqurey_option" data-value="진로">진로</button>
-            <button type="button" class="inqurey_option" data-value="건강">건강</button>
-            <button type="button" class="inqurey_option" data-value="기타">기타</button>
+            <button type="button" class="inqurey_option" data-value="재정 관리">재정</button>
+            <button type="button" class="inqurey_option" data-value="주거 관리">주거</button>
+            <button type="button" class="inqurey_option" data-value="진로 관리">진로</button>
+            <button type="button" class="inqurey_option" data-value="건강 관리">건강</button>
+            <button type="button" class="inqurey_option" data-value="기타 관리">기타</button>
           </div>
         </div>
         <textarea id="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"></textarea>
@@ -574,12 +574,17 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a5bbbba078.js" crossorigin="anonymous"></script>
 
+  <!-- solapi -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/solapi.js"></script>
+
 
   <script src="./js/toggle.js"></script>
   <script src="./js/first_carousel.js"></script>
-  <script src="./js/modal.js"></script>
-  <script src="./js/form.js"></script>
-  <script src="js/inform.js"></script>
 </body>
 
 </html>

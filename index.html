@@ -18,9 +18,6 @@
 
   <!-- aos 라이브러리 불러오기-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- 폰트어썸 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;300&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -481,9 +478,9 @@
       data-aos-duration="1300">
       <form>
         <p>문의하기</p>
-        <input type="text" placeholder="이름" class="name" id="name" />
-        <input type="tel" placeholder="연락처" class="call" id="tel" />
-        <input type="email" placeholder="이메일" class="email" id="email" />
+        <input type="text" placeholder="이름" class="name" id="name" autocomplete="name" />
+        <input type="tel" placeholder="연락처" class="call" id="tel" autocomplete="tel" />
+        <input type="email" placeholder="이메일" class="email" id="email" autocomplete="email" />
         <div>
           <div class="inqurey_btn">
             <button type="button" class="inqurey_option" data-value="재정 관리">재정</button>
@@ -585,8 +582,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
 
   <script src="./js/config.js"></script>
-  <script src="./js/form.js"></script>
   <script src="./js/solapi.js"></script>
+  <script src="./js/form.js"></script>
 
 
   <script src="./js/toggle.js"></script>

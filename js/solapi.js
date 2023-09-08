@@ -1,16 +1,37 @@
-function btn_sendMessage() {
+function btn_sendMessage_counselor() {
+  let name = document.getElementById('name').value;
+  let tel = "01075400153";
+  let templateId = "KA01TP230907043126398rad96zOaFkv";
+  let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
+
+  let now = new Date();
+  let options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+  let nowDate = now.toLocaleString(undefined, options);
+
+  const text = document.getElementById("text").value;
+
+  let link = "daegu-zarip-center.netlify.app";
+
+  // 2021. 8. 16. 오후 7:53:03
+  console.log(nowDate);
+  console.log(name);
+  console.log(tel);
+  console.log(templateId);
+
+  sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selectedValue, link);
+}
+
+function btn_sendMessage_customer() {
   let name = document.getElementById('name').value;
   let tel = document.getElementById('tel').value;
-  let btn_url = "daegu-zarip-center.netlify.app";
-  let templateId = "KA01TP230901085249072NMufXx7qANC";
+  let templateId = "KA01TP230907043423335DsEA22M5lVp";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
   console.log(name);
   console.log(tel);
-  console.log(btn_url);
   console.log(templateId);
 
-  sendMessage(name, tel, btn_url, pfid, templateId);
+  sendMessage_customer(name, tel, pfid, templateId, selectedValue);
 }
 
 function getAuthorization() {
@@ -120,7 +141,53 @@ function getTemplates() {
   request.send();
 }
 
-function sendMessage(name, tel, btn_url, pfid, templateId) {
+function sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selectedValue, link) {
+  let url = 'https://api.solapi.com/messages/v4/send-many/detail';
+
+  request = new XMLHttpRequest();
+
+  if (!request) {
+    alert('request create fail');
+    return;
+  }
+
+  let authoriztion = getAuthorization();
+
+  request.onreadystatechange = requestResult;
+  request.open('POST', url);
+  request.setRequestHeader("Content-Type", "application/json");
+  request.setRequestHeader("Authorization", authoriztion);
+
+  var data = {
+    "messages": [
+      {
+        "to": tel,
+        "kakaoOptions": {
+          "pfId": pfid,
+          "templateId": templateId,
+          "variables": {
+            "#{시간}": nowDate + " ",
+            "#{이름}": name,
+            "#{신청버튼}": selectedValue,
+            "#{문의사항}": text,
+            "#{링크}": link,
+          }
+        }
+      }
+    ]
+  };
+
+  console.log(data);
+
+  var message = JSON.stringify(data);
+
+  console.log(message);
+
+  request.send(message);
+  return;
+}
+
+function sendMessage_customer(name, tel, pfid, templateId, selectedValue) {
   let url = 'https://api.solapi.com/messages/v4/send-many/detail';
 
   request = new XMLHttpRequest();
@@ -165,6 +232,6 @@ function sendMessage(name, tel, btn_url, pfid, templateId) {
 
 function requestResult() {
   if (request.readyState == XMLHttpRequest.DONE) {
-    alert(request.responseText);
+    alert("상담 신청이 완료되었습니다.");
   }
 }

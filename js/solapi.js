@@ -12,12 +12,6 @@ function btn_sendMessage_counselor() {
 
   let link = "daegu-zarip-center.netlify.app";
 
-  // 2021. 8. 16. 오후 7:53:03
-  console.log(nowDate);
-  console.log(name);
-  console.log(tel);
-  console.log(templateId);
-
   sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selectedValue, link);
 }
 
@@ -26,10 +20,6 @@ function btn_sendMessage_customer() {
   let tel = document.getElementById('tel').value;
   let templateId = "KA01TP230907043423335DsEA22M5lVp";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
-
-  console.log(name);
-  console.log(tel);
-  console.log(templateId);
 
   sendMessage_customer(name, tel, pfid, templateId, selectedValue);
 }
@@ -177,11 +167,7 @@ function sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selec
     ]
   };
 
-  console.log(data);
-
   var message = JSON.stringify(data);
-
-  console.log(message);
 
   request.send(message);
   return;
@@ -220,11 +206,7 @@ function sendMessage_customer(name, tel, pfid, templateId, selectedValue) {
     ]
   };
 
-  console.log(data);
-
   var message = JSON.stringify(data);
-
-  console.log(message);
 
   request.send(message);
   return;
@@ -232,6 +214,10 @@ function sendMessage_customer(name, tel, pfid, templateId, selectedValue) {
 
 function requestResult() {
   if (request.readyState == XMLHttpRequest.DONE) {
-    alert("상담 신청이 완료되었습니다.");
+    if (request.status === 200) {
+      console.log("상담 신청이 완료되었습니다.");
+    } else {
+      console.log("상담 신청에 실패하였습니다. 다시 시도해주세요.");
+    }
   }
-}
+};

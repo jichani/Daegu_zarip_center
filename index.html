@@ -476,11 +476,11 @@
 
     <div class="form_area" data-aos-offset="300" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
       data-aos-duration="1300">
-      <form>
+      <form onsubmit="return buttonConsulting(event)">
         <p>문의하기</p>
-        <input type="text" placeholder="이름" class="name" id="name" autocomplete="name" />
-        <input type="tel" placeholder="연락처" class="call" id="tel" autocomplete="tel" />
-        <input type="email" placeholder="이메일" class="email" id="email" autocomplete="email" />
+        <input type="text" placeholder="이름" class="name" id="name" autocomplete="name" required minlength="1" />
+        <input type="tel" placeholder="연락처" class="call" id="tel" autocomplete="tel" required minlength="9" />
+        <input type="email" placeholder="이메일" class="email" id="email" autocomplete="email" required />
         <div>
           <div class="inqurey_btn">
             <button type="button" class="inqurey_option" data-value="재정 관리">재정</button>
@@ -490,10 +490,11 @@
             <button type="button" class="inqurey_option" data-value="기타 관리">기타</button>
           </div>
         </div>
-        <textarea id="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"></textarea>
-        <label><input id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보수집 이용에 관한 동의</label>
+        <textarea id="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"
+          required></textarea>
+        <label><input required id="agreeCheckbox" type="checkbox" class="checkbox" /> 개인정보수집 이용에 관한 동의</label>
         <a href="./agree.html" target="_blank">개인정보처리방침</a>
-        <button id="privateButton" class="submit">신청하기</button>
+        <button type="submit" id="privateButton" class="submit">신청하기</button>
       </form>
     </div>
   </section>
@@ -580,7 +581,6 @@
   <!-- solapi -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
-  <script src="./js/mysql.js"></script>
 
   <script src="./js/config.js"></script>
   <script src="./js/solapi.js"></script>

@@ -32,7 +32,6 @@ form_submit.addEventListener("click", (e) => {
       alert("로컬에서만 작동합니다");
     }
 
-
     // const name = document.getElementById("name").value;
     // const tel = document.getElementById("tel").value;
     // const email = document.getElementById("email").value;

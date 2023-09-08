@@ -42,10 +42,9 @@ section.content_first img {
 }
 
 section.first_carousel {
-  margin-top: 0px;
-  padding-top: 100px;
+  height: calc(100vh - 90px);
+  padding-top: 90px;
   font-family: Pretendard, sans-serif;
-  height: 45.327vw;
 }
 section.first_carousel .wrapper {
   width: 80%;
@@ -100,6 +99,10 @@ section.first_carousel .first_swiper .text_box .text_box_description {
   height: 100%;
   justify-content: space-between;
 }
+section.first_carousel .first_swiper .text_box .text_box_description p > span {
+  font-size: 22px;
+  font-weight: 700;
+}
 section.first_carousel .first_swiper .text_box .text_box_description > p.text_gold {
   color: #ff9213;
 }
@@ -141,7 +144,7 @@ section.first_carousel .first_swiper img {
 section.first_carousel .carousel_button {
   z-index: 10;
   position: absolute;
-  bottom: 5.21vw;
+  bottom: 10.42vw;
   left: 9.378vw;
   display: inline-block;
 }
@@ -575,6 +578,10 @@ section.contact_form .form_area form .submit:hover {
     padding: 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
+  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p > span {
+    font-size: 16px;
+    font-weight: 700;
+  }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
     font-size: 24px;
   }
@@ -953,6 +960,10 @@ section.contact_form .form_area form .submit:hover {
     height: 420px;
     left: 20px;
     bottom: 140px;
+  }
+  section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p > span {
+    font-size: 18px;
+    font-weight: 700;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
     font-size: 24px;

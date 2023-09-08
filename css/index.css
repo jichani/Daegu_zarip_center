@@ -9,6 +9,7 @@
     width: 95%;
     margin: 0 auto;
     padding-bottom: 20px;
+    font-size: 28px;
 }
 
 .finance_img,
@@ -125,13 +126,32 @@
     padding-bottom: 42px;
 }
 
+@media screen and (min-width: 501px) {
+    .title {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .finance_zip,
+    .unv_zip {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .home_zip,
+    .medi_zip {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (min-width: 812px) {
 
     /* 세번째 컨텐츠 */
     .title {
         width: 85%;
-        padding-bottom: 40px;
-        font-size: 40px;
+        padding-bottom: 104px;
+        font-size: 28px;
         font-weight: 700;
     }
 
@@ -297,6 +317,49 @@
     .medi_btn a {
         width: 100%;
     }
+}
+
+@media screen and (min-width: 1025px) {
+    .finance {
+        /* border: 1px solid blue; */
+        height: calc(100vh - 90px);
+        /* padding-top: 90px; */
+    }
+    .finance_zip {
+        display: flex;
+        align-items: center;
+        /* border: 1px solid #454ace; */
+    }
+    .home, .unv, .medi {
+        height: calc(100vh - 90px);
+        /* border: 1px solid #ff9213; */
+        /* padding-top: 90px; */
+        display: flex;
+        align-items: center;
+    }
+    .content_third {
+        padding-top: 90px;
+        /* border: 1px solid black; */
+        height: auto;
+    }
+    .title {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 48px;
+    }
+
+    .finance_zip,
+    .unv_zip {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .home_zip,
+    .medi_zip {
+        width: 80%;
+        margin: 0 auto;
+    }
+
 }
 
 @media screen and (min-width: 1043px) {

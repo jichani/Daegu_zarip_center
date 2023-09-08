@@ -26,7 +26,8 @@ form_submit.addEventListener("click", (e) => {
     e.preventDefault();
 
     if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
-      btn_sendMessage();
+      btn_sendMessage_customer();
+      btn_sendMessage_counselor();
     } else {
       alert("로컬에서만 작동합니다");
     }

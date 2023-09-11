@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+}
+
+html {
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+body {
+    min-width: 300px;
+    padding: 0 30px;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    position: absolute;
+    top: 224px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #0d0d0d;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+table {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table_tr {
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4D5359;
+}
+
+table tr td {
+    padding: 10px 0;
+}
+
+table tr td:not(:nth-last-child(1)){
+    border-right: 1px solid #ddd;
+}
+
+.box {
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    height: 216px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.q {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    color: #4D5359;
+}
+
+.box div {
+    padding-top: 10px;
+}
+
+.box_s {
+    height: 216px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 12px;
+}
+
+.box_s_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4D5359;
+}
+
+.input_box input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.input_box input:nth-last-child(1) {
+    margin-left: 5px;
+}
+
+label{
+    cursor: pointer;
+}
+
+.after {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.check {
+    margin-bottom: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background-color: #4279BC;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

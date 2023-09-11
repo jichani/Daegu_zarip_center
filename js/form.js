@@ -13,34 +13,28 @@ inform_buttons.forEach(button => {
   });
 });
 
-// 약관 동의
-const checkbox = document.getElementById("agreeCheckbox");
-const form_submit = document.getElementById("privateButton");
+function buttonConsulting(e) {
+  e.preventDefault();
 
-form_submit.addEventListener("click", (e) => {
-  if (!checkbox.checked) {
-    // 약관에 동의하지 않았다면 폼 제출 방지
-    alert("약관에 동의하세요.");
-    e.preventDefault();
-  } else {
-    e.preventDefault();
+  // 선택된 버튼 찾기
+  const selectedButton = document.querySelector('.inqurey_option.checked');
 
-    if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
-      btn_sendMessage();
-    } else {
-      alert("로컬에서만 작동합니다");
-    }
-
-
-    // const name = document.getElementById("name").value;
-    // const tel = document.getElementById("tel").value;
-    // const email = document.getElementById("email").value;
-    // const text = document.getElementById("text").value;
-
-    // console.log(`이름: ${name}`);
-    // console.log(`번호: ${tel}`);
-    // console.log(`Email: ${email}`);
-    // console.log(`버튼: ${selectedValue}`)
-    // console.log(`텍스트: ${text}`);
+  // 만약 선택된 버튼이 없다면 경고 메시지 표시 후 함수 종료
+  if (!selectedButton) {
+    alert('문의할 카테고리를 선택해주세요.');
+    return;
   }
-});
+
+  // 선택된 버튼의 데이터 값 가져오기
+  const selectedValue = selectedButton.dataset.value;
+
+  console.log(selectedValue);
+
+  if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
+    btn_sendMessage_customer();
+    btn_sendMessage_counselor();
+    // console.log("api 키는 있지만 일시적으로 막아둠!");
+  } else {
+    alert("api 키가 없으니 로컬에서만 작동합니다");
+  }
+}

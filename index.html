@@ -15,18 +15,20 @@
             <tr class="table_tr">
                 <td>신청자명</td>
                 <td>문의유형</td>
-                <td>신청기간</td>
+                <td>문의시간</td>
             </tr>
             <tr>
                 <td>김하나</td>
-                <td>진로</td>
+                <td>진로 관리</td>
                 <td>2023.09.07<br />13:42:08</td>
             </tr>
         </table>
-        <div class="box">
-            <h4 class="q">문의내용</h4>
-            <div>대학에 진학하고 싶은데 진학하는 방법을 모르겠어요</div>
-        </div>
+        <form id="form">
+            <div class="box">
+                <h4 class="q">문의내용</h4>
+                <textarea id="form_detail" name="form_detail" rows="8" readonly>문의 내용 입력입니다.</textarea>
+            </div>
+        </form>
 
         <h2>조치내용</h2>
         <form id="counselingForm">
@@ -34,13 +36,12 @@
                 <div class="box_s_wrapper">
                     <h4 class="content">상담내용</h4>
                     <div class="input_box">
-                        <label><input type="radio" name="counselingType" value="전화상담" checked>전화상담</label>
-                        <label><input type="radio" name="counselingType" value="방문상담">방문상담</label>
+                        <label><input type="radio" name="counselingType" value="전화상담" required>전화상담</label>
+                        <label><input type="radio" name="counselingType" value="방문상담" required>방문상담</label>
                     </div>
                 </div>
                 <div class="after">
-                    <textarea id="counselingDetails" name="counselingDetails" rows="4" cols="50">
-                    </textarea>
+                    <textarea id="counselingDetails" name="counselingDetails" rows="8" required></textarea>
                 </div>
             </div>
 

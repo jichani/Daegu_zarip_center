@@ -52,6 +52,18 @@ table {
     margin-bottom: 20px;
 }
 
+textarea {
+    outline: none;
+}
+
+textarea#form_detail {
+    border: none;
+}
+
+textarea#counselingDetails {
+    padding: 10px;
+}
+
 .table_tr {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
@@ -63,7 +75,7 @@ table tr td {
     padding: 10px 0;
 }
 
-table tr td:not(:nth-last-child(1)){
+table tr td:not(:nth-last-child(1)) {
     border-right: 1px solid #ddd;
 }
 
@@ -83,8 +95,10 @@ table tr td:not(:nth-last-child(1)){
     color: #4D5359;
 }
 
-.box div {
-    padding-top: 10px;
+.box textarea {
+    margin-top: 10px;
+    width: 100%;
+    resize: none;
 }
 
 .box_s {
@@ -120,7 +134,7 @@ table tr td:not(:nth-last-child(1)){
     margin-left: 5px;
 }
 
-label{
+label {
     cursor: pointer;
 }
 
@@ -128,6 +142,11 @@ label{
     font-size: 16px;
     font-weight: 400;
     padding-top: 10px;
+}
+
+.after textarea {
+    width: 100%;
+    resize: none;
 }
 
 .check {

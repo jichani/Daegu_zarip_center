@@ -439,7 +439,7 @@
 
     <div class="form_area" data-aos-offset="300" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
       data-aos-duration="1300">
-      <form method="POST" action="/submit" onsubmit="return buttonConsulting(event)">
+      <form id="yourForm" onsubmit="buttonConsulting(event)">
         <p>문의하기</p>
         <input type="text" placeholder="이름" class="name" id="name" name="name" autocomplete="name" required
           minlength="1" />
@@ -561,22 +561,6 @@
 
   <!-- ajax -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("form").on("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-
-        var formData = $(this).serialize();
-
-        $.post('/submit', formData, function (data) {
-          alert('Data inserted successfully');
-          // Here you can also clear the form fields or update the page in some other way
-        }).fail(function () {
-          alert('An error occurred during the query');
-        });
-      });
-    });
-  </script>
 
   <script src="./js/config.js"></script>
   <script src="./js/solapi.js"></script>

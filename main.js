@@ -59,12 +59,12 @@ app.post('/submit', function (req, res) {
   let sql = "INSERT INTO Counseling (Inquirer_name, Inquirer_phone_number, Inquirer_email, Inquiry_type, inquiry_details) VALUES (?, ?, ?, ?, ?)";
   let values = [req.body.name, req.body.tel, req.body.email, req.body.inquiryType, req.body.text];
 
-  con.query(sql, values, function (err) {
+  con.query(sql, values, function (err, result) {
     if (err) {
       console.log(err);
-      res.status(500).send(err, '쿼리 값을 집어넣는 부분에서 에러가 났어요');
+      res.status(500).send({ success: false });
     } else {
-      res.send('성공적으로 데이터를 집어넣었습니다.');
+      res.send({ success: true, id: result.insertId });
     }
   });
 });

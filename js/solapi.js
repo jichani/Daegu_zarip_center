@@ -11,10 +11,30 @@ function btn_sendMessage_counselor() {
 
   const text = document.getElementById("text").value;
 
-  let link = "daegu-zarip-center.netlify.app";
-  let selectedValue = document.getElementById('inquiryType').value;
 
-  sendMessage_counselor(inquirer_name, counselor_name, tel, pfid, templateId, nowDate, text, selectedValue, link);
+  var selectedValue = document.getElementById('inquiryType').value;
+
+  // AJAX request
+  $.ajax({
+    type: "POST",
+    url: "/submit",
+    data: $("#yourForm").serialize(),
+  }).done(function (response) {
+
+    if (response.success) {
+      const id = response.id;
+      // use the id to generate link
+      let link = "port-0-daegu-zarip-center-3prof2lll079qfg.sel4.cloudtype.app/?id=" + id;
+
+      sendMessage_counselor(inquirer_name, counselor_name, tel, pfid,
+        templateId,
+        nowDate, text,
+        selectedValue,
+        link);
+
+    } else { console.log("Server did not return a success response"); }
+
+  }).fail(function () { console.log("Ajax request failed"); });
 }
 
 function btn_sendMessage_customer() {
@@ -143,9 +163,9 @@ function sendMessage_customer(name, tel, pfid, templateId, selectedValue) {
 function requestResult() {
   if (request.readyState == XMLHttpRequest.DONE) {
     if (request.status === 200) {
-      console.log("상담 신청이 완료되었습니다.");
+      alert("상담 신청이 완료되었습니다.");
     } else {
-      console.log("상담 신청에 실패하였습니다. 다시 시도해주세요.");
+      alert("상담 신청에 실패하였습니다. 다시 시도해주세요.");
     }
   }
 };

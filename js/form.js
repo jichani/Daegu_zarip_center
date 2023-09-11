@@ -30,7 +30,7 @@ function buttonConsulting(e) {
   // 선택된 버튼의 데이터 값 가져오기
   const selectedValue = selectedButton.dataset.value;
 
-  console.log(selectedValue);
+  // console.log(selectedValue);
 
   if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
     btn_sendMessage_customer();

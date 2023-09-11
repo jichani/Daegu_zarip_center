@@ -131,7 +131,10 @@ footer {
 
 @media screen and (min-width: 1920px) {
     footer {
-        padding: 40px 237px 64px 361px;
+        padding: 40px 0 64px 0;
+        /* max-width: 80%;
+        border: 1px solid red; */
+        margin: 0 auto;
         font-size: 16px;
         height: 241px;
     }

@@ -1,7 +1,8 @@
 function btn_sendMessage_counselor() {
-  let name = document.getElementById('name').value;
+  let inquirer_name = document.getElementById('name').value;
+  let counselor_name = "이연경";
   let tel = "01086727571";
-  let templateId = "KA01TP230907043126398rad96zOaFkv";
+  let templateId = "KA01TP230911050059565VQAWKP7Ydik";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
   let now = new Date();
@@ -11,8 +12,9 @@ function btn_sendMessage_counselor() {
   const text = document.getElementById("text").value;
 
   let link = "daegu-zarip-center.netlify.app";
+  let selectedValue = document.getElementById('inquiryType').value;
 
-  sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selectedValue, link);
+  sendMessage_counselor(inquirer_name, counselor_name, tel, pfid, templateId, nowDate, text, selectedValue, link);
 }
 
 function btn_sendMessage_customer() {
@@ -20,6 +22,7 @@ function btn_sendMessage_customer() {
   let tel = document.getElementById('tel').value;
   let templateId = "KA01TP230907043423335DsEA22M5lVp";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
+  let selectedValue = document.getElementById('inquiryType').value;
 
   sendMessage_customer(name, tel, pfid, templateId, selectedValue);
 }
@@ -55,7 +58,7 @@ function getSignature(value, key) {
 
 var request;
 
-function sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selectedValue, link) {
+function sendMessage_counselor(inquirer_name, counselor_name, tel, pfid, templateId, nowDate, text, selectedValue, link) {
   let url = 'https://api.solapi.com/messages/v4/send-many/detail';
 
   request = new XMLHttpRequest();
@@ -80,10 +83,11 @@ function sendMessage_counselor(name, tel, pfid, templateId, nowDate, text, selec
           "pfId": pfid,
           "templateId": templateId,
           "variables": {
-            "#{시간}": nowDate + " ",
-            "#{이름}": name,
-            "#{신청버튼}": selectedValue,
-            "#{문의사항}": text,
+            "#{상담사이름}": counselor_name,
+            "#{신청시간}": nowDate + " ",
+            "#{문의자이름}": inquirer_name,
+            "#{문의유형}": selectedValue,
+            "#{문의내용}": text,
             "#{링크}": link,
           }
         }

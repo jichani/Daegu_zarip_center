@@ -9,11 +9,51 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, './')));
 app.use(cors());
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
-});
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', function (req, res) {
+  let id = req.query.id;
+
+  if (id) {
+    let sql = "SELECT * FROM Counseling WHERE id = ?";
+    let values = [id];
+
+    con.query(sql, values, function (err, result) {
+      if (err) {
+        console.log(err);
+        // 데이터베이스 조회 중 오류가 발생한 경우
+        res.status(500).send('데이터베이스 조회 중 오류가 발생했습니다.');
+      } else {
+        if (result.length > 0) {
+          let data = result[0];
+
+          // HTML 파일 전송 및 데이터 전달
+          try {
+            // EJS 렌더링 중 오류가 발생할 수 있는 부분을 try-catch 문으로 감싼다.
+            res.render('index', { data: data });
+          } catch (e) {
+            console.log(e);
+            res.status(500).send('EJS 렌더링 중 오류가 발생했습니다.');
+          }
+
+        } else {
+          // 해당 ID에 대한 데이터를 찾을 수 없는 경우
+          res.status(404).send('해당 ID에 대한 데이터를 찾을 수 없습니다.');
+        }
+      }
+    });
+  } else {
+    try {
+      // EJS 렌더링 중 오류가 발생할 수 있는 부분을 try-catch 문으로 감싼다.
+      res.render('index');
+    } catch (e) {
+      console.log(e);
+      res.status(500).send('EJS 렌더링 중 오류가 발생했습니다.');
+    }
+
+  }
+});
 
 const con = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -28,31 +68,6 @@ con.connect(function (err) {
     console.log(err, "🥲");
     return;
   }
-
-  var sql = `
-  CREATE TABLE IF NOT EXISTS Counseling (
-    Id int(11) AUTO_INCREMENT PRIMARY KEY,
-    Inquiry_time timestamp DEFAULT CURRENT_TIMESTAMP,
-    Inquirer_name varchar(255),
-    Inquirer_phone_number varchar(20),
-    Inquirer_email varchar(255),
-    Inquiry_type varchar(20),
-    inquiry_details text,
-    Counseling_in_progress tinyint(1) DEFAULT 0,
-    Counselor_name varchar(255),
-    Counseling_date timestamp NULL DEFAULT NULL,
-    Counseling_type varchar(20),
-    Counseling_details text
-  )
-`;
-
-  con.query(sql, (err, result) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log("테이블이 이미 존재하고 있으니 연결은 성공~! 😊");
-  });
 });
 
 app.post('/submit', function (req, res) {

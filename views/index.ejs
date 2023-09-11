@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대구자립지원전담기관_상담조회</title>
-    <link rel="stylesheet" href="./css/counselor.css" />
+    <link rel="stylesheet" href="../css/counselor.css" />
 </head>
 
 <body>
@@ -18,15 +18,28 @@
                 <td>문의시간</td>
             </tr>
             <tr>
-                <td>김하나</td>
-                <td>진로 관리</td>
-                <td>2023.09.07<br />13:42:08</td>
+                <td id="Inquirer_name">
+                    <%= data.Inquirer_name %>
+                </td>
+                <td id="Inquiry_type">
+                    <%= data.Inquiry_type %>
+                </td>
+                <td id="Inquiry_time">
+                    <% const date=new Date(data.Inquiry_time); const year=date.getFullYear(); const
+                        month=String(date.getMonth() + 1).padStart(2, '0' ); const
+                        day=String(date.getDate()).padStart(2, '0' ); const
+                        hours=String(date.getHours()).padStart(2, '0' ); const
+                        minutes=String(date.getMinutes()).padStart(2, '0' ); const
+                        seconds=String(date.getSeconds()).padStart(2, '0' ); %>
+                        <%- `${year}.${month}.${day}<br>${hours}:${minutes}:${seconds}` %>
+                </td>
             </tr>
         </table>
         <form id="form">
             <div class="box">
                 <h4 class="q">문의내용</h4>
-                <textarea id="form_detail" name="form_detail" rows="8" readonly>문의 내용 입력입니다.</textarea>
+                <textarea id="inquiry_details" class="form_detail" name="form_detail" rows="8"
+                    readonly><%= data.inquiry_details %></textarea>
             </div>
         </form>
 
@@ -41,7 +54,8 @@
                     </div>
                 </div>
                 <div class="after">
-                    <textarea id="counselingDetails" name="counselingDetails" rows="8" required></textarea>
+                    <textarea id="counselingDetails" class="counselingDetails" name="counselingDetails" rows="8"
+                        required></textarea>
                 </div>
             </div>
 
@@ -52,6 +66,8 @@
             <button id="agree_button" type="submit">상담완료</button>
         </form>
     </div>
+
+
 </body>
 
 </html>

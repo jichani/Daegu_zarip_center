@@ -56,11 +56,11 @@ textarea {
     outline: none;
 }
 
-textarea#form_detail {
+textarea.form_detail {
     border: none;
 }
 
-textarea#counselingDetails {
+textarea.counselingDetails {
     padding: 10px;
 }
 

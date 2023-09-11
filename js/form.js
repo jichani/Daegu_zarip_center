@@ -13,28 +13,6 @@ inform_buttons.forEach(button => {
   });
 });
 
-// 약관 동의
-const checkbox = document.getElementById("agreeCheckbox");
-const form_submit = document.getElementById("privateButton");
-
-// form_submit.addEventListener("click", (e) => {
-//   if (!checkbox.checked) {
-//     // 약관에 동의하지 않았다면 폼 제출 방지
-//     alert("약관에 동의하세요.");
-//     e.preventDefault();
-//   } else {
-//     e.preventDefault();
-
-//     if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
-//       // btn_sendMessage_customer();
-//       // btn_sendMessage_counselor();
-//       console.log("막아둠!")
-//     } else {
-//       alert("로컬에서만 작동합니다");
-//     }
-//   }
-// });
-
 function buttonConsulting(e) {
   e.preventDefault();
 

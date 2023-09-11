@@ -99,8 +99,8 @@ section.first_carousel {
         justify-content: space-between;
 
         p > span {
-          font-size: 22px;
-          font-weight: 700;
+          font-size: 1.3em;
+          font-weight: 600;
         }
 
         > p.text_gold {
@@ -151,7 +151,8 @@ section.first_carousel {
   .carousel_button {
     z-index: 10;
     position: absolute;
-    bottom: 200 * $size-1920-1px;
+    // bottom: 200 * $size-1920-1px;
+    top: 200 * $size-1920-top;
     left: 180 * $size-1920-1px;
     display: inline-block;
 
@@ -428,16 +429,16 @@ section.contact_form {
       }
       .first_swiper .text_box {
         max-width: 320 * $size-1024-1px;
-        min-height: 240px;
+        min-height: 280px;
         left: 120px;
-        padding: 40px;
+        padding: 30px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 
         .text_box_description {
 
           p > span {
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 600;
           }
 
           > p:nth-child(1) {
@@ -448,7 +449,7 @@ section.contact_form {
             font-size: 12px;
             font-weight: 400;
             line-height: 1.8;
-            max-height: 150px;
+            max-height: 230px;
             overflow: hidden;
           }
           a {
@@ -487,7 +488,8 @@ section.contact_form {
       }
     }
     .carousel_button {
-      bottom: 100px;
+      // bottom: 100px;
+      top: 200px;
       left: 70px;
       .button_purple {
         svg {
@@ -583,6 +585,16 @@ section.contact_form {
 }
 
 @media (max-width: 866px) {
+  section.first_carousel {
+    .first_swiper .text_box {
+      max-width: 310 * $size-1024-1px;
+      min-height: 240px;
+      left: 120px;
+      padding: 30px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   section.contact_form {
     display: flex;
     justify-content: center;
@@ -632,10 +644,15 @@ section.contact_form {
       margin-top: 20px;
       display: flex;
       gap: 18 * $size-430-1px;
-      position: relative;
-      bottom: auto;
-      left: auto;
-      justify-content: center;
+      // position: relative;
+      position: absolute;
+      top: 500px;
+      // margin: 0 auto;
+      // bottom: auto;
+      // border: 1px solid red;
+      z-index: 88;
+      left: 15%;
+
     }
     &.first_carousel {
       > div.gray_section {
@@ -721,14 +738,29 @@ section.contact_form {
         }
       }
     }
+    // .carousel_button {
+    //   margin-top: 0;
+    //   display: flex;
+    //   gap: 18 * $size-430-1px;
+    //   position: relative;
+    //   bottom: 100px;
+    //   left: auto;
+    //   justify-content: center;
+    // }
+
     .carousel_button {
-      margin-top: 0;
+      margin-top: 20px;
       display: flex;
       gap: 18 * $size-430-1px;
-      position: relative;
-      bottom: 100px;
-      left: auto;
-      justify-content: center;
+      // position: relative;
+      position: absolute;
+      top: 950px;
+      // margin: 0 auto;
+      // bottom: auto;
+      // border: 1px solid red;
+      z-index: 88;
+      left: 15%;
+
     }
   }
   section.contact_form {

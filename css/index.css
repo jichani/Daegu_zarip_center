@@ -321,14 +321,11 @@
 
 @media screen and (min-width: 1025px) {
     .finance {
-        /* border: 1px solid blue; */
         height: calc(100vh - 90px);
-        /* padding-top: 90px; */
     }
     .finance_zip {
         display: flex;
         align-items: center;
-        /* border: 1px solid #454ace; */
     }
     .home, .unv, .medi {
         height: calc(100vh - 90px);

@@ -84,11 +84,22 @@ footer {
 
 @media screen and (min-width: 1024px) {
     footer {
-        padding: 40px 120px 60px 120px;
+        padding: 40px 0 60px 0;
         font-size: 16px;
         display: flex;
         justify-content: space-between;
-        height: 180px;
+        height: auto;
+    }
+
+    .footer_big_wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .footer_logo img {
+        width: 255px;
     }
 
     .footer_list {
@@ -132,10 +143,18 @@ footer {
 @media screen and (min-width: 1920px) {
     footer {
         padding: 40px 0 64px 0;
-        /* max-width: 80%;
-        border: 1px solid red; */
-        margin: 0 auto;
+        /* margin: 0 auto; */
         font-size: 16px;
-        height: 241px;
+        height: auto;
     }
+    .footer_big_wrapper {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_logo img {
+        width: 364px;
+    }
+
 }

@@ -46,12 +46,11 @@ app.get('/', function (req, res) {
   } else {
     try {
       // EJS 렌더링 중 오류가 발생할 수 있는 부분을 try-catch 문으로 감싼다.
-      res.render('index');
+      res.render('index', { data: {} }); // 여기에서 기본값으로 빈 객체를 전달합니다.
     } catch (e) {
       console.log(e);
       res.status(500).send('EJS 렌더링 중 오류가 발생했습니다.');
     }
-
   }
 });
 
@@ -71,18 +70,34 @@ con.connect(function (err) {
 });
 
 app.post('/submit', function (req, res) {
-  let sql = "INSERT INTO Counseling (Inquirer_name, Inquirer_phone_number, Inquirer_email, Inquiry_type, inquiry_details) VALUES (?, ?, ?, ?, ?)";
-  let values = [req.body.name, req.body.tel, req.body.email, req.body.inquiryType, req.body.text];
+  let sql = "UPDATE Counseling SET Counseling_type = ?, Counseling_details = ?, Counseling_in_progress = ?, Counseling_date = NOW() WHERE id = ?";
 
-  con.query(sql, values, function (err) {
+  // 요청 본문(body)에서 값을 가져옵니다.
+  let counselingType = req.body.Counseling_type;
+  let counselingDetails = req.body.Counseling_details;
+  let counselingInProgress = true;
+
+  // 요청 본문(body)에서 ID 값을 가져옵니다.
+  // 클라이언트에서 해당 ID 값을 보내줘야 합니다.
+  let idToUpdate = req.body.id;
+
+  let values = [counselingType, counselingDetails, counselingInProgress, idToUpdate];
+
+  con.query(sql, values, function (err, result) {
     if (err) {
       console.log(err);
-      res.status(500).send(err, '쿼리 값을 집어넣는 부분에서 에러가 났어요');
+      res.status(500).send('데이터베이스 업데이트 중 오류가 발생했습니다.');
     } else {
-      res.send('성공적으로 데이터를 집어넣었습니다.');
+      // result.affectedRows 값으로 업데이트가 실제로 발생했는지 확인합니다.
+      if (result.affectedRows > 0) {
+        res.send('성공적으로 데이터를 업데이트하였습니다.');
+      } else {
+        res.status(404).send('업데이트할 데이터를 찾을 수 없습니다.');
+      }
     }
   });
 });
+
 
 app.listen(3000, function () {
   console.log("Server is running on port:3000");

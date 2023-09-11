@@ -45,17 +45,18 @@
         </form>
 
         <h2>조치내용</h2>
-        <form id="counselingForm">
+        <form id="counselingForm" method="POST" action="/submit">
+            <input type="hidden" id="id" name="id" value="<%= data.Id %>">
             <div class="box_s">
                 <div class="box_s_wrapper">
                     <h4 class="content">상담내용</h4>
                     <div class="input_box">
-                        <label><input type="radio" name="counselingType" value="전화상담" required>전화상담</label>
-                        <label><input type="radio" name="counselingType" value="방문상담" required>방문상담</label>
+                        <label><input type="radio" name="Counseling_type" value="전화상담" required>전화상담</label>
+                        <label><input type="radio" name="Counseling_type" value="방문상담" required>방문상담</label>
                     </div>
                 </div>
                 <div class="after">
-                    <textarea id="counselingDetails" class="counselingDetails" name="counselingDetails" rows="8"
+                    <textarea id="counselingDetails" class="counselingDetails" name="Counseling_details" rows="8"
                         required></textarea>
                 </div>
             </div>
@@ -69,6 +70,43 @@
     </div>
 
 
+    <script>
+        $(document).ready(function () {
+            $('#counselingForm').on('submit', function (e) {
+                e.preventDefault(); // 폼의 기본 제출 동작을 막습니다.
+
+                const counselingType = $('input[name="counselingType"]:checked').val();
+                const counselingDetails = $('#counselingDetails').val();
+
+                // 현재 시간을 timestamp로 변환합니다.
+                const date = new Date();
+                const counselingDate = date.getTime();
+
+                const id = $('#id').val();
+                console.log(id);
+
+                $.ajax({
+                    url: '/submit', // 실제 데이터를 전송할 서버의 URL로 변경해야 합니다.
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        id: id,
+                        Counseling_type: counselingType,
+                        Counseling_details: counselingDetails,
+                        Counseling_in_progress: true,
+                    }),
+                    success: function (data) {
+                        console.log('Data sent successfully');
+                        // 추가적인 성공 처리 로직
+                    },
+                    error: function (err) {
+                        console.log('Error:', err);
+                        // 에러 처리 로직
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

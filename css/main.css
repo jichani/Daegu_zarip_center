@@ -100,8 +100,8 @@ section.first_carousel .first_swiper .text_box .text_box_description {
   justify-content: space-between;
 }
 section.first_carousel .first_swiper .text_box .text_box_description p > span {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
 }
 section.first_carousel .first_swiper .text_box .text_box_description > p.text_gold {
   color: #ff9213;
@@ -144,7 +144,7 @@ section.first_carousel .first_swiper img {
 section.first_carousel .carousel_button {
   z-index: 10;
   position: absolute;
-  bottom: 10.42vw;
+  top: 28vh;
   left: 9.378vw;
   display: inline-block;
 }
@@ -573,14 +573,14 @@ section.contact_form .form_area form .submit:hover {
   }
   section.first_carousel.first_carousel .first_swiper .text_box {
     max-width: 31.264vw;
-    min-height: 240px;
+    min-height: 280px;
     left: 120px;
-    padding: 40px;
+    padding: 30px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description p > span {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description > p:nth-child(1) {
     font-size: 24px;
@@ -589,7 +589,7 @@ section.contact_form .form_area form .submit:hover {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.8;
-    max-height: 150px;
+    max-height: 230px;
     overflow: hidden;
   }
   section.first_carousel.first_carousel .first_swiper .text_box .text_box_description a {
@@ -775,7 +775,7 @@ section.contact_form .form_area form .submit:hover {
     height: 366px;
   }
   section.first_carousel .carousel_button {
-    bottom: 100px;
+    top: 200px;
     left: 70px;
   }
   section.first_carousel .carousel_button .button_purple svg {
@@ -860,6 +860,13 @@ section.contact_form .form_area form .submit:hover {
   }
 }
 @media (max-width: 866px) {
+  section.first_carousel .first_swiper .text_box {
+    max-width: 30.287vw;
+    min-height: 240px;
+    left: 120px;
+    padding: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
   section.contact_form {
     display: flex;
     justify-content: center;
@@ -901,10 +908,10 @@ section.contact_form .form_area form .submit:hover {
     margin-top: 20px;
     display: flex;
     gap: 4.1868vw;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    justify-content: center;
+    position: absolute;
+    top: 500px;
+    z-index: 88;
+    left: 15%;
   }
   section.first_carousel.first_carousel > div.gray_section {
     display: none;
@@ -975,13 +982,13 @@ section.contact_form .form_area form .submit:hover {
     max-height: none;
   }
   section.first_carousel .carousel_button {
-    margin-top: 0;
+    margin-top: 20px;
     display: flex;
     gap: 4.1868vw;
-    position: relative;
-    bottom: 100px;
-    left: auto;
-    justify-content: center;
+    position: absolute;
+    top: 950px;
+    z-index: 88;
+    left: 15%;
   }
   section.contact_form form .inqurey_btn button {
     width: 60px;

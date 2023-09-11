@@ -125,7 +125,7 @@
                 <p>
                   <!-- 자립 한다는 것은 살아야 할 새로운 장소를 찾아야 한다는 것을 뜻합니다. -->
                   <span>자립</span>을 하려면 혼자 또는 누군가와 함께 <span>살 장소</span>를 찾을 계획을 세워야 합니다.<br /> 주택나 아파트 등의 <span>방을 구할
-                  때 갖추어야 할 서류와 거쳐야 할 절차</span>는 어떤 것이 있는지 알아보도록 합시다.
+                    때 갖추어야 할 서류와 거쳐야 할 절차</span>는 어떤 것이 있는지 알아보도록 합시다.
                 </p>
                 <a href="http://www.ggjarip.or.kr/ebook/gg01/" target="_blank" class="button green">
                   <p>자세히보기</p>
@@ -439,14 +439,17 @@
 
     <div class="form_area" data-aos-offset="300" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
       data-aos-duration="1300">
-      <form onsubmit="return buttonConsulting(event)">
+      <form method="POST" action="/submit" onsubmit="return buttonConsulting(event)">
         <p>문의하기</p>
-        <input type="text" placeholder="이름" class="name" id="name" autocomplete="name" required minlength="1" />
-        <input type="tel" placeholder="연락처" class="call" id="tel" autocomplete="tel" required minlength="9" />
-        <input type="email" placeholder="이메일" class="email" id="email" autocomplete="email" required />
+        <input type="text" placeholder="이름" class="name" id="name" name="name" autocomplete="name" required
+          minlength="1" />
+        <input type="tel" placeholder="연락처" class="call" name="tel" id="tel" autocomplete="tel" required
+          minlength="9" />
+        <input type="email" name="email" placeholder="이메일" class="email" id="email" autocomplete="email" required />
         <div>
           <div class="inqurey_btn">
-            <button type="button" class="inqurey_option" data-value="재정 관리">
+            <input type="hidden" id="inquiryType" name="inquiryType" value="재정 관리">
+            <button type="button" class="inqurey_option checked" data-value="재정 관리">
               재정
             </button>
             <button type="button" class="inqurey_option" data-value="주거 관리">
@@ -463,7 +466,7 @@
             </button>
           </div>
         </div>
-        <textarea id="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"
+        <textarea id="text" name="text" placeholder="문의사항을 남겨주시면 더 빠른 상담이 가능합니다." class="contact_info" name="inputstr"
           required></textarea>
         <label><input required id="agreeCheckbox" type="checkbox" class="checkbox" />
           개인정보수집 이용에 관한 동의</label>
@@ -506,12 +509,6 @@
       <a href="#contact_form"><img src="./img/contact.png" alt="contact" class="chatbox" /></a>
     </div>
   </div>
-
-  <form method="POST" action="/submit">
-    <input type="text" id="name" name="name"><br>
-    <input type="text" id="email" name="email"><br>
-    <button type="submit">제출하기</button>
-  </form>
 
   <footer>
     <div class="footer_wrapper">

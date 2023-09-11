@@ -10,6 +10,8 @@ inform_buttons.forEach(button => {
     button.classList.add("checked");
     // 데이터 값 가져오기
     selectedValue = button.dataset.value;
+    // Hidden input field 업데이트
+    document.getElementById('inquiryType').value = selectedValue;
   });
 });
 
@@ -22,7 +24,7 @@ function buttonConsulting(e) {
   // 만약 선택된 버튼이 없다면 경고 메시지 표시 후 함수 종료
   if (!selectedButton) {
     alert('문의할 카테고리를 선택해주세요.');
-    return;
+    return false;
   }
 
   // 선택된 버튼의 데이터 값 가져오기
@@ -34,7 +36,9 @@ function buttonConsulting(e) {
     btn_sendMessage_customer();
     btn_sendMessage_counselor();
     // console.log("api 키는 있지만 일시적으로 막아둠!");
+    return true;
   } else {
     alert("api 키가 없으니 로컬에서만 작동합니다");
+    return false;
   }
 }

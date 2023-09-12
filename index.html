@@ -29,20 +29,13 @@
             </tr>
             <tr>
                 <td id="Inquirer_name">
-                    <%= data.Inquirer_name %>
+                    조정
                 </td>
                 <td id="Inquiry_type">
-                    <%= data.Inquiry_type %>
+                    진로 정보
                 </td>
                 <td id="Inquiry_time">
-                    <% const date=new Date(data.Inquiry_time); const year=date.getFullYear(); const
-                        month=String(date.getMonth() + 1).padStart(2, '0' ); const
-                        day=String(date.getDate()).padStart(2, '0' ); const weekdays=['일', '월' , '화' , '수' , '목' , '금'
-                        , '토' ]; const weekday=weekdays[date.getDay()]; const
-                        hours=String(date.getHours()).padStart(2, '0' ); const
-                        minutes=String(date.getMinutes()).padStart(2, '0' ); const
-                        seconds=String(date.getSeconds()).padStart(2, '0' ); %>
-                        <%- `${year}.${month}.${day}(${weekday})<br>${hours}:${minutes}:${seconds}` %>
+                    23.09.12<br/>09:48
                 </td>
             </tr>
         </table>
@@ -50,7 +43,7 @@
             <div class="box">
                 <h4 class="q">문의내용</h4>
                 <textarea id="inquiry_details" class="form_detail" name="form_detail" rows="8"
-                    readonly><%= data.inquiry_details %></textarea>
+                    readonly>문의내용입니다.</textarea>
             </div>
         </form>
 
@@ -67,24 +60,24 @@
                 </div>
                 <div class="after">
                     <textarea id="counselingDetails" class="counselingDetails" name="Counseling_details" rows="8"
-                        required></textarea>
+                        required placeholder="상담시간 및 상담 내용을 입력해주세요."></textarea>
                 </div>
             </div>
             <table class="counseling_name">
-                <tr class="table_tr">
-                    <td>상담자명</td>
+                <tr class="table_tr name_table">
+                    <td style="width: 30%;">상담자명</td>
                     <td>상담유형</td>
-                    <td>상담시간</td>
                 </tr>
                 <tr>
-                    <td>이선희</td>
+                    <td>
+                        <input class="name_input" type="text" required />
+                    </td>
                     <td>
                         <div class="input_box">
                             <label><input type="radio" name="counselingType" value="전화상담" required checked>전화상담</label>
                             <label><input type="radio" name="counselingType" value="방문상담" required>방문상담</label>
                         </div>
                     </td>
-                    <td>23.09.12<br/>09:38</td>
                 </tr>
             </table>
 

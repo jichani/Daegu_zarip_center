@@ -115,7 +115,7 @@ table tr td:not(:nth-last-child(1)){
 
 .input_box {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .input_box input {
@@ -140,6 +140,10 @@ label{
 .after textarea {
     width: 100%;
     resize: none;
+}
+
+.name_input {
+    width: 60%;
 }
 
 .check {

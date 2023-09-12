@@ -12,7 +12,7 @@
     <div class="wrapper">
         <h2>상담조회</h2>
         <table>
-            <tr class="table_tr">
+            <!-- <tr class="table_tr">
                 <td>신청자명</td>
                 <td>문의유형</td>
                 <td>문의시간</td>
@@ -21,29 +21,72 @@
                 <td>김하나</td>
                 <td>진로 관리</td>
                 <td>2023.09.07<br />13:42:08</td>
+            </tr> -->
+            <tr class="table_tr">
+                <td>신청자명</td>
+                <td>문의유형</td>
+                <td>문의시간</td>
+            </tr>
+            <tr>
+                <td id="Inquirer_name">
+                    <%= data.Inquirer_name %>
+                </td>
+                <td id="Inquiry_type">
+                    <%= data.Inquiry_type %>
+                </td>
+                <td id="Inquiry_time">
+                    <% const date=new Date(data.Inquiry_time); const year=date.getFullYear(); const
+                        month=String(date.getMonth() + 1).padStart(2, '0' ); const
+                        day=String(date.getDate()).padStart(2, '0' ); const weekdays=['일', '월' , '화' , '수' , '목' , '금'
+                        , '토' ]; const weekday=weekdays[date.getDay()]; const
+                        hours=String(date.getHours()).padStart(2, '0' ); const
+                        minutes=String(date.getMinutes()).padStart(2, '0' ); const
+                        seconds=String(date.getSeconds()).padStart(2, '0' ); %>
+                        <%- `${year}.${month}.${day}(${weekday})<br>${hours}:${minutes}:${seconds}` %>
+                </td>
             </tr>
         </table>
         <form id="form">
             <div class="box">
                 <h4 class="q">문의내용</h4>
-                <textarea id="form_detail" name="form_detail" rows="8"></textarea>
+                <textarea id="inquiry_details" class="form_detail" name="form_detail" rows="8"
+                    readonly><%= data.inquiry_details %></textarea>
             </div>
         </form>
 
         <h2>조치내용</h2>
-        <form id="counselingForm">
+        <form id="counselingForm" method="POST" action="/submit">
+            <input type="hidden" id="id" name="id" value="<%= data.Id %>">
             <div class="box_s">
                 <div class="box_s_wrapper">
                     <h4 class="content">상담내용</h4>
-                    <div class="input_box">
-                        <label><input type="radio" name="counselingType" value="전화상담" checked>전화상담</label>
-                        <label><input type="radio" name="counselingType" value="방문상담">방문상담</label>
-                    </div>
+                    <!-- <div class="input_box">
+                        <label><input type="radio" name="counselingType" value="전화상담" required checked>전화상담</label>
+                        <label><input type="radio" name="counselingType" value="방문상담" required>방문상담</label>
+                    </div> -->
                 </div>
                 <div class="after">
-                    <textarea id="counselingDetails" name="counselingDetails" rows="8"></textarea>
+                    <textarea id="counselingDetails" class="counselingDetails" name="Counseling_details" rows="8"
+                        required></textarea>
                 </div>
             </div>
+            <table class="counseling_name">
+                <tr class="table_tr">
+                    <td>상담자명</td>
+                    <td>상담유형</td>
+                    <td>상담시간</td>
+                </tr>
+                <tr>
+                    <td>이선희</td>
+                    <td>
+                        <div class="input_box">
+                            <label><input type="radio" name="counselingType" value="전화상담" required checked>전화상담</label>
+                            <label><input type="radio" name="counselingType" value="방문상담" required>방문상담</label>
+                        </div>
+                    </td>
+                    <td>23.09.12<br/>09:38</td>
+                </tr>
+            </table>
 
             <!-- Checkbox -->
             <label><input class="check" type="checkbox" id="double_check" required>작성을 완료하였습니다.</label>

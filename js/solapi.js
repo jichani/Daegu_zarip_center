@@ -24,7 +24,7 @@ function btn_sendMessage_counselor() {
     if (response.success) {
       const id = response.id;
       // use the id to generate link
-      let link = "port-0-daegu-zarip-center-3prof2lll079qfg.sel4.cloudtype.app/?id=" + id;
+      let link = "port-0-daegu-zarip-center-sub-page-3prof2lll079qfg.sel4.cloudtype.app/?id=" + id;
 
       sendMessage_counselor(inquirer_name, counselor_name, tel, pfid,
         templateId,

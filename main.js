@@ -7,6 +7,8 @@ require('dotenv').config();
 
 const app = express();
 
+var CryptoJS = require("crypto-js");
+
 app.use(express.static(path.join(__dirname, './')));
 app.use(cors());
 app.get('/', function (req, res) {

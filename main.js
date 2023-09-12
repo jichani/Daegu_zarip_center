@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-
-const app = express();
+var request = require('request'); // You need to install this package if you haven't already
 
 var CryptoJS = require("crypto-js");
+const app = express();
 
 app.use(express.static(path.join(__dirname, './')));
 app.use(cors());
@@ -15,6 +15,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // To parse JSON in the body of POST requests
 
 
 const con = mysql.createConnection({
@@ -74,3 +75,140 @@ app.post('/submit', function (req, res) {
 app.listen(3000, function () {
   console.log("Server is running on port:3000");
 });
+
+// 추가 코드
+
+function getAuthorization() {
+  let salt = getSalt();
+  let date = getDate();
+  let value = date + salt;
+  let signature = getSignature(value, process.env.API_SECRET);
+  let authoriztion =
+    'HMAC-SHA256 apiKey=' +
+    process.env.API_KEY +
+    ', date=' +
+    date +
+    ', salt=' +
+    salt +
+    ', signature=' +
+    signature;
+  return authoriztion;
+}
+
+function getSalt() {
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+
+  for (var i = 0; i < 30; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+function getDate() {
+  let today = new Date();
+  return today.toISOString();
+}
+
+function getSignature(value, key) {
+  let signature = CryptoJS.HmacSHA256(value, key);
+  return signature.toString(CryptoJS.enc.Hex);
+}
+
+// Add these two endpoints:
+
+app.post('/send-message-counselor', function (req, res) {
+
+  let url = "https://api.solapi.com/messages/v4/send-many/detail";
+  let authoriztion = getAuthorization();
+
+  var data = {
+    "messages": [
+      {
+        "to": req.body.tel,
+        "kakaoOptions": {
+          "pfId": req.body.pfid,
+          "templateId": req.body.templateId,
+          "variables": {
+            "#{상담사이름}": req.body.counselor_name,
+            "#{신청시간}": req.body.nowDate + " ",
+            "#{문의자이름}": req.body.inquirer_name,
+            "#{문의유형}": req.body.selectedValue,
+            "#{문의내용}": req.body.text,
+            "#{링크}": req.body.link,
+
+          }
+        }
+      }
+    ]
+  };
+
+  request({
+    url: url,
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': authoriztion
+    },
+    body: data,
+
+    json: true
+
+  }, (err, response, body) => {
+    if (err) {
+      console.log(err);
+      res.send({ success: false });
+    } else {
+      res.send({ success: true });
+    }
+  });
+
+});
+
+app.post('/send-message-customer', function (req, res) {
+
+  let url = "https://api.solapi.com/messages/v4/send-many/detail";
+  let authoriztion = getAuthorization();
+
+  var data = {
+    "messages": [
+      {
+        "to": req.body.tel,
+        "kakaoOptions": {
+          "pfId": req.body.pfid,
+          "templateId": req.body.templateId,
+          "variables": {
+            "#{이름}": req.body.name,
+            "#{신청버튼}": req.body.selectedValue,
+
+          }
+        }
+      }
+    ]
+  };
+
+  request({
+    url: url,
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': authoriztion
+    },
+    body: data,
+
+    json: true
+
+  }, (err, response, body) => {
+    if (err) {
+      console.log(err);
+      res.send({ success: false });
+    } else {
+      res.send({ success: true });
+    }
+  });
+
+});
+
+
+// ... (The rest of your code)

@@ -27,18 +27,14 @@ function buttonConsulting(e) {
     return false;
   }
 
-  // 선택된 버튼의 데이터 값 가져오기
-  const selectedValue = selectedButton.dataset.value;
-
   // console.log(selectedValue);
 
-  if (typeof api_key !== 'undefined' && typeof api_secret !== 'undefined') {
-    btn_sendMessage_customer();
-    btn_sendMessage_counselor();
-    // console.log("api 키는 있지만 일시적으로 막아둠!");
-    return true;
-  } else {
-    alert("api 키가 없으니 로컬에서만 작동합니다");
-    return false;
-  }
+  Promise.all([btn_sendMessage_customer(), btn_sendMessage_counselor()])
+    .then(() => {
+      alert("상담 신청이 완료되었습니다.");
+    })
+    .catch((error) => {
+      console.error("Error during message sending:", error);
+      alert("상담 신청이 실패했습니다.")
+    });
 }

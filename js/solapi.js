@@ -1,7 +1,7 @@
 function btn_sendMessage_counselor() {
   let inquirer_name = document.getElementById('name').value;
   let counselor_name = "이연경";
-  let tel = "01086727571";
+  let tel = "01075400153";
   let templateId = "KA01TP230911050059565VQAWKP7Ydik";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
@@ -24,7 +24,7 @@ function btn_sendMessage_counselor() {
     if (response.success) {
       const id = response.id;
       // use the id to generate link
-      let link = "port-0-daegu-zarip-center-sub-page-3prof2lll079qfg.sel4.cloudtype.app/?id=" + id;
+      let link = "port-0-daegu-zarip-center-sub-page-last-3prof2lll079qfg.sel4.cloudtype.app/?id=" + id;
 
       sendMessage_counselor(inquirer_name, counselor_name, tel, pfid,
         templateId,

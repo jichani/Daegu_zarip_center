@@ -39,7 +39,7 @@
         <form id="form">
             <div class="box">
                 <h4 class="q">문의내용</h4>
-                <textarea id="inquiry_details" class="form_detail" name="form_detail" rows="8"
+                <textarea id="inquiry_details" class="form_detail" name="form_detail" rows="7"
                     readonly><%= data.inquiry_details %></textarea>
             </div>
         </form>
@@ -47,19 +47,33 @@
         <h2>조치내용</h2>
         <form id="counselingForm" method="POST" action="/submit">
             <input type="hidden" id="id" name="id" value="<%= data.Id %>">
+
             <div class="box_s">
                 <div class="box_s_wrapper">
                     <h4 class="content">상담내용</h4>
-                    <div class="input_box">
-                        <label><input type="radio" name="Counseling_type" value="전화 상담" required>전화상담</label>
-                        <label><input type="radio" name="Counseling_type" value="방문 상담" required>방문상담</label>
-                    </div>
                 </div>
                 <div class="after">
-                    <textarea id="counselingDetails" class="counselingDetails" name="Counseling_details" rows="8"
-                        required></textarea>
+                    <textarea id="counselingDetails" class="counselingDetails" name="Counseling_details" rows="7"
+                        required placeholder="상담시간 및 상담 내용을 입력해주세요."></textarea>
                 </div>
             </div>
+            <table class="counseling_name">
+                <tr class="table_tr name_table">
+                    <td style="width: 30%;">상담자명</td>
+                    <td>상담유형</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="name_input" id="Counselor_name" name="Counselor_name" type="text" required />
+                    </td>
+                    <td>
+                        <div class="input_box">
+                            <label><input type="radio" name="Counseling_type" value="전화상담" required checked>전화상담</label>
+                            <label><input type="radio" name="Counseling_type" value="방문상담" required>방문상담</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
             <!-- Checkbox -->
             <label><input class="check" type="checkbox" id="double_check" required>작성을 완료하였습니다.</label>
@@ -77,6 +91,7 @@
 
                 const counselingType = $('input[name="counselingType"]:checked').val();
                 const counselingDetails = $('#counselingDetails').val();
+                const Counselor_name = $('#Counselor_name').val();
 
                 // 현재 시간을 timestamp로 변환합니다.
                 const date = new Date();
@@ -93,6 +108,7 @@
                         id: id,
                         Counseling_type: counselingType,
                         Counseling_details: counselingDetails,
+                        Counselor_name: Counselor_name,
                         Counseling_in_progress: true,
                     }),
                     success: function (data) {

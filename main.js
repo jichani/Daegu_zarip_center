@@ -70,18 +70,19 @@ con.connect(function (err) {
 });
 
 app.post('/submit', function (req, res) {
-  let sql = "UPDATE Counseling SET Counseling_type = ?, Counseling_details = ?, Counseling_in_progress = ?, Counseling_date = NOW() WHERE id = ?";
+  let sql = "UPDATE Counseling SET Counseling_type = ?, Counseling_details = ?, Counselor_name = ?, Counseling_in_progress = ?, Counseling_date = NOW() WHERE id = ?";
 
   // 요청 본문(body)에서 값을 가져옵니다.
   let counselingType = req.body.Counseling_type;
   let counselingDetails = req.body.Counseling_details;
+  let counselorName = req.body.Counselor_name;
   let counselingInProgress = true;
 
   // 요청 본문(body)에서 ID 값을 가져옵니다.
   // 클라이언트에서 해당 ID 값을 보내줘야 합니다.
   let idToUpdate = req.body.id;
 
-  let values = [counselingType, counselingDetails, counselingInProgress, idToUpdate];
+  let values = [counselingType, counselingDetails, counselorName, counselingInProgress, idToUpdate];
 
   con.query(sql, values, function (err, result) {
     if (err) {

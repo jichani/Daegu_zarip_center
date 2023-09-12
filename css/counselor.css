@@ -54,13 +54,6 @@ table {
 
 textarea {
     outline: none;
-}
-
-textarea.form_detail {
-    border: none;
-}
-
-textarea.counselingDetails {
     padding: 10px;
 }
 
@@ -107,7 +100,7 @@ table tr td:not(:nth-last-child(1)) {
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .box_s_wrapper {
@@ -123,6 +116,11 @@ table tr td:not(:nth-last-child(1)) {
     font-size: 20px;
     font-weight: 600;
     color: #4D5359;
+}
+
+.input_box {
+    display: flex;
+    justify-content: center;
 }
 
 .input_box input {
@@ -149,9 +147,15 @@ label {
     resize: none;
 }
 
+.name_input {
+    width: 60%;
+    text-align: center;
+}
+
 .check {
-    margin-bottom: 12px;
+    margin-bottom: 40px;
     margin-right: 5px;
+    margin-left: 10px;
     cursor: pointer;
 }
 

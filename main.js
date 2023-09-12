@@ -87,13 +87,13 @@ app.post('/submit', function (req, res) {
   con.query(sql, values, function (err, result) {
     if (err) {
       console.log(err);
-      res.status(500).send('데이터베이스 업데이트 중 오류가 발생했습니다.');
+      res.status(500).send('<div style="display:flex; justify-content:center; align-items:center; height:100vh"><p style="font-size:6em; text-align: center;">데이터 업데이트 중 문제가 발생했습니다.</p></div>');
     } else {
       // result.affectedRows 값으로 업데이트가 실제로 발생했는지 확인합니다.
       if (result.affectedRows > 0) {
-        res.send('성공적으로 데이터를 업데이트하였습니다.');
+        res.send('<div style="display:flex; justify-content:center; align-items:center; height:100vh"><p style="font-size:6em; text-align: center;">성공적으로 데이터를 업데이트하였습니다.</p></div>');
       } else {
-        res.status(404).send('업데이트할 데이터를 찾을 수 없습니다.');
+        res.status(404).send('<div style="display:flex; justify-content:center; align-items:center; height:100vh"><p style="font-size:6em; text-align: center;">업데이트할 데이터를 찾을 수 없습니다.</p></div>');
       }
     }
   });

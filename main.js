@@ -181,6 +181,7 @@ app.post('/send-message-customer', function (req, res) {
           "variables": {
             "#{이름}": req.body.name,
             "#{신청버튼}": req.body.selectedValue,
+            "#{링크}": req.body.link,
 
           }
         }

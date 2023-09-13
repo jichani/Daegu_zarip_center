@@ -2,7 +2,7 @@ function btn_sendMessage_counselor() {
   let inquirer_name = document.getElementById('name').value;
   let counselor_name = "이연경";
   let tel = "01075400153";
-  let templateId = "KA01TP230911050059565VQAWKP7Ydik";
+  let templateId = "KA01TP2309120838479400wiZ0XnN1j6";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
   let now = new Date();
@@ -56,16 +56,16 @@ function btn_sendMessage_counselor() {
 function btn_sendMessage_customer() {
   let name = document.getElementById('name').value;
   let tel = document.getElementById('tel').value;
-  let templateId = "KA01TP230907043423335DsEA22M5lVp";
+  let templateId = "KA01TP230912084203416iyD9IDvVF9r";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
   let selectedValue = document.getElementById('inquiryType').value;
-
+  let link = "port-0-daegu-zarip-center-f02w2almfz1tf4.sel5.cloudtype.app"
 
   $.ajax({
     type: "POST",
     url: "/send-message-customer",
-    data: JSON.stringify({ name, tel, pfid, templateId, selectedValue }),
+    data: JSON.stringify({ name, tel, pfid, templateId, selectedValue, link }),
     contentType: 'application/json',
 
   }).done(function (response) {

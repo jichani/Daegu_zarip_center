@@ -1,7 +1,7 @@
 function btn_sendMessage_counselor() {
   let inquirer_name = document.getElementById('name').value;
   let counselor_name = "이연경";
-  let tel = "01075400153";
+  let tel = "01086727571";
   let templateId = "KA01TP2309120838479400wiZ0XnN1j6";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
@@ -60,7 +60,7 @@ function btn_sendMessage_customer() {
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
   let selectedValue = document.getElementById('inquiryType').value;
-  let link = "port-0-daegu-zarip-center-f02w2almfz1tf4.sel5.cloudtype.app"
+  let link = "port-0-daegu-zarip-center-2rrqq2blmj97c9c.sel5.cloudtype.app"
 
   $.ajax({
     type: "POST",

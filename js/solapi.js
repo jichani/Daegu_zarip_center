@@ -1,7 +1,7 @@
 function btn_sendMessage_counselor() {
   let inquirer_name = document.getElementById('name').value;
-  let counselor_name = "이선희";
-  let tel = "01073722732";
+  let counselor_name = "임지찬";
+  let tel = "01086727571";
   let templateId = "KA01TP2309120838479400wiZ0XnN1j6";
   let pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 
